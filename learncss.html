@@ -1,0 +1,1530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="web.css" />
+  <link rel="stylesheet" href="learncss.css">
+  <title>WebStart — Learn CSS</title>
+</head>
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#path">Learning Path</a></li>
+      <li><a href="#resources">Resources</a></li>
+      <li><a href="form.html">Subscribe</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+      <h2 class="left"><span class="left_h2">CSS</span> Tutorial</h2>
+      <a href="#css-introduction" class="active">CSS HOME</a>
+
+      <details>
+        <summary>Introduction</summary>
+        <a href="#css-introduction">CSS Introduction</a>
+        <a href="#css-syntax">CSS Syntax</a>
+        <a href="#css-selectors">CSS Selectors</a>
+        <a href="#css-how-to">CSS How To</a>
+        <a href="#css-comments">CSS Comments</a>
+        <a href="#">Code Challenge</a>
+      </details>
+
+      <details>
+        <summary>CSS Colors</summary>
+        <a href="#css-colors" class="overview_header">CSS Colors</a>
+          <a href="#css-colors" class="sub">Colors</a>
+          <a href="#" class="sub">Code Challenge</a>
+        <a href="#css-backgrounds" class="overview_header">CSS Backgrounds</a>
+          <a href="#css-backgrounds" class="sub">Backgrounds</a>
+          <a href="#css-backgrounds" class="sub">Shorthand</a>
+          <a href="#" class="sub">Code Challenge</a>
+      </details>
+
+      <details>
+        <summary>CSS Box Model</summary>
+        <a href="#css-borders" class="overview_header">CSS Borders</a>
+          <a href="#css-borders" class="sub">Borders</a>
+          <a href="#css-borders" class="sub">Border Width</a>
+          <a href="#css-borders" class="sub">Border Color</a>
+          <a href="#css-borders" class="sub">Border Sides</a>
+          <a href="#css-borders" class="sub">Border Shorthand</a>
+          <a href="#css-borders" class="sub">Rounded Borders</a>
+          <a href="#" class="sub">Code Challenge</a>
+        <a href="#css-margins" class="overview_header">CSS Margins</a>
+          <a href="#css-margins" class="sub">Margins</a>
+          <a href="#css-margins" class="sub">Margin Collapse</a>
+          <a href="#" class="sub">Code Challenge</a>
+        <a href="#css-padding" class="overview_header">CSS Padding</a>
+          <a href="#css-padding" class="sub">Padding</a>
+          <a href="#" class="sub">Code Challenge</a>
+        <a href="#css-height-width" class="overview_header">CSS Height/Width</a>
+          <a href="#css-height-width" class="sub">Height/Width</a>
+          <a href="#css-height-width" class="sub">Max Height/Width</a>
+          <a href="#" class="sub">Code Challenge</a>
+        <a href="#css-box-model">CSS Box Model</a>
+        <a href="#css-outline" class="overview_header">CSS Outline</a>
+          <a href="#css-outline" class="sub">Outline</a>
+          <a href="#css-outline" class="sub">Outline Width</a>
+          <a href="#css-outline" class="sub">Outline Color</a>
+          <a href="#css-outline" class="sub">Outline Shorthand</a>
+          <a href="#css-outline" class="sub">Outline Offset</a>
+          <a href="#" class="sub">Code Challenge</a>
+      </details>
+
+      <details>
+        <summary>CSS Text &amp; Fonts</summary>
+        <a href="#css-text" class="overview_header">CSS Text</a>
+          <a href="#css-text" class="sub">Text Color</a>
+          <a href="#css-text" class="sub">Text Alignment</a>
+          <a href="#css-text" class="sub">Text Decoration</a>
+          <a href="#css-text" class="sub">Text Transformation</a>
+          <a href="#css-text" class="sub">Text Spacing</a>
+          <a href="#css-text" class="sub">Text Shadow</a>
+          <a href="#" class="sub">Code Challenge</a>
+        <a href="#css-fonts" class="overview_header">CSS Fonts</a>
+          <a href="#css-fonts" class="sub">Font Family</a>
+          <a href="#css-fonts" class="sub">Font Web Safe</a>
+          <a href="#css-fonts" class="sub">Font Fallbacks</a>
+          <a href="#css-fonts" class="sub">Font Style</a>
+          <a href="#css-fonts" class="sub">Font Size</a>
+          <a href="#css-fonts" class="sub">Google Fonts</a>
+          <a href="#css-fonts" class="sub">Font Shorthand</a>
+          <a href="#" class="sub">Code Challenge</a>
+        <a href="#css-icons">CSS Icons</a>
+        <a href="#css-links" class="overview_header">CSS Links</a>
+          <a href="#css-links" class="sub">Links</a>
+          <a href="#css-links" class="sub">Link Buttons</a>
+          <a href="#" class="sub">Code Challenge</a>
+      </details>
+
+      <details>
+        <summary>CSS Lists &amp; Tables</summary>
+        <a href="#css-lists" class="overview_header">CSS Lists</a>
+          <a href="#css-lists" class="sub">Lists</a>
+          <a href="#" class="sub">Code Challenge</a>
+        <a href="#css-tables" class="overview_header">CSS Tables</a>
+          <a href="#css-tables" class="sub">Tables</a>
+          <a href="#css-tables" class="sub">Table Size</a>
+          <a href="#css-tables" class="sub">Table Alignment</a>
+          <a href="#css-tables" class="sub">Table Style</a>
+          <a href="#css-tables" class="sub">Responsive Table</a>
+          <a href="#" class="sub">Code Challenge</a>
+      </details>
+
+      <details>
+        <summary>CSS Layout</summary>
+        <a href="#css-display" class="overview_header">CSS Display</a>
+          <a href="#css-display" class="sub">Display</a>
+          <a href="#" class="sub">Code Challenge</a>
+        <a href="#css-height-width">CSS Max-width</a>
+        <a href="#css-position" class="overview_header">CSS Position</a>
+          <a href="#css-position" class="sub">Position</a>
+          <a href="#" class="sub">Code Challenge</a>
+        <a href="#css-z-index">CSS Z-index</a>
+        <a href="#css-overflow" class="overview_header">CSS Overflow</a>
+          <a href="#css-overflow" class="sub">Overflow</a>
+          <a href="#" class="sub">Code Challenge</a>
+        <a href="#css-float" class="overview_header">CSS Float</a>
+          <a href="#css-float" class="sub">Float</a>
+          <a href="#css-float" class="sub">Clear</a>
+          <a href="#css-float" class="sub">Float Examples</a>
+          <a href="#" class="sub">Code Challenge</a>
+        <a href="#css-inline-block">CSS Inline-block</a>
+        <a href="#css-align" class="overview_header">CSS Align</a>
+          <a href="#css-align" class="sub">Align</a>
+          <a href="#" class="sub">Code Challenge</a>
+        <a href="#css-flexbox" class="overview_header">CSS Flexbox</a>
+          <a href="#css-flexbox" class="sub">Flexbox</a>
+          <a href="#css-flexbox" class="sub">Flex Container</a>
+          <a href="#css-flexbox" class="sub">Flex Items</a>
+          <a href="#css-flexbox" class="sub">Flex Responsive</a>
+          <a href="#" class="sub">Code Challenge</a>
+        <a href="#css-grid" class="overview_header">CSS Grid</a>
+          <a href="#css-grid" class="sub">Grid Intro</a>
+          <a href="#css-grid" class="sub">Grid Container</a>
+          <a href="#css-grid" class="sub">Grid Item</a>
+          <a href="#" class="sub">Code Challenge</a>
+      </details>
+
+      <details>
+        <summary>CSS Selectors</summary>
+        <a href="#css-combinators" class="overview_header">CSS Combinators</a>
+          <a href="#css-combinators" class="sub">Combinators</a>
+          <a href="#" class="sub">Code Challenge</a>
+        <a href="#css-pseudo-classes" class="overview_header">CSS Pseudo-classes</a>
+          <a href="#css-pseudo-classes" class="sub">Pseudo-classes</a>
+          <a href="#" class="sub">Code Challenge</a>
+        <a href="#css-pseudo-elements" class="overview_header">CSS Pseudo-elements</a>
+          <a href="#css-pseudo-elements" class="sub">Pseudo-elements</a>
+          <a href="#" class="sub">Code Challenge</a>
+        <a href="#css-attribute-selectors" class="overview_header">CSS Attribute Selectors</a>
+          <a href="#css-attribute-selectors" class="sub">Attribute Selectors</a>
+          <a href="#" class="sub">Code Challenge</a>
+        <a href="#css-specificity">CSS Specificity</a>
+        <a href="#css-specificity">CSS Important</a>
+      </details>
+
+      <details>
+        <summary>CSS Advanced</summary>
+        <a href="#css-shadows" class="overview_header">CSS Shadows</a>
+          <a href="#css-shadows" class="sub">Box Shadow</a>
+          <a href="#css-shadows" class="sub">Text Shadow</a>
+        <a href="#css-gradients" class="overview_header">CSS Gradients</a>
+          <a href="#css-gradients" class="sub">Linear Gradients</a>
+          <a href="#css-gradients" class="sub">Radial Gradients</a>
+          <a href="#css-gradients" class="sub">Conic Gradients</a>
+          <a href="#" class="sub">Code Challenge</a>
+        <a href="#css-2d-transforms" class="overview_header">CSS 2D Transforms</a>
+          <a href="#css-2d-transforms" class="sub">2D Transforms</a>
+          <a href="#" class="sub">Code Challenge</a>
+        <a href="#css-3d-transforms" class="overview_header">CSS 3D Transforms</a>
+          <a href="#css-3d-transforms" class="sub">3D Transforms</a>
+          <a href="#" class="sub">Code Challenge</a>
+        <a href="#css-transitions" class="overview_header">CSS Transitions</a>
+          <a href="#css-transitions" class="sub">Transitions</a>
+          <a href="#" class="sub">Code Challenge</a>
+        <a href="#css-animations" class="overview_header">CSS Animations</a>
+          <a href="#css-animations" class="sub">Animations</a>
+          <a href="#" class="sub">Code Challenge</a>
+        <a href="#css-variables">CSS Variables</a>
+        <a href="#css-math-functions">CSS Math Functions</a>
+        <a href="#css-responsive">CSS Responsive</a>
+      </details>
+
+      <details>
+        <summary>CSS Components</summary>
+        <a href="#css-forms" class="overview_header">CSS Forms</a>
+          <a href="#css-forms" class="sub">Forms</a>
+          <a href="#" class="sub">Code Challenge</a>
+        <a href="#css-buttons" class="overview_header">CSS Buttons</a>
+          <a href="#css-buttons" class="sub">Buttons</a>
+          <a href="#" class="sub">Code Challenge</a>
+        <a href="#css-navigation" class="overview_header">CSS Navigation</a>
+          <a href="#css-navigation" class="sub">Navbar</a>
+          <a href="#css-navigation" class="sub">Vertical Nav</a>
+          <a href="#css-navigation" class="sub">Horizontal Nav</a>
+          <a href="#" class="sub">Code Challenge</a>
+        <a href="#">CSS Dropdowns</a>
+        <a href="#">CSS Image Gallery</a>
+      </details>
+
+      <details>
+        <summary>CSS Examples &amp; Cert</summary>
+        <a href="#">CSS Examples</a>
+        <a href="#">CSS Editor</a>
+        <a href="#">CSS Quiz</a>
+        <a href="#">CSS Exercises</a>
+        <a href="#">CSS Challenges</a>
+        <a href="#">CSS Syllabus</a>
+        <a href="#">CSS Study Plan</a>
+        <a href="#">CSS Certificate</a>
+      </details>
+
+      <details>
+        <summary>CSS References</summary>
+        <a href="#">CSS Reference</a>
+        <a href="#">CSS Selectors</a>
+        <a href="#">CSS Functions</a>
+        <a href="#">CSS Colors</a>
+        <a href="#">CSS Entities</a>
+        <a href="#">CSS Aural</a>
+        <a href="#">CSS Browser Support</a>
+      </details>
+
+    </section>
+
+    <div>
+
+      <article id="css-introduction">
+        <h2>CSS Introduction</h2>
+        <div class="media-row">
+          <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Oj4AVYz40VY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="codepen-wrapper">
+            <iframe
+              src="https://codepen.io/trial/embed/PNaGbb?default-tab=html,result&editable=true"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        <p>CSS (Cascading Style Sheets) describes how HTML elements are displayed on screen. It separates content from design.</p>
+        <pre><code>/* CSS saved as styles.css */
+body {
+  background-color: lightblue;
+  font-family: Arial, sans-serif;
+}
+h1 { color: navy; }
+p  { color: grey; font-size: 16px; }</code></pre>
+        <ul>
+          <li>CSS stands for Cascading Style Sheets</li>
+          <li>CSS saves a lot of work — one file can style many pages</li>
+          <li>"Cascading" means styles flow from parent to child elements</li>
+        </ul>
+      </article>
+
+      <article id="css-syntax">
+        <h2>CSS Syntax</h2>
+        <div class="media-row">
+          <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Oj4AVYz40VY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="codepen-wrapper">
+            <iframe
+              src="https://codepen.io/trial/embed/PNaGbb?default-tab=html,result&editable=true"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        <p>A CSS rule has a selector and a declaration block containing property/value pairs.</p>
+        <pre><code>selector {
+  property: value;
+  property: value;
+}
+
+h1         { color: blue; }      /* element */
+.highlight { color: red; }       /* class */
+#title     { font-size: 2rem; }  /* id */
+*          { box-sizing: border-box; } /* universal */</code></pre>
+      </article>
+
+      <article id="css-selectors">
+        <h2>CSS Selectors</h2>
+        <div class="media-row">
+          <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Oj4AVYz40VY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="codepen-wrapper">
+            <iframe
+              src="https://codepen.io/trial/embed/PNaGbb?default-tab=html,result&editable=true"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        <pre><code>p          { }   /* all &lt;p&gt; elements */
+.card      { }   /* class="card" */
+#hero      { }   /* id="hero" */
+*          { }   /* all elements */
+h1, h2, p  { }   /* grouping — applies to all three */</code></pre>
+        <ul>
+          <li>Element selectors are least specific</li>
+          <li>Class selectors (<code>.name</code>) are reusable across many elements</li>
+          <li>ID selectors (<code>#name</code>) target one unique element</li>
+          <li>Grouped selectors share the same rules — saves repetition</li>
+        </ul>
+      </article>
+
+      <article id="css-how-to">
+        <h2>CSS How To</h2>
+        <div class="media-row">
+          <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Oj4AVYz40VY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="codepen-wrapper">
+            <iframe
+              src="https://codepen.io/trial/embed/PNaGbb?default-tab=html,result&editable=true"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        <pre><code>&lt;!-- External (recommended) --&gt;
+&lt;link rel="stylesheet" href="styles.css"&gt;
+
+&lt;!-- Internal --&gt;
+&lt;style&gt;
+  p { color: red; }
+&lt;/style&gt;
+
+&lt;!-- Inline --&gt;
+&lt;p style="color:red;"&gt;Red text&lt;/p&gt;</code></pre>
+        <ul>
+          <li>External: one file styles the whole site — best practice</li>
+          <li>Internal: styles one page only — placed in <code>&lt;head&gt;</code></li>
+          <li>Inline: highest priority — hardest to maintain</li>
+          <li>Cascade order: inline &gt; internal/external (last wins) &gt; browser default</li>
+        </ul>
+      </article>
+
+      <article id="css-comments">
+        <h2>CSS Comments</h2>
+        <div class="media-row">
+          <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Oj4AVYz40VY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="codepen-wrapper">
+            <iframe
+              src="https://codepen.io/trial/embed/PNaGbb?default-tab=html,result&editable=true"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        <pre><code>/* Single-line comment */
+
+/*
+  Multi-line comment
+  spanning several lines
+*/
+
+p { color: red; } /* inline comment */</code></pre>
+        <ul>
+          <li>Comments are ignored by the browser</li>
+          <li>Use them to explain complex rules or separate sections</li>
+        </ul>
+      </article>
+
+      <article id="css-colors">
+        <h2>CSS Colors</h2>
+        <div class="media-row">
+          <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/rlcPXOecjOA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="codepen-wrapper">
+            <iframe
+              src="https://codepen.io/trial/embed/PNaGbb?default-tab=html,result&editable=true"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        <pre><code>color: red;                   /* named */
+color: rgb(255, 0, 0);        /* RGB */
+color: rgba(255, 0, 0, 0.5);  /* RGB + alpha */
+color: #ff0000;               /* HEX */
+color: hsl(0, 100%, 50%);     /* HSL */
+color: hsla(0, 100%, 50%, 0.5);/* HSL + alpha */
+
+background-color: lightblue;
+border-color: #333;</code></pre>
+      </article>
+
+      <article id="css-backgrounds">
+        <h2>CSS Backgrounds</h2>
+        <div class="media-row">
+          <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Oj4AVYz40VY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="codepen-wrapper">
+            <iframe
+              src="https://codepen.io/trial/embed/PNaGbb?default-tab=html,result&editable=true"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        <pre><code>div {
+  background-color: #f0f0f0;
+  background-image: url('bg.jpg');
+  background-repeat: no-repeat;   /* repeat | repeat-x | repeat-y */
+  background-position: center top;
+  background-size: cover;         /* contain | auto | px/% */
+  background-attachment: fixed;   /* scroll | local */
+}
+
+/* Shorthand */
+background: #f0f0f0 url('bg.jpg') no-repeat center/cover fixed;</code></pre>
+        <ul>
+          <li><code>cover</code> — scales to fill, may crop</li>
+          <li><code>contain</code> — fits inside, may leave gaps</li>
+          <li><code>fixed</code> — background stays fixed on scroll (parallax effect)</li>
+        </ul>
+      </article>
+
+      <article id="css-borders">
+        <h2>CSS Borders</h2>
+        <div class="media-row">
+          <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Oj4AVYz40VY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="codepen-wrapper">
+            <iframe
+              src="https://codepen.io/trial/embed/PNaGbb?default-tab=html,result&editable=true"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        <pre><code>border: 2px solid #333;          /* shorthand */
+border-width: 2px;
+border-style: solid;             /* dotted | dashed | double | groove | none */
+border-color: red;
+border-top: 3px dashed blue;     /* individual sides */
+border-radius: 8px;              /* rounded corners */
+border-radius: 50%;              /* circle */</code></pre>
+      </article>
+
+      <article id="css-margins">
+        <h2>CSS Margins</h2>
+        <div class="media-row">
+          <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Oj4AVYz40VY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="codepen-wrapper">
+            <iframe
+              src="https://codepen.io/trial/embed/PNaGbb?default-tab=html,result&editable=true"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        <p>Margin is the space <strong>outside</strong> an element's border.</p>
+        <pre><code>margin: 20px;                    /* all sides */
+margin: 10px 20px;               /* top/bottom  left/right */
+margin: 5px 10px 15px 20px;      /* top right bottom left */
+margin-top: 10px;
+margin: 0 auto;                  /* center block element horizontally */
+margin: -10px;                   /* negative margin allowed */</code></pre>
+        <ul>
+          <li>Vertical margins between block elements collapse to the larger value</li>
+          <li><code>margin: 0 auto</code> centers a block element (needs a set width)</li>
+        </ul>
+      </article>
+
+      <article id="css-padding">
+        <h2>CSS Padding</h2>
+        <div class="media-row">
+          <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Oj4AVYz40VY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="codepen-wrapper">
+            <iframe
+              src="https://codepen.io/trial/embed/PNaGbb?default-tab=html,result&editable=true"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        <p>Padding is the space <strong>inside</strong> an element between content and border.</p>
+        <pre><code>padding: 20px;
+padding: 10px 20px;
+padding: 5px 10px 15px 20px;     /* top right bottom left */
+padding-left: 16px;</code></pre>
+        <ul>
+          <li>Padding increases the element's size (unless <code>box-sizing: border-box</code>)</li>
+          <li>Negative padding is not allowed</li>
+        </ul>
+      </article>
+
+      <article id="css-height-width">
+        <h2>CSS Height / Width</h2>
+        <div class="media-row">
+          <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Oj4AVYz40VY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="codepen-wrapper">
+            <iframe
+              src="https://codepen.io/trial/embed/PNaGbb?default-tab=html,result&editable=true"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        <pre><code>div {
+  width: 300px;
+  height: 200px;
+  max-width: 100%;     /* won't overflow parent */
+  min-height: 50px;
+  width: 50%;          /* relative to parent */
+  width: 100vw;        /* viewport width */
+  height: 100vh;       /* viewport height */
+}</code></pre>
+        <ul>
+          <li>Default: <code>width: auto</code> (stretches to fill parent for block elements)</li>
+          <li>Use <code>max-width: 100%</code> on images for responsive behavior</li>
+        </ul>
+      </article>
+
+      <article id="css-box-model">
+        <h2>CSS Box Model</h2>
+        <div class="media-row">
+          <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Oj4AVYz40VY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="codepen-wrapper">
+            <iframe
+              src="https://codepen.io/trial/embed/PNaGbb?default-tab=html,result&editable=true"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        <p>Every element is a rectangular box: content → padding → border → margin.</p>
+        <pre><code>/* Default: width = content only */
+div { width: 300px; padding: 20px; border: 5px solid; }
+/* Total visual width = 300 + 40 + 10 = 350px */
+
+/* Border-box: width includes padding + border */
+* { box-sizing: border-box; }
+div { width: 300px; padding: 20px; border: 5px solid; }
+/* Total visual width = 300px exactly */</code></pre>
+        <ul>
+          <li>Always add <code>* { box-sizing: border-box; }</code> to your CSS reset</li>
+        </ul>
+      </article>
+
+      <article id="css-outline">
+        <h2>CSS Outline</h2>
+        <div class="media-row">
+          <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Oj4AVYz40VY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="codepen-wrapper">
+            <iframe
+              src="https://codepen.io/trial/embed/PNaGbb?default-tab=html,result&editable=true"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        <p>Outline is drawn <em>outside</em> the border. It does not affect layout (takes no space).</p>
+        <pre><code>outline: 3px solid red;
+outline-width: 3px;
+outline-style: dotted;
+outline-color: red;
+outline-offset: 5px;   /* gap between border and outline */
+outline: none;         /* removes focus outline (use carefully!) */</code></pre>
+        <ul>
+          <li>Unlike borders, outlines don't change element size</li>
+          <li>Commonly seen on focused form inputs — don't remove without a replacement</li>
+        </ul>
+      </article>
+
+      <article id="css-text">
+        <h2>CSS Text</h2>
+        <div class="media-row">
+          <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Oj4AVYz40VY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="codepen-wrapper">
+            <iframe
+              src="https://codepen.io/trial/embed/PNaGbb?default-tab=html,result&editable=true"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        <pre><code>color: #333;
+text-align: center;          /* left | right | justify */
+text-decoration: underline;  /* none | line-through | overline */
+text-transform: uppercase;   /* lowercase | capitalize */
+letter-spacing: 2px;
+word-spacing: 4px;
+line-height: 1.6;
+text-indent: 30px;
+white-space: nowrap;
+text-shadow: 2px 2px 4px grey;</code></pre>
+      </article>
+
+      <article id="css-fonts">
+        <h2>CSS Fonts</h2>
+        <div class="media-row">
+          <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Oj4AVYz40VY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="codepen-wrapper">
+            <iframe
+              src="https://codepen.io/trial/embed/PNaGbb?default-tab=html,result&editable=true"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        <pre><code>font-family: 'Segoe UI', Arial, sans-serif;
+font-size: 16px;        /* px | em | rem | % */
+font-weight: bold;      /* normal | 100-900 */
+font-style: italic;     /* normal | oblique */
+font-variant: small-caps;
+
+/* Shorthand: style variant weight size/line-height family */
+font: italic bold 16px/1.5 Arial, sans-serif;
+
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto');
+font-family: 'Roboto', sans-serif;</code></pre>
+        <ul>
+          <li>Always end font stack with a generic family: <code>serif</code>, <code>sans-serif</code>, <code>monospace</code></li>
+          <li>Use <code>rem</code> for font sizes — scales with user browser settings</li>
+        </ul>
+      </article>
+
+      <article id="css-icons">
+        <h2>CSS Icons</h2>
+        <div class="media-row">
+          <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Oj4AVYz40VY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="codepen-wrapper">
+            <iframe
+              src="https://codepen.io/trial/embed/PNaGbb?default-tab=html,result&editable=true"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        <p>Icon libraries like Font Awesome add scalable icons via CSS classes.</p>
+        <pre><code>&lt;!-- Font Awesome CDN in &lt;head&gt; --&gt;
+&lt;link rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"&gt;
+
+&lt;!-- Usage --&gt;
+&lt;i class="fas fa-home"&gt;&lt;/i&gt;
+&lt;i class="fas fa-star" style="color:gold; font-size:24px;"&gt;&lt;/i&gt;</code></pre>
+      </article>
+
+      <article id="css-links">
+        <h2>CSS Links</h2>
+        <div class="media-row">
+          <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/fQqdu9_IB5A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="codepen-wrapper">
+            <iframe
+              src="https://codepen.io/trial/embed/PNaGbb?default-tab=html,result&editable=true"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        <pre><code>a:link    { color: blue; text-decoration: none; }
+a:visited { color: purple; }
+a:hover   { color: red; text-decoration: underline; }
+a:active  { color: orange; }
+
+/* Button-style link */
+a.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #0f3460;
+  color: white;
+  border-radius: 4px;
+}</code></pre>
+      </article>
+
+      <article id="css-lists">
+        <h2>CSS Lists</h2>
+        <div class="media-row">
+          <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Oj4AVYz40VY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="codepen-wrapper">
+            <iframe
+              src="https://codepen.io/trial/embed/PNaGbb?default-tab=html,result&editable=true"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        <pre><code>ul { list-style-type: square; }   /* disc | circle | none */
+ol { list-style-type: upper-roman; }
+
+li { list-style-image: url('bullet.png'); }
+li { list-style-position: inside; }  /* outside (default) */
+
+/* Shorthand */
+ul { list-style: square inside url('bullet.png'); }
+
+/* Common: remove default styling */
+ul { list-style: none; padding: 0; margin: 0; }</code></pre>
+      </article>
+
+      <article id="css-tables">
+        <h2>CSS Tables</h2>
+        <div class="media-row">
+          <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Oj4AVYz40VY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="codepen-wrapper">
+            <iframe
+              src="https://codepen.io/trial/embed/PNaGbb?default-tab=html,result&editable=true"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        <pre><code>table  { width: 100%; border-collapse: collapse; }
+th, td { padding: 12px; border: 1px solid #ddd; text-align: left; }
+th     { background-color: #0f3460; color: white; }
+tr:nth-child(even) { background-color: #f2f2f2; }
+tr:hover           { background-color: #ddd; }
+
+/* Responsive */
+.table-wrap { overflow-x: auto; }</code></pre>
+      </article>
+
+      <article id="css-display">
+        <h2>CSS Display</h2>
+        <div class="media-row">
+          <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Oj4AVYz40VY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="codepen-wrapper">
+            <iframe
+              src="https://codepen.io/trial/embed/PNaGbb?default-tab=html,result&editable=true"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        <pre><code>display: block;          /* full width, new line */
+display: inline;         /* content width, same line, no w/h */
+display: inline-block;   /* content width, same line, has w/h */
+display: none;           /* hidden, no space taken */
+display: flex;           /* flexbox container */
+display: grid;           /* grid container */
+display: table;          /* behaves like &lt;table&gt; */</code></pre>
+        <ul>
+          <li><code>visibility: hidden</code> hides but keeps space; <code>display: none</code> removes it completely</li>
+        </ul>
+      </article>
+
+      <article id="css-position">
+        <h2>CSS Position</h2>
+        <div class="media-row">
+          <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Oj4AVYz40VY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="codepen-wrapper">
+            <iframe
+              src="https://codepen.io/trial/embed/PNaGbb?default-tab=html,result&editable=true"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        <pre><code>position: static;    /* default — normal flow */
+position: relative;  /* offset from its normal position */
+position: absolute;  /* relative to nearest positioned ancestor */
+position: fixed;     /* relative to viewport, stays on scroll */
+position: sticky;    /* relative until scroll threshold, then fixed */
+
+/* Use with: top, right, bottom, left */
+.box {
+  position: absolute;
+  top: 20px;
+  left: 50px;
+}</code></pre>
+        <ul>
+          <li><code>relative</code> keeps its space in the flow</li>
+          <li><code>absolute</code> is removed from the flow</li>
+          <li><code>fixed</code> is great for headers and back-to-top buttons</li>
+          <li><code>sticky</code> requires a <code>top</code> value to activate</li>
+        </ul>
+      </article>
+
+      <article id="css-z-index">
+        <h2>CSS Z-index</h2>
+        <div class="media-row">
+          <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Oj4AVYz40VY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="codepen-wrapper">
+            <iframe
+              src="https://codepen.io/trial/embed/PNaGbb?default-tab=html,result&editable=true"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        <p>Z-index controls the stacking order of positioned elements. Higher = on top.</p>
+        <pre><code>.modal   { position: fixed; z-index: 1000; }
+.overlay { position: fixed; z-index: 999; }
+.header  { position: sticky; z-index: 100; }</code></pre>
+        <ul>
+          <li>Only works on positioned elements (<code>relative</code>, <code>absolute</code>, <code>fixed</code>, <code>sticky</code>)</li>
+          <li>Default z-index is <code>auto</code> (= 0)</li>
+          <li>Negative z-index places an element behind others</li>
+        </ul>
+      </article>
+
+      <article id="css-overflow">
+        <h2>CSS Overflow</h2>
+        <div class="media-row">
+          <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Oj4AVYz40VY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="codepen-wrapper">
+            <iframe
+              src="https://codepen.io/trial/embed/PNaGbb?default-tab=html,result&editable=true"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        <pre><code>overflow: visible;  /* default — content spills out */
+overflow: hidden;   /* clips overflowing content */
+overflow: scroll;   /* always shows scrollbars */
+overflow: auto;     /* scrollbars only when needed */
+
+overflow-x: hidden; /* clip horizontal only */
+overflow-y: auto;   /* scroll vertical only */</code></pre>
+      </article>
+
+      <article id="css-float">
+        <h2>CSS Float</h2>
+        <div class="media-row">
+          <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Oj4AVYz40VY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="codepen-wrapper">
+            <iframe
+              src="https://codepen.io/trial/embed/PNaGbb?default-tab=html,result&editable=true"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        <pre><code>img { float: left; margin: 0 16px 8px 0; }
+
+/* Clearfix — parent collapses when all children float */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}</code></pre>
+        <ul>
+          <li>Float is mainly used to wrap text around images today</li>
+          <li>For layouts, prefer Flexbox or Grid instead</li>
+          <li>Always clear floats to prevent parent collapse</li>
+        </ul>
+      </article>
+
+      <article id="css-inline-block">
+        <h2>CSS Inline-block</h2>
+        <div class="media-row">
+          <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Oj4AVYz40VY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="codepen-wrapper">
+            <iframe
+              src="https://codepen.io/trial/embed/PNaGbb?default-tab=html,result&editable=true"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        <p><code>inline-block</code> sits on the same line as siblings but respects width and height.</p>
+        <pre><code>.nav-item {
+  display: inline-block;
+  width: 100px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+}</code></pre>
+      </article>
+
+      <article id="css-align">
+        <h2>CSS Align</h2>
+        <div class="media-row">
+          <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/-2CnrBUfAUQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="codepen-wrapper">
+            <iframe
+              src="https://codepen.io/trial/embed/PNaGbb?default-tab=html,result&editable=true"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        <pre><code>/* Center a block element */
+div { width: 300px; margin: 0 auto; }
+
+/* Center text */
+p { text-align: center; }
+
+/* Center with Flexbox */
+.container {
+  display: flex;
+  justify-content: center;  /* horizontal */
+  align-items: center;      /* vertical */
+  height: 100vh;
+}
+
+/* Center with Grid */
+.container {
+  display: grid;
+  place-items: center;
+}</code></pre>
+      </article>
+
+      <article id="css-flexbox">
+        <h2>CSS Flexbox</h2>
+        <div class="media-row">
+          <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/-_oObijc9j4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="codepen-wrapper">
+            <iframe
+              src="https://codepen.io/trial/embed/PNaGbb?default-tab=html,result&editable=true"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        <p>Flexbox is a one-dimensional layout system for arranging items in a row or column.</p>
+        <pre><code>/* Container */
+.container {
+  display: flex;
+  flex-direction: row;          /* column | row-reverse | column-reverse */
+  justify-content: space-between; /* flex-start | center | space-around */
+  align-items: center;           /* flex-start | flex-end | stretch */
+  flex-wrap: wrap;               /* nowrap | wrap-reverse */
+  gap: 16px;
+}
+
+/* Items */
+.item {
+  flex: 1;            /* grow and shrink equally */
+  flex: 0 0 200px;    /* don't grow, don't shrink, 200px */
+  align-self: flex-end;
+  order: 2;
+}</code></pre>
+      </article>
+
+      <article id="css-grid">
+        <h2>CSS Grid</h2>
+        <div class="media-row">
+          <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/RfBRZcLeYBU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="codepen-wrapper">
+            <iframe
+              src="https://codepen.io/trial/embed/PNaGbb?default-tab=html,result&editable=true"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        <p>Grid is a two-dimensional layout system for rows and columns simultaneously.</p>
+        <pre><code>/* Container */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;        /* 3 columns */
+  grid-template-columns: repeat(3, 1fr);     /* same */
+  grid-template-rows: 100px auto 60px;
+  gap: 16px;
+  grid-template-areas:
+    "header header header"
+    "sidebar main main"
+    "footer footer footer";
+}
+
+/* Items */
+.header  { grid-area: header; }
+.sidebar { grid-area: sidebar; }
+
+/* Span cells */
+.wide { grid-column: 1 / 3; }  /* span 2 columns */
+.tall { grid-row: 1 / 3; }     /* span 2 rows */</code></pre>
+      </article>
+
+      <article id="css-combinators">
+        <h2>CSS Combinators</h2>
+        <div class="media-row">
+          <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Oj4AVYz40VY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="codepen-wrapper">
+            <iframe
+              src="https://codepen.io/trial/embed/PNaGbb?default-tab=html,result&editable=true"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        <pre><code>div p     { }  /* descendant — any &lt;p&gt; inside &lt;div&gt; */
+div > p   { }  /* child — only direct &lt;p&gt; children */
+h2 + p    { }  /* adjacent sibling — &lt;p&gt; immediately after &lt;h2&gt; */
+h2 ~ p    { }  /* general sibling — all &lt;p&gt; after &lt;h2&gt; */</code></pre>
+      </article>
+
+      <article id="css-pseudo-classes">
+        <h2>CSS Pseudo-classes</h2>
+        <div class="media-row">
+          <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Oj4AVYz40VY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="codepen-wrapper">
+            <iframe
+              src="https://codepen.io/trial/embed/PNaGbb?default-tab=html,result&editable=true"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        <pre><code>a:hover           { color: red; }
+a:visited         { color: purple; }
+input:focus       { border-color: blue; }
+li:first-child    { font-weight: bold; }
+li:last-child     { color: grey; }
+li:nth-child(2)   { background: yellow; }
+li:nth-child(odd) { background: #f9f9f9; }
+p:not(.special)   { color: #444; }
+input:checked     { outline: 2px solid green; }
+input:disabled    { opacity: 0.5; }</code></pre>
+      </article>
+
+      <article id="css-pseudo-elements">
+        <h2>CSS Pseudo-elements</h2>
+        <div class="media-row">
+          <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Oj4AVYz40VY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="codepen-wrapper">
+            <iframe
+              src="https://codepen.io/trial/embed/PNaGbb?default-tab=html,result&editable=true"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        <pre><code>p::first-line   { font-weight: bold; }
+p::first-letter { font-size: 2em; float: left; }
+
+/* Insert content before/after */
+h2::before {
+  content: "★ ";
+  color: gold;
+}
+h2::after {
+  content: "";
+  display: block;
+  border-bottom: 2px solid #0f3460;
+}
+
+/* Style selected text */
+::selection { background: #0f3460; color: white; }
+
+/* Style placeholder */
+input::placeholder { color: #aaa; font-style: italic; }</code></pre>
+      </article>
+
+      <article id="css-attribute-selectors">
+        <h2>CSS Attribute Selectors</h2>
+        <div class="media-row">
+          <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Oj4AVYz40VY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="codepen-wrapper">
+            <iframe
+              src="https://codepen.io/trial/embed/PNaGbb?default-tab=html,result&editable=true"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        <pre><code>[type]           { }   /* has type attribute */
+[type="text"]    { }   /* type equals "text" */
+[class~="card"]  { }   /* class contains word "card" */
+[href^="https"]  { }   /* href starts with "https" */
+[href$=".pdf"]   { }   /* href ends with ".pdf" */
+[href*="google"] { }   /* href contains "google" */</code></pre>
+      </article>
+
+      <article id="css-specificity">
+        <h2>CSS Specificity</h2>
+        <div class="media-row">
+          <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Oj4AVYz40VY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="codepen-wrapper">
+            <iframe
+              src="https://codepen.io/trial/embed/PNaGbb?default-tab=html,result&editable=true"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        <p>When rules conflict, the more specific rule wins.</p>
+        <pre><code>/* Specificity score (higher = wins) */
+*            { }   /* 0 */
+p            { }   /* 1 */
+.class       { }   /* 10 */
+#id          { }   /* 100 */
+style=""         /* 1000 */
+!important       /* overrides all */
+
+/* Example: which color wins? */
+p           { color: black; }   /* 1 */
+.text       { color: blue; }    /* 10 ← wins */
+#main p     { color: red; }     /* 101 ← wins over .text */</code></pre>
+        <ul>
+          <li>Avoid <code>!important</code> — it breaks the natural cascade</li>
+          <li>When specificity is equal, the last rule in the file wins</li>
+        </ul>
+      </article>
+
+      <article id="css-shadows">
+        <h2>CSS Shadows</h2>
+        <div class="media-row">
+          <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/PqDfILvhAtM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="codepen-wrapper">
+            <iframe
+              src="https://codepen.io/trial/embed/PNaGbb?default-tab=html,result&editable=true"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        <pre><code>/* Box shadow: h-offset v-offset blur spread color */
+box-shadow: 4px 4px 8px 0px rgba(0,0,0,0.2);
+box-shadow: 0 2px 12px rgba(0,0,0,0.1);  /* soft card shadow */
+box-shadow: inset 0 2px 4px grey;         /* inner shadow */
+
+/* Text shadow: h-offset v-offset blur color */
+text-shadow: 2px 2px 4px grey;
+text-shadow: 0 0 10px gold;               /* glow effect */</code></pre>
+      </article>
+
+      <article id="css-gradients">
+        <h2>CSS Gradients</h2>
+        <div class="media-row">
+          <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/PqDfILvhAtM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="codepen-wrapper">
+            <iframe
+              src="https://codepen.io/trial/embed/PNaGbb?default-tab=html,result&editable=true"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        <pre><code>/* Linear */
+background: linear-gradient(red, blue);
+background: linear-gradient(to right, red, yellow, blue);
+background: linear-gradient(45deg, #1a1a2e, #0f3460);
+
+/* Radial */
+background: radial-gradient(circle, red, blue);
+background: radial-gradient(ellipse at top, #1a1a2e, #0f3460);
+
+/* Conic */
+background: conic-gradient(red, yellow, green, blue, red);</code></pre>
+      </article>
+
+      <article id="css-2d-transforms">
+        <h2>CSS 2D Transforms</h2>
+        <div class="media-row">
+          <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/PqDfILvhAtM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="codepen-wrapper">
+            <iframe
+              src="https://codepen.io/trial/embed/PNaGbb?default-tab=html,result&editable=true"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        <pre><code>transform: translate(50px, 100px);    /* move */
+transform: rotate(45deg);             /* rotate */
+transform: scale(1.5);                /* scale up */
+transform: scale(0.5, 1);             /* scale x only */
+transform: skew(20deg, 10deg);        /* skew */
+
+/* Combine transforms */
+transform: translate(-50%, -50%) rotate(45deg) scale(1.2);</code></pre>
+      </article>
+
+      <article id="css-3d-transforms">
+        <h2>CSS 3D Transforms</h2>
+        <div class="media-row">
+          <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/PqDfILvhAtM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="codepen-wrapper">
+            <iframe
+              src="https://codepen.io/trial/embed/PNaGbb?default-tab=html,result&editable=true"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        <pre><code>.container { perspective: 800px; }
+
+.box {
+  transform: rotateX(45deg);
+  transform: rotateY(45deg);
+  transform: rotateZ(45deg);
+  transform: translateZ(100px);
+  transform-style: preserve-3d;
+}</code></pre>
+      </article>
+
+      <article id="css-transitions">
+        <h2>CSS Transitions</h2>
+        <div class="media-row">
+          <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/PqDfILvhAtM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="codepen-wrapper">
+            <iframe
+              src="https://codepen.io/trial/embed/PNaGbb?default-tab=html,result&editable=true"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        <p>Transitions animate property changes smoothly.</p>
+        <pre><code>/* transition: property duration timing-function delay */
+button {
+  background: blue;
+  transition: background 0.3s ease;
+}
+button:hover { background: red; }
+
+/* Multiple transitions */
+div {
+  transition: width 0.5s ease, opacity 0.3s linear;
+}
+
+/* All properties */
+div { transition: all 0.3s ease-in-out; }</code></pre>
+        <ul>
+          <li>Timing functions: <code>ease</code>, <code>linear</code>, <code>ease-in</code>, <code>ease-out</code>, <code>ease-in-out</code></li>
+        </ul>
+      </article>
+
+      <article id="css-animations">
+        <h2>CSS Animations</h2>
+        <div class="media-row">
+          <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/PqDfILvhAtM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="codepen-wrapper">
+            <iframe
+              src="https://codepen.io/trial/embed/PNaGbb?default-tab=html,result&editable=true"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        <pre><code>/* Define keyframes */
+@keyframes slideIn {
+  from { transform: translateX(-100%); opacity: 0; }
+  to   { transform: translateX(0);     opacity: 1; }
+}
+
+@keyframes pulse {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* Apply animation */
+.box {
+  animation: slideIn 0.5s ease forwards;
+  animation: pulse 2s ease-in-out infinite;
+  /* name duration timing fill-mode iteration-count */
+}</code></pre>
+      </article>
+
+      <article id="css-variables">
+        <h2>CSS Variables</h2>
+        <div class="media-row">
+          <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Oj4AVYz40VY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="codepen-wrapper">
+            <iframe
+              src="https://codepen.io/trial/embed/PNaGbb?default-tab=html,result&editable=true"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        <pre><code>/* Define on :root for global scope */
+:root {
+  --primary: #0f3460;
+  --accent:  #e94560;
+  --spacing: 16px;
+  --radius:  8px;
+}
+
+/* Use with var() */
+button {
+  background: var(--primary);
+  padding: var(--spacing);
+  border-radius: var(--radius);
+}
+
+/* Fallback value */
+color: var(--text-color, black);</code></pre>
+      </article>
+
+      <article id="css-responsive">
+        <h2>CSS Responsive / Media Queries</h2>
+        <div class="media-row">
+          <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/-2CnrBUfAUQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="codepen-wrapper">
+            <iframe
+              src="https://codepen.io/trial/embed/PNaGbb?default-tab=html,result&editable=true"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        <pre><code>/* Mobile first: base styles, then override for larger screens */
+.container { width: 100%; }
+
+@media (min-width: 768px) {
+  .container { width: 750px; }
+}
+@media (min-width: 1024px) {
+  .container { width: 960px; }
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  body { background: #1a1a2e; color: #fff; }
+}
+
+/* Print */
+@media print {
+  nav, footer { display: none; }
+}</code></pre>
+      </article>
+
+      <article id="css-math-functions">
+        <h2>CSS Math Functions</h2>
+        <div class="media-row">
+          <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Oj4AVYz40VY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="codepen-wrapper">
+            <iframe
+              src="https://codepen.io/trial/embed/PNaGbb?default-tab=html,result&editable=true"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        <pre><code>width: calc(100% - 60px);          /* arithmetic */
+width: min(500px, 100%);           /* smaller of two */
+width: max(300px, 50%);            /* larger of two */
+font-size: clamp(1rem, 2.5vw, 2rem); /* min, ideal, max */</code></pre>
+        <ul>
+          <li><code>calc()</code> — mix units (px, %, em)</li>
+          <li><code>clamp()</code> — fluid typography / sizing</li>
+        </ul>
+      </article>
+
+      <article id="css-forms">
+        <h2>CSS Forms</h2>
+        <div class="media-row">
+          <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/JYv_jNYV2R8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="codepen-wrapper">
+            <iframe
+              src="https://codepen.io/trial/embed/PNaGbb?default-tab=html,result&editable=true"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        <pre><code>input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+input:focus {
+  border-color: #0f3460;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(15,52,96,0.2);
+}
+
+input:invalid { border-color: red; }
+input:valid   { border-color: green; }</code></pre>
+      </article>
+
+      <article id="css-buttons">
+        <h2>CSS Buttons</h2>
+        <div class="media-row">
+          <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Oj4AVYz40VY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="codepen-wrapper">
+            <iframe
+              src="https://codepen.io/trial/embed/PNaGbb?default-tab=html,result&editable=true"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        <pre><code>.btn {
+  display: inline-block;
+  padding: 10px 24px;
+  background: #0f3460;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+.btn:hover  { background: #e94560; }
+.btn:active { transform: scale(0.97); }
+.btn:disabled { opacity: 0.5; cursor: not-allowed; }</code></pre>
+      </article>
+
+      <article id="css-navigation">
+        <h2>CSS Navigation Bar</h2>
+        <div class="media-row">
+          <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Oj4AVYz40VY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="codepen-wrapper">
+            <iframe
+              src="https://codepen.io/trial/embed/PNaGbb?default-tab=html,result&editable=true"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        <pre><code>/* Horizontal nav */
+nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0; padding: 0;
+  background: #1a1a2e;
+  gap: 0;
+}
+nav a {
+  display: block;
+  padding: 14px 20px;
+  color: white;
+  text-decoration: none;
+}
+nav a:hover { background: #0f3460; }
+
+/* Sticky */
+nav { position: sticky; top: 0; z-index: 100; }</code></pre>
+      </article>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>WebStart &copy; 2026</p>
+  </footer>
+
+</body>
+</html>
