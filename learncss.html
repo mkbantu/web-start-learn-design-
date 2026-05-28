@@ -27,6 +27,7 @@
         <a href="#css-syntax">CSS Syntax</a>
         <a href="#css-selectors">CSS Selectors</a>
         <a href="#css-how-to">CSS How To</a>
+        <a href="#css-cascading-order">CSS Cascading Order</a>
         <a href="#css-comments">CSS Comments</a>
         <a href="#">Code Challenge</a>
       </details>
@@ -264,6 +265,27 @@ p  { color: grey; font-size: 16px; }</code></pre>
           <li>CSS saves a lot of work — one file can style many pages</li>
           <li>"Cascading" means styles flow from parent to child elements</li>
         </ul>
+
+        <h3>Why CSS? — The Problem It Solved</h3>
+        <p>Before CSS existed, web developers had to control the visual appearance of a page using HTML attributes directly on each element. This caused serious problems:</p>
+        <pre><code>&lt;!-- Old approach (HTML 3.2 era) — a nightmare to maintain --&gt;
+&lt;font face="Arial" size="4" color="red"&gt;Heading&lt;/font&gt;
+&lt;font face="Arial" size="2" color="black"&gt;Paragraph text.&lt;/font&gt;
+&lt;font face="Arial" size="2" color="black"&gt;Another paragraph.&lt;/font&gt;</code></pre>
+        <ul>
+          <li>Every element needed its own <code>&lt;font&gt;</code> tag with repeated attributes</li>
+          <li>Changing the font across a site meant editing every single page manually</li>
+          <li>HTML pages became very large and hard to read</li>
+          <li>The <strong>W3C (World Wide Web Consortium)</strong> created CSS in 1996 to solve this</li>
+          <li>CSS moves all styling into one external file — change one rule and the whole site updates</li>
+        </ul>
+        <pre><code>/* CSS approach — change once, update everywhere */
+body {
+  font-family: Arial, sans-serif;
+  color: black;
+  font-size: 16px;
+}
+h1 { color: red; font-size: 2em; }</code></pre>
       </article>
 
       <article id="css-syntax">
@@ -348,6 +370,47 @@ h1, h2, p  { }   /* grouping — applies to all three */</code></pre>
           <li>Internal: styles one page only — placed in <code>&lt;head&gt;</code></li>
           <li>Inline: highest priority — hardest to maintain</li>
           <li>Cascade order: inline &gt; internal/external (last wins) &gt; browser default</li>
+        </ul>
+      </article>
+
+      <article id="css-cascading-order">
+        <h2>CSS Cascading Order</h2>
+        <div class="media-row">
+          <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Oj4AVYz40VY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="codepen-wrapper">
+            <iframe
+              src="https://codepen.io/trial/embed/PNaGbb?default-tab=html,result&editable=true"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        <p>When multiple CSS rules target the same element, the browser follows a priority order to decide which style wins. This priority order is called the <strong>cascade</strong>.</p>
+        <pre><code>/* Priority order — highest wins: */
+/* 1. Inline style (style="...") */
+/* 2. External and Internal style sheets (last loaded wins) */
+/* 3. Browser default styles */</code></pre>
+        <ul>
+          <li><strong>1. Inline style</strong> — highest priority. Declared directly on the element using the <code>style</code> attribute. Always overrides external and internal styles.</li>
+          <li><strong>2. External and Internal style sheets</strong> — both have the same priority. If they conflict, the one that appears <em>last</em> in the HTML document wins (last-loaded rule).</li>
+          <li><strong>3. Browser default</strong> — lowest priority. Each browser has built-in default styles (e.g. blue underlined links, bold headings). Your CSS always overrides these.</li>
+        </ul>
+        <pre><code>&lt;head&gt;
+  &lt;link rel="stylesheet" href="external.css"&gt;  &lt;!-- lower priority --&gt;
+  &lt;style&gt;
+    p { color: green; }   /* internal — overrides external if loaded after */
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;p style="color: red;"&gt;Red — inline wins over everything&lt;/p&gt;
+  &lt;p&gt;Green — internal style sheet wins (loaded after external)&lt;/p&gt;
+&lt;/body&gt;</code></pre>
+        <ul>
+          <li>If two rules have the same priority, the rule with the higher <strong>specificity</strong> wins</li>
+          <li>If specificity is also equal, the rule that appears <strong>later in the file</strong> wins</li>
+          <li><code>!important</code> overrides all other rules — use it only as a last resort</li>
         </ul>
       </article>
 
@@ -474,15 +537,48 @@ border-radius: 50%;              /* circle */</code></pre>
           </div>
         </div>
         <p>Margin is the space <strong>outside</strong> an element's border.</p>
-        <pre><code>margin: 20px;                    /* all sides */
-margin: 10px 20px;               /* top/bottom  left/right */
-margin: 5px 10px 15px 20px;      /* top right bottom left */
+        <pre><code>/* Individual sides */
 margin-top: 10px;
-margin: 0 auto;                  /* center block element horizontally */
-margin: -10px;                   /* negative margin allowed */</code></pre>
+margin-right: 20px;
+margin-bottom: 10px;
+margin-left: 20px;
+
+/* Shorthand — 1 value: all sides */
+margin: 20px;
+
+/* Shorthand — 2 values: top/bottom   left/right */
+margin: 10px 20px;
+
+/* Shorthand — 3 values: top   left/right   bottom */
+margin: 5px 15px 10px;
+
+/* Shorthand — 4 values: top right bottom left (clockwise) */
+margin: 5px 10px 15px 20px;
+
+/* Center a block element horizontally */
+margin: 0 auto;
+
+/* Inherit margin from parent element */
+margin: inherit;
+
+/* Negative margin (pulls element toward neighbour) */
+margin: -10px;</code></pre>
         <ul>
-          <li>Vertical margins between block elements collapse to the larger value</li>
-          <li><code>margin: 0 auto</code> centers a block element (needs a set width)</li>
+          <li>The 4-value shorthand goes clockwise: <strong>top, right, bottom, left</strong></li>
+          <li>The 3-value shorthand: <strong>top, left/right (equal), bottom</strong></li>
+          <li>The 2-value shorthand: <strong>top/bottom (equal), left/right (equal)</strong></li>
+          <li><code>margin: 0 auto</code> centers a block element — requires a set <code>width</code></li>
+          <li><code>inherit</code> forces the element to use the same margin value as its parent</li>
+          <li>Negative margins are allowed and pull content closer to adjacent elements</li>
+        </ul>
+        <h3>Margin Collapse</h3>
+        <p>When two vertical margins meet (e.g. bottom margin of one paragraph and top margin of the next), they <strong>collapse</strong> into a single margin equal to the larger of the two values:</p>
+        <pre><code>/* Both paragraphs have margin: 20px */
+/* The gap between them is 20px (not 40px) */
+p { margin: 20px; }</code></pre>
+        <ul>
+          <li>Margin collapse only happens vertically (top and bottom margins), never horizontally</li>
+          <li>Only block-level elements collapse; floated, positioned, and flex/grid items do not</li>
         </ul>
       </article>
 
@@ -609,16 +705,57 @@ outline: none;         /* removes focus outline (use carefully!) */</code></pre>
             </iframe>
           </div>
         </div>
-        <pre><code>color: #333;
-text-align: center;          /* left | right | justify */
-text-decoration: underline;  /* none | line-through | overline */
-text-transform: uppercase;   /* lowercase | capitalize */
-letter-spacing: 2px;
-word-spacing: 4px;
-line-height: 1.6;
-text-indent: 30px;
-white-space: nowrap;
-text-shadow: 2px 2px 4px grey;</code></pre>
+        <pre><code>/* Text color */
+color: #333;
+color: rgb(50, 50, 50);
+color: navy;
+
+/* Text alignment */
+text-align: left;       /* default for LTR languages */
+text-align: right;
+text-align: center;
+text-align: justify;    /* stretches lines to equal width (like a newspaper) */
+
+/* Text decoration */
+text-decoration: none;          /* removes underline from links */
+text-decoration: underline;
+text-decoration: overline;      /* line above text */
+text-decoration: line-through;  /* strikethrough */
+
+/* Text transformation */
+text-transform: uppercase;      /* ALL CAPS */
+text-transform: lowercase;      /* all lowercase */
+text-transform: capitalize;     /* First Letter Of Each Word */
+
+/* Text indentation */
+text-indent: 30px;    /* indent first line of paragraph */
+
+/* Letter and word spacing */
+letter-spacing: 2px;  /* space between individual characters */
+word-spacing: 4px;    /* space between words */
+
+/* Line height */
+line-height: 1.6;     /* unitless multiplier (recommended) */
+line-height: 24px;    /* fixed height */
+
+/* Text direction */
+direction: ltr;       /* left to right (default) */
+direction: rtl;       /* right to left (Arabic, Hebrew) */
+
+/* Text shadow: h-offset v-offset blur-radius color */
+text-shadow: 2px 2px 4px grey;
+text-shadow: 0 0 8px gold;   /* glow effect */
+
+white-space: nowrap;  /* prevents text wrapping onto next line */</code></pre>
+        <ul>
+          <li><code>color</code> — sets text colour; accepts named colours, HEX, RGB, or HSL</li>
+          <li><code>text-align: justify</code> — spreads words to fill the full line width, like printed books</li>
+          <li><code>text-decoration: none</code> — commonly used to remove the underline from links</li>
+          <li><code>text-transform</code> — changes case visually without touching the HTML content</li>
+          <li><code>letter-spacing</code> — adds space between each character (useful for headings)</li>
+          <li><code>line-height</code> — controls vertical spacing between lines; use 1.4–1.8 for readability</li>
+          <li><code>text-shadow</code> — takes h-offset, v-offset, blur-radius, and colour</li>
+        </ul>
       </article>
 
       <article id="css-fonts">
@@ -635,21 +772,53 @@ text-shadow: 2px 2px 4px grey;</code></pre>
             </iframe>
           </div>
         </div>
-        <pre><code>font-family: 'Segoe UI', Arial, sans-serif;
-font-size: 16px;        /* px | em | rem | % */
-font-weight: bold;      /* normal | 100-900 */
-font-style: italic;     /* normal | oblique */
-font-variant: small-caps;
+
+        <h3>Serif vs Sans-Serif</h3>
+        <p>The two most important font categories in web design are <strong>serif</strong> and <strong>sans-serif</strong>:</p>
+        <ul>
+          <li><strong>Serif fonts</strong> have small decorative strokes (serifs) at the ends of letters — e.g. Times New Roman, Georgia. Traditionally used for printed body text.</li>
+          <li><strong>Sans-serif fonts</strong> have clean, modern strokes with no decorative tails — e.g. Arial, Helvetica, Verdana. Preferred for screen readability.</li>
+          <li>Always include a generic family (<code>serif</code> or <code>sans-serif</code>) as the last fallback so the browser can choose if none of your named fonts are available.</li>
+        </ul>
+
+        <h3>Font Properties</h3>
+        <pre><code>/* font-family: preferred font, fallback, generic family */
+font-family: 'Segoe UI', Arial, sans-serif;
+font-family: Georgia, 'Times New Roman', serif;
+font-family: 'Courier New', Courier, monospace;
+
+/* font-style */
+font-style: normal;    /* default */
+font-style: italic;    /* slanted version of the font */
+font-style: oblique;   /* artificially slanted if italic unavailable */
+
+/* font-size */
+font-size: 16px;       /* fixed pixels */
+font-size: 1em;        /* relative to parent element */
+font-size: 1rem;       /* relative to root (html) element */
+font-size: 120%;       /* percentage of parent size */
+
+/* font-weight */
+font-weight: normal;   /* same as 400 */
+font-weight: bold;     /* same as 700 */
+font-weight: 100;      /* thin */
+font-weight: 900;      /* black / extra bold */
+
+/* font-variant */
+font-variant: normal;
+font-variant: small-caps;  /* lowercase letters shown as smaller capitals */
 
 /* Shorthand: style variant weight size/line-height family */
-font: italic bold 16px/1.5 Arial, sans-serif;
+font: italic small-caps bold 16px/1.5 Arial, sans-serif;
 
 /* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Roboto');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 font-family: 'Roboto', sans-serif;</code></pre>
         <ul>
           <li>Always end font stack with a generic family: <code>serif</code>, <code>sans-serif</code>, <code>monospace</code></li>
           <li>Use <code>rem</code> for font sizes — scales with user browser settings</li>
+          <li><code>1em</code> = current element's font size; <code>1rem</code> = root font size (usually 16px)</li>
+          <li><code>font-variant: small-caps</code> is useful for headings and stylistic text</li>
         </ul>
       </article>
 
@@ -1499,24 +1668,86 @@ input:valid   { border-color: green; }</code></pre>
             </iframe>
           </div>
         </div>
-        <pre><code>/* Horizontal nav */
+        <p>A navigation bar is essentially an HTML list of links styled with CSS. The key is to remove the default list styling and then control how the links appear.</p>
+
+        <h3>Vertical Navigation Bar</h3>
+        <p>A vertical nav bar stacks links top to bottom — used for sidebars and menus on the left or right of the page.</p>
+        <pre><code>&lt;nav&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="index.html" class="active"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="services.html"&gt;Services&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="contact.html"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+        <pre><code>/* Vertical nav bar */
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 180px;
+  background-color: #1a1a2e;
+}
+nav ul li a {
+  display: block;
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  border-bottom: 1px solid #333;
+}
+nav ul li a:hover {
+  background-color: #0f3460;
+  color: white;
+}
+/* Active / current page link */
+nav ul li a.active {
+  background-color: #e94560;
+  color: white;
+}</code></pre>
+        <ul>
+          <li><code>display: block</code> on the <code>&lt;a&gt;</code> makes the entire row clickable, not just the text</li>
+          <li>Adding <code>class="active"</code> to the current page link and styling it differently shows users where they are</li>
+        </ul>
+
+        <h3>Horizontal Navigation Bar</h3>
+        <p>A horizontal nav bar places links side by side — used for the top menu of most websites.</p>
+        <pre><code>/* Horizontal nav bar using Flexbox */
 nav ul {
   display: flex;
   list-style: none;
-  margin: 0; padding: 0;
+  margin: 0;
+  padding: 0;
   background: #1a1a2e;
-  gap: 0;
 }
-nav a {
+nav ul li a {
   display: block;
   padding: 14px 20px;
   color: white;
   text-decoration: none;
 }
-nav a:hover { background: #0f3460; }
+nav ul li a:hover {
+  background: #0f3460;
+}
+nav ul li a.active {
+  background-color: #e94560;
+}
 
-/* Sticky */
+/* Sticky horizontal nav */
 nav { position: sticky; top: 0; z-index: 100; }</code></pre>
+        <ul>
+          <li>Using <code>display: flex</code> on the <code>&lt;ul&gt;</code> places all list items in a row</li>
+          <li>The <code>.active</code> class highlights the link for the current page</li>
+          <li><code>position: sticky; top: 0;</code> keeps the nav bar fixed at the top while scrolling</li>
+          <li>For a right-aligned last item: <code>li:last-child { margin-left: auto; }</code></li>
+        </ul>
+
+        <h3>Adding Borders Between Links</h3>
+        <pre><code>nav ul li {
+  border-right: 1px solid #333;
+}
+nav ul li:last-child {
+  border-right: none;
+}</code></pre>
       </article>
 
     </div>

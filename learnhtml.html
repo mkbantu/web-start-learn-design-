@@ -47,6 +47,15 @@
           <a href="#html-paragraphs" class="overview_header">HTML Paragraphs</a>
             <a href="#html-paragraphs" class="sub">Paragraphs</a>
             <a href="#" class="sub">Code Challenge</a>
+          <a href="#html-horizontal-lines" class="overview_header">HTML Horizontal Lines</a>
+            <a href="#html-horizontal-lines" class="sub">Horizontal Lines</a>
+            <a href="#" class="sub">Code Challenge</a>
+          <a href="#html-centering" class="overview_header">HTML Centering</a>
+            <a href="#html-centering" class="sub">Centering</a>
+            <a href="#" class="sub">Code Challenge</a>
+          <a href="#html-nbsp" class="overview_header">HTML Nonbreaking Spaces</a>
+            <a href="#html-nbsp" class="sub">Nonbreaking Spaces</a>
+            <a href="#" class="sub">Code Challenge</a>
           <a href="#html-styles" class="overview_header">HTML Styles</a>
             <a href="#html-styles" class="sub">Styles</a>
             <a href="#" class="sub">Code Challenge</a>
@@ -142,6 +151,12 @@
             <a href="#" class="sub">Code Challenge</a>
           <a href="#html-iframes" class="overview_header">HTML Iframes</a>
             <a href="#html-iframes" class="sub">Iframes</a>
+            <a href="#" class="sub">Code Challenge</a>
+          <a href="#html-frames" class="overview_header">HTML Frames</a>
+            <a href="#html-frames" class="sub">Frames (Legacy)</a>
+            <a href="#" class="sub">Code Challenge</a>
+          <a href="#html-page-backgrounds" class="overview_header">HTML Backgrounds</a>
+            <a href="#html-page-backgrounds" class="sub">Backgrounds</a>
             <a href="#" class="sub">Code Challenge</a>
       </details>
 
@@ -463,6 +478,90 @@
           <li><code>&lt;br&gt;</code> — line break without a new paragraph</li>
           <li><code>&lt;hr&gt;</code> — thematic break / horizontal line</li>
           <li><code>&lt;pre&gt;</code> — preserves spaces and line breaks exactly</li>
+        </ul>
+      </article>
+
+      <article id="html-horizontal-lines">
+        <h2>HTML Horizontal Lines</h2>
+        <div class="media-row">
+          <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="codepen-wrapper">
+            <iframe
+              src="https://codepen.io/trial/embed/PNaGbb?default-tab=html,result&editable=true"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        <p>The <code>&lt;hr&gt;</code> tag creates a horizontal line that extends from the current position to the right margin of the page. It is used to visually separate sections of content.</p>
+        <pre><code>&lt;p&gt;Section one content.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Section two content.&lt;/p&gt;</code></pre>
+        <ul>
+          <li><code>&lt;hr&gt;</code> is a void (empty) element — it has no closing tag</li>
+          <li>In XHTML-style HTML it is written as <code>&lt;hr /&gt;</code></li>
+          <li>The line is a <strong>thematic break</strong> — it signals a change in topic or section</li>
+          <li>Styled with CSS: <code>hr { border: 2px solid red; }</code></li>
+        </ul>
+      </article>
+
+      <article id="html-centering">
+        <h2>HTML Centering Content</h2>
+        <div class="media-row">
+          <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="codepen-wrapper">
+            <iframe
+              src="https://codepen.io/trial/embed/PNaGbb?default-tab=html,result&editable=true"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        <p>The <code>&lt;center&gt;</code> tag places its content in the center of the page or the center of the table cell it is in. It was part of early HTML and is covered in the course notes for historical context.</p>
+        <pre><code>&lt;center&gt;
+  &lt;h2&gt;This heading is centered&lt;/h2&gt;
+  &lt;p&gt;This paragraph is also centered.&lt;/p&gt;
+&lt;/center&gt;</code></pre>
+        <ul>
+          <li>The <code>&lt;center&gt;</code> tag is <strong>deprecated</strong> — it was removed from HTML5</li>
+          <li>Use CSS instead: <code>text-align: center;</code> or <code>margin: 0 auto;</code></li>
+          <li>Understanding it helps when reading older HTML code</li>
+        </ul>
+        <pre><code>&lt;!-- Modern CSS equivalent --&gt;
+&lt;p style="text-align: center;"&gt;Centered paragraph&lt;/p&gt;
+
+&lt;div style="margin: 0 auto; width: 300px;"&gt;
+  Centered block element
+&lt;/div&gt;</code></pre>
+      </article>
+
+      <article id="html-nbsp">
+        <h2>HTML Nonbreaking Spaces</h2>
+        <div class="media-row">
+          <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="codepen-wrapper">
+            <iframe
+              src="https://codepen.io/trial/embed/PNaGbb?default-tab=html,result&editable=true"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        <p>The <strong>nonbreaking space</strong> entity <code>&amp;nbsp;</code> creates a white space between words. Unlike a regular space, the browser will not break a line at a nonbreaking space — keeping the words together on the same line.</p>
+        <pre><code>&lt;p&gt;10&amp;nbsp;km&lt;/p&gt;
+&lt;p&gt;Mr.&amp;nbsp;Smith&lt;/p&gt;
+&lt;p&gt;Section&amp;nbsp;2.3&lt;/p&gt;</code></pre>
+        <ul>
+          <li><code>&amp;nbsp;</code> is an HTML character entity for a nonbreaking space</li>
+          <li>It prevents the browser from breaking the line between those two words</li>
+          <li>Multiple <code>&amp;nbsp;</code> entities can be used to add extra horizontal spacing</li>
+          <li>Use it for units (<code>10&amp;nbsp;km</code>), titles (<code>Mr.&amp;nbsp;Smith</code>), and number-word pairs</li>
         </ul>
       </article>
 
@@ -1373,6 +1472,93 @@ document.getElementById("main-title").style.color = "red";</code></pre>
         </ul>
       </article>
 
+      <article id="html-frames">
+        <h2>HTML Frames (Legacy)</h2>
+        <div class="media-row">
+          <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="codepen-wrapper">
+            <iframe
+              src="https://codepen.io/trial/embed/PNaGbb?default-tab=html,result&editable=true"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        <p>In older HTML (before HTML5), the <code>&lt;frameset&gt;</code> element was used to divide the browser window into multiple panes, each loading a different HTML page. This is different from <code>&lt;iframe&gt;</code>, which embeds a page <em>inside</em> a page.</p>
+        <pre><code>&lt;!-- frameset.html (the outer container page) --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;&lt;title&gt;Frames Example&lt;/title&gt;&lt;/head&gt;
+&lt;frameset rows="25%,75%"&gt;
+  &lt;frame src="top.html" name="topFrame"&gt;
+  &lt;frame src="main.html" name="mainFrame"&gt;
+  &lt;noframes&gt;
+    &lt;p&gt;Your browser does not support frames.&lt;/p&gt;
+  &lt;/noframes&gt;
+&lt;/frameset&gt;
+&lt;/html&gt;</code></pre>
+        <pre><code>&lt;!-- columns instead of rows --&gt;
+&lt;frameset cols="20%,80%"&gt;
+  &lt;frame src="nav.html" name="navFrame"&gt;
+  &lt;frame src="content.html" name="contentFrame"&gt;
+&lt;/frameset&gt;</code></pre>
+        <ul>
+          <li><code>&lt;frameset&gt;</code> replaces <code>&lt;body&gt;</code> — you cannot use both on the same page</li>
+          <li><code>rows</code> or <code>cols</code> attribute splits the window; values are pixel sizes or percentages</li>
+          <li><code>&lt;frame src="..." name="..."&gt;</code> defines each pane and its source page</li>
+          <li><code>&lt;noframes&gt;</code> provides fallback content for browsers that do not support frames</li>
+          <li>The <code>name</code> attribute on a frame allows links in one frame to open their target in another frame using <code>target="frameName"</code></li>
+          <li><strong>Frameset is deprecated and removed from HTML5.</strong> Do not use it in new projects. For embedding pages use <code>&lt;iframe&gt;</code> instead. For multi-pane layouts use CSS Flexbox or Grid.</li>
+        </ul>
+      </article>
+
+      <article id="html-page-backgrounds">
+        <h2>HTML Backgrounds</h2>
+        <div class="media-row">
+          <div class="video-wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <div class="codepen-wrapper">
+            <iframe
+              src="https://codepen.io/trial/embed/PNaGbb?default-tab=html,result&editable=true"
+              loading="lazy"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+        <p>HTML originally provided two attributes on the <code>&lt;body&gt;</code> tag (and on table elements) for setting backgrounds: <code>bgcolor</code> for a solid background colour and <code>background</code> for a background image.</p>
+        <pre><code>&lt;!-- Background colour on the body (deprecated HTML attribute) --&gt;
+&lt;body bgcolor="lightblue"&gt;
+
+&lt;!-- Background image on the body (deprecated HTML attribute) --&gt;
+&lt;body background="bg.jpg"&gt;
+
+&lt;!-- bgcolor on a table cell (deprecated) --&gt;
+&lt;table bgcolor="yellow"&gt;
+  &lt;tr&gt;
+    &lt;td bgcolor="pink"&gt;Cell with pink background&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+        <ul>
+          <li>The <code>bgcolor</code> attribute accepts a colour name (e.g. <code>red</code>), a HEX value (e.g. <code>#ff0000</code>), or an RGB value</li>
+          <li>The <code>background</code> attribute accepts a path to an image file; the image tiles to fill the element</li>
+          <li>Both <code>bgcolor</code> and <code>background</code> as HTML attributes are <strong>deprecated</strong> — they were valid in HTML 4 but are not used in HTML5</li>
+          <li>Use CSS instead: <code>background-color</code> and <code>background-image</code> on the relevant selector</li>
+        </ul>
+        <pre><code>&lt;!-- Modern CSS equivalent --&gt;
+&lt;style&gt;
+  body {
+    background-color: lightblue;
+  }
+  body {
+    background-image: url('bg.jpg');
+    background-repeat: repeat;   /* tile the image */
+  }
+&lt;/style&gt;</code></pre>
+      </article>
+
       <article id="html-javascript">
         <h2>HTML JavaScript</h2>
         <div class="media-row">
@@ -1805,6 +1991,7 @@ y = 10;&lt;/code&gt;&lt;/pre&gt;                  &lt;!-- code block --&gt;
             </iframe>
           </div>
         </div>
+        <p>Forms contain several element types beyond just <code>&lt;input&gt;</code>. Each has its own purpose:</p>
         <pre><code>&lt;input&gt;      various input types
 &lt;label&gt;      label for an input
 &lt;select&gt;     dropdown list
@@ -1814,13 +2001,98 @@ y = 10;&lt;/code&gt;&lt;/pre&gt;                  &lt;!-- code block --&gt;
 &lt;legend&gt;     caption for fieldset
 &lt;datalist&gt;   predefined suggestions for input
 &lt;output&gt;     result of a calculation</code></pre>
-        <pre><code>&lt;textarea rows="4" cols="30"&gt;Default text&lt;/textarea&gt;
 
+        <h3>TEXTAREA</h3>
+        <p>The <code>&lt;textarea&gt;</code> element creates a multi-line text input box. Use <code>rows</code> and <code>cols</code> to set its visible size.</p>
+        <pre><code>&lt;textarea name="comments" rows="4" cols="40"&gt;
+  Default text shown in the box.
+&lt;/textarea&gt;</code></pre>
+        <ul>
+          <li><code>rows</code> — number of visible text lines</li>
+          <li><code>cols</code> — visible width in average character widths</li>
+          <li>Content between opening and closing tags is the default value</li>
+          <li>Users can type freely including line breaks</li>
+        </ul>
+
+        <h3>SELECT — Drop-Down List</h3>
+        <p>The <code>&lt;select&gt;</code> element creates a drop-down menu. Each item is an <code>&lt;option&gt;</code>. Related options can be grouped with <code>&lt;optgroup&gt;</code>.</p>
+        <pre><code>&lt;select name="country" size="1"&gt;
+  &lt;option value="rw"&gt;Rwanda&lt;/option&gt;
+  &lt;option value="ke"&gt;Kenya&lt;/option&gt;
+  &lt;option value="ug" selected&gt;Uganda&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;!-- Grouped options --&gt;
 &lt;select name="car"&gt;
-  &lt;optgroup label="Swedish"&gt;
+  &lt;optgroup label="Swedish Cars"&gt;
     &lt;option value="volvo"&gt;Volvo&lt;/option&gt;
+    &lt;option value="saab"&gt;Saab&lt;/option&gt;
   &lt;/optgroup&gt;
+  &lt;optgroup label="German Cars"&gt;
+    &lt;option value="mercedes"&gt;Mercedes&lt;/option&gt;
+    &lt;option value="audi"&gt;Audi&lt;/option&gt;
+  &lt;/optgroup&gt;
+&lt;/select&gt;
+
+&lt;!-- Multiple selection --&gt;
+&lt;select name="skills" multiple size="4"&gt;
+  &lt;option value="html"&gt;HTML&lt;/option&gt;
+  &lt;option value="css"&gt;CSS&lt;/option&gt;
+  &lt;option value="js"&gt;JavaScript&lt;/option&gt;
+  &lt;option value="php"&gt;PHP&lt;/option&gt;
 &lt;/select&gt;</code></pre>
+        <ul>
+          <li><code>size</code> — number of visible rows; default is 1 (drop-down)</li>
+          <li><code>multiple</code> — allows the user to select more than one option (hold Ctrl/Cmd)</li>
+          <li><code>selected</code> on an <code>&lt;option&gt;</code> marks it as the default choice</li>
+          <li><code>&lt;optgroup label="..."&gt;</code> groups related options under a heading</li>
+        </ul>
+
+        <h3>LABEL</h3>
+        <p>The <code>&lt;label&gt;</code> element provides a text description for a form control. When a user clicks a label, the linked input receives focus.</p>
+        <pre><code>&lt;!-- Method 1: for attribute matches input id --&gt;
+&lt;label for="username"&gt;Username:&lt;/label&gt;
+&lt;input type="text" id="username" name="username"&gt;
+
+&lt;!-- Method 2: wrap the input inside the label --&gt;
+&lt;label&gt;
+  Password:
+  &lt;input type="password" name="password"&gt;
+&lt;/label&gt;</code></pre>
+        <ul>
+          <li>The <code>for</code> attribute must match the <code>id</code> of the linked input</li>
+          <li>Labels improve accessibility — screen readers announce the label when the input is focused</li>
+          <li>Clicking a label for a checkbox or radio button toggles it</li>
+        </ul>
+
+        <h3>FIELDSET and LEGEND</h3>
+        <p>The <code>&lt;fieldset&gt;</code> element groups related form controls together with a visible box border. The <code>&lt;legend&gt;</code> element provides a caption for the fieldset.</p>
+        <pre><code>&lt;form action="/register" method="post"&gt;
+
+  &lt;fieldset&gt;
+    &lt;legend&gt;Personal Information&lt;/legend&gt;
+    &lt;label for="fname"&gt;First name:&lt;/label&gt;
+    &lt;input type="text" id="fname" name="fname"&gt;&lt;br&gt;
+    &lt;label for="lname"&gt;Last name:&lt;/label&gt;
+    &lt;input type="text" id="lname" name="lname"&gt;
+  &lt;/fieldset&gt;
+
+  &lt;fieldset&gt;
+    &lt;legend&gt;Account Details&lt;/legend&gt;
+    &lt;label for="email"&gt;Email:&lt;/label&gt;
+    &lt;input type="email" id="email" name="email"&gt;&lt;br&gt;
+    &lt;label for="pass"&gt;Password:&lt;/label&gt;
+    &lt;input type="password" id="pass" name="pass"&gt;
+  &lt;/fieldset&gt;
+
+  &lt;button type="submit"&gt;Register&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+        <ul>
+          <li><code>&lt;fieldset&gt;</code> draws a border around the grouped controls</li>
+          <li><code>&lt;legend&gt;</code> appears at the top of the fieldset border as a caption</li>
+          <li>Fieldsets help users understand which fields belong together</li>
+          <li>Especially useful on long forms — breaks them into logical sections</li>
+        </ul>
       </article>
 
       <article id="html-input-types">

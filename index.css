@@ -5,7 +5,7 @@ section.section-wrap.bg-light { background: #f0f4f8; }
 /* ── Section Divider ── */
 hr.section-divider {
   height: 4px;
-  background: linear-gradient(to right, #00628b, #e94560);
+  background: #00628b;
   border: none;
   margin: 0;
   display: block;
