@@ -370,7 +370,7 @@ section div.guide-section div.path-steps div.path-step a:hover {
 
 /* ── CTA Section ── */
 section.cta-section {
-  background: linear-gradient(135deg, #1a1a2e, #00628b);
+  background: linear-gradient(135deg, #1a1a2e, #d6dde0);
   padding: 64px 24px;
   text-align: center;
   width: 100%;
