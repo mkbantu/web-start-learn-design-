@@ -9,13 +9,46 @@
 <body>
 
   <nav>
-    <a href="index.html" class="nav-logo"><img src="../images/logo.png" alt="WebStart" /></a>
+    <a href="../index.html" class="nav-logo"><img src="../images/logo.png" alt="WebStart" /></a>
     <input type="checkbox" id="nav-toggle" class="nav-checkbox" />
     <label for="nav-toggle" class="nav-toggle">&#9776;</label>
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="index.html#path">Learning Path</a></li>
-      <li><a href="#resources">Resources</a></li>
+      <li>
+        <details class="nav-home">
+          <summary>Home</summary>
+          <div class="nav-home-menu">
+            <a href="../index.html#welcome">Welcome</a>
+            <a href="../index.html#internet">The Internet</a>
+            <a href="../index.html#web">The Web</a>
+            <a href="../index.html#path">Learning Path</a>
+            <a href="../index.html#resources">Resources</a>
+          </div>
+        </details>
+      </li>
+      <li>
+        <details class="nav-path">
+          <summary>Learning Path</summary>
+          <div class="nav-path-menu">
+            <a href="learnhtml.html">HTML</a>
+            <a href="learncss.html">CSS</a>
+            <a href="learnjs.html">JavaScript</a>
+          </div>
+        </details>
+      </li>
+      <li>
+        <details class="nav-resources">
+          <summary>Resources</summary>
+          <div class="nav-resources-menu">
+            <a href="../index.html#resources">All Resources</a>
+            <a href="../index.html#w3schools">W3Schools</a>
+            <a href="../index.html#mdn">MDN Web Docs</a>
+            <a href="../index.html#freecodecamp">freeCodeCamp</a>
+            <a href="../index.html#youtube">YouTube</a>
+            <a href="../index.html#codepen">CodePen</a>
+            <a href="../index.html#stackoverflow">Stack Overflow</a>
+          </div>
+        </details>
+      </li>
       <li><a href="form.html">Subscribe</a></li>
     </ul>
   </nav>
@@ -291,7 +324,7 @@
         <h2>HTML Introduction</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -321,7 +354,7 @@
         <h2>HTML Editors</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/h74pEV8hEFo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/h74pEV8hEFo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -344,7 +377,7 @@
         <h2>HTML Basic</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/9qj9WOPDj84" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/9qj9WOPDj84" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -378,7 +411,7 @@
         <h2>HTML Elements</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -406,7 +439,7 @@
         <h2>HTML Attributes</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/8KXmNKgIJzE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/8KXmNKgIJzE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -432,7 +465,7 @@
         <h2>HTML Headings</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/9cOOg1v0Elw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/9cOOg1v0Elw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -460,7 +493,7 @@
         <h2>HTML Paragraphs</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/DvBhidRatWw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/DvBhidRatWw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -489,7 +522,7 @@
         <h2>HTML Horizontal Lines</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -515,7 +548,7 @@
         <h2>HTML Centering Content</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -547,7 +580,7 @@
         <h2>HTML Nonbreaking Spaces</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -573,7 +606,7 @@
         <h2>HTML Styles</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -599,7 +632,7 @@
         <h2>HTML Formatting</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/ND-ma8lW9UY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/ND-ma8lW9UY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -627,7 +660,7 @@
         <h2>HTML Quotations</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -661,7 +694,7 @@
         <h2>HTML Comments</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/916GWv2Qs08" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/916GWv2Qs08" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -691,7 +724,7 @@
         <h2>HTML Colors</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/y-UxeZUrs3k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/y-UxeZUrs3k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -717,7 +750,7 @@
         <h2>Colors — RGB &amp; RGBA</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/y-UxeZUrs3k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/y-UxeZUrs3k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -739,7 +772,7 @@ color: rgba(255, 0, 0, 0.5); /* 50% transparent red */</code></pre>
         <h2>Colors — HEX</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/y-UxeZUrs3k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/y-UxeZUrs3k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -765,7 +798,7 @@ color: rgba(255, 0, 0, 0.5); /* 50% transparent red */</code></pre>
         <h2>Colors — HSL &amp; HSLA</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/y-UxeZUrs3k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/y-UxeZUrs3k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -791,7 +824,7 @@ color: hsla(0, 100%, 50%, 0.3);/* 30% transparent */</code></pre>
         <h2>HTML CSS</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/G3e-cpL7ofc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/G3e-cpL7ofc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -823,7 +856,7 @@ color: hsla(0, 100%, 50%, 0.3);/* 30% transparent */</code></pre>
         <h2>HTML Links</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/8KXmNKgIJzE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/8KXmNKgIJzE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -850,7 +883,7 @@ color: hsla(0, 100%, 50%, 0.3);/* 30% transparent */</code></pre>
         <h2>Link Colors</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/fQqdu9_IB5A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/fQqdu9_IB5A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -875,7 +908,7 @@ a:active  { color: orange; }  /* being clicked */</code></pre>
         <h2>Link Bookmarks</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/8KXmNKgIJzE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/8KXmNKgIJzE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -900,7 +933,7 @@ a:active  { color: orange; }  /* being clicked */</code></pre>
         <h2>HTML Images</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/HIxEsZXk7o8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/HIxEsZXk7o8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -924,7 +957,7 @@ a:active  { color: orange; }  /* being clicked */</code></pre>
         <h2>Image Map</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -950,7 +983,7 @@ a:active  { color: orange; }  /* being clicked */</code></pre>
         <h2>Background Images</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -978,7 +1011,7 @@ body {
         <h2>The Picture Element</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -1005,7 +1038,7 @@ body {
         <h2>HTML Favicon</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -1030,7 +1063,7 @@ body {
         <h2>HTML Page Title</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -1055,7 +1088,7 @@ body {
         <h2>HTML Tables</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/ZUmloybepoA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/ZUmloybepoA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -1084,7 +1117,7 @@ body {
         <h2>Table Borders</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/ZUmloybepoA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/ZUmloybepoA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -1109,7 +1142,7 @@ th, td { border-radius: 4px; }</code></pre>
         <h2>Table Sizes</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/ZUmloybepoA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/ZUmloybepoA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -1129,7 +1162,7 @@ th:last-child  { width: 40%; }</code></pre>
         <h2>Table Headers</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/ZUmloybepoA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/ZUmloybepoA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -1158,7 +1191,7 @@ th:last-child  { width: 40%; }</code></pre>
         <h2>Padding &amp; Spacing</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/ZUmloybepoA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/ZUmloybepoA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -1179,7 +1212,7 @@ table  { border-spacing: 10px; }    /* space between cells */</code></pre>
         <h2>Colspan &amp; Rowspan</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/ZUmloybepoA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/ZUmloybepoA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -1197,7 +1230,7 @@ table  { border-spacing: 10px; }    /* space between cells */</code></pre>
         <h2>Table Styling</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/ZUmloybepoA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/ZUmloybepoA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -1216,7 +1249,7 @@ th, td             { border-bottom: 1px solid #ddd; }/* horizontal lines only */
         <h2>Table Colgroup</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/ZUmloybepoA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/ZUmloybepoA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -1243,7 +1276,7 @@ th, td             { border-bottom: 1px solid #ddd; }/* horizontal lines only */
         <h2>HTML Lists</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/2CCO4fqR9qI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/2CCO4fqR9qI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -1262,7 +1295,7 @@ th, td             { border-bottom: 1px solid #ddd; }/* horizontal lines only */
         <h2>Unordered Lists</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/2CCO4fqR9qI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/2CCO4fqR9qI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -1283,7 +1316,7 @@ ul { list-style-type: none; }    /* no bullet */</code></pre>
         <h2>Ordered Lists</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/8ZTA8GMwp94" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/8ZTA8GMwp94" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -1305,7 +1338,7 @@ ul { list-style-type: none; }    /* no bullet */</code></pre>
         <h2>Description Lists</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/5ol3nDsEHXY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/5ol3nDsEHXY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -1328,7 +1361,7 @@ ul { list-style-type: none; }    /* no bullet */</code></pre>
         <h2>Block &amp; Inline Elements</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -1352,7 +1385,7 @@ ul { list-style-type: none; }    /* no bullet */</code></pre>
         <h2>HTML Div</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -1377,7 +1410,7 @@ ul { list-style-type: none; }    /* no bullet */</code></pre>
         <h2>HTML Classes</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -1404,7 +1437,7 @@ ul { list-style-type: none; }    /* no bullet */</code></pre>
         <h2>HTML Id</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -1430,7 +1463,7 @@ document.getElementById("main-title").style.color = "red";</code></pre>
         <h2>HTML Buttons</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/vEPMD9SaO_4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/vEPMD9SaO_4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -1456,7 +1489,7 @@ document.getElementById("main-title").style.color = "red";</code></pre>
         <h2>HTML Iframes</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -1480,7 +1513,7 @@ document.getElementById("main-title").style.color = "red";</code></pre>
         <h2>HTML Frames (Legacy)</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -1522,7 +1555,7 @@ document.getElementById("main-title").style.color = "red";</code></pre>
         <h2>HTML Backgrounds</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -1567,7 +1600,7 @@ document.getElementById("main-title").style.color = "red";</code></pre>
         <h2>HTML JavaScript</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -1596,7 +1629,7 @@ document.getElementById("main-title").style.color = "red";</code></pre>
         <h2>HTML File Paths</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -1621,7 +1654,7 @@ document.getElementById("main-title").style.color = "red";</code></pre>
         <h2>HTML Head</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -1651,7 +1684,7 @@ document.getElementById("main-title").style.color = "red";</code></pre>
         <h2>HTML Layout</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/Bu21yHpRH6k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/Bu21yHpRH6k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -1680,7 +1713,7 @@ document.getElementById("main-title").style.color = "red";</code></pre>
         <h2>HTML Responsive</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/-2CnrBUfAUQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/-2CnrBUfAUQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -1712,7 +1745,7 @@ img { max-width: 100%; height: auto; }
         <h2>HTML Computercode</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -1734,7 +1767,7 @@ y = 10;&lt;/code&gt;&lt;/pre&gt;                  &lt;!-- code block --&gt;
         <h2>HTML Semantics</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -1766,7 +1799,7 @@ y = 10;&lt;/code&gt;&lt;/pre&gt;                  &lt;!-- code block --&gt;
         <h2>HTML Style Guide</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -1793,7 +1826,7 @@ y = 10;&lt;/code&gt;&lt;/pre&gt;                  &lt;!-- code block --&gt;
         <h2>HTML Entities</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -1819,7 +1852,7 @@ y = 10;&lt;/code&gt;&lt;/pre&gt;                  &lt;!-- code block --&gt;
         <h2>HTML Symbols</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -1838,7 +1871,7 @@ y = 10;&lt;/code&gt;&lt;/pre&gt;                  &lt;!-- code block --&gt;
         <h2>HTML Emojis</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -1859,7 +1892,7 @@ y = 10;&lt;/code&gt;&lt;/pre&gt;                  &lt;!-- code block --&gt;
         <h2>HTML Charsets</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -1882,7 +1915,7 @@ y = 10;&lt;/code&gt;&lt;/pre&gt;                  &lt;!-- code block --&gt;
         <h2>HTML URL Encode</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -1906,7 +1939,7 @@ y = 10;&lt;/code&gt;&lt;/pre&gt;                  &lt;!-- code block --&gt;
         <h2>HTML vs. XHTML</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -1931,7 +1964,7 @@ y = 10;&lt;/code&gt;&lt;/pre&gt;                  &lt;!-- code block --&gt;
         <h2>HTML Forms</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/vEPMD9SaO_4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/vEPMD9SaO_4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -1957,7 +1990,7 @@ y = 10;&lt;/code&gt;&lt;/pre&gt;                  &lt;!-- code block --&gt;
         <h2>HTML Form Attributes</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/vEPMD9SaO_4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/vEPMD9SaO_4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -1985,7 +2018,7 @@ y = 10;&lt;/code&gt;&lt;/pre&gt;                  &lt;!-- code block --&gt;
         <h2>HTML Form Elements</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/vEPMD9SaO_4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/vEPMD9SaO_4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -2103,7 +2136,7 @@ y = 10;&lt;/code&gt;&lt;/pre&gt;                  &lt;!-- code block --&gt;
         <h2>HTML Input Types</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/vEPMD9SaO_4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/vEPMD9SaO_4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -2135,7 +2168,7 @@ y = 10;&lt;/code&gt;&lt;/pre&gt;                  &lt;!-- code block --&gt;
         <h2>HTML Input Attributes</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/vEPMD9SaO_4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/vEPMD9SaO_4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -2165,7 +2198,7 @@ y = 10;&lt;/code&gt;&lt;/pre&gt;                  &lt;!-- code block --&gt;
         <h2>Input Form Attributes</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/vEPMD9SaO_4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/vEPMD9SaO_4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -2191,7 +2224,7 @@ y = 10;&lt;/code&gt;&lt;/pre&gt;                  &lt;!-- code block --&gt;
         <h2>HTML Canvas</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/9qj9WOPDj84" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/9qj9WOPDj84" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -2217,7 +2250,7 @@ y = 10;&lt;/code&gt;&lt;/pre&gt;                  &lt;!-- code block --&gt;
         <h2>HTML SVG</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/qA_-O35O_X4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/qA_-O35O_X4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -2245,7 +2278,7 @@ y = 10;&lt;/code&gt;&lt;/pre&gt;                  &lt;!-- code block --&gt;
         <h2>HTML Media</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -2267,7 +2300,7 @@ y = 10;&lt;/code&gt;&lt;/pre&gt;                  &lt;!-- code block --&gt;
         <h2>HTML Video</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/nGigbThVLqA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/nGigbThVLqA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -2293,7 +2326,7 @@ y = 10;&lt;/code&gt;&lt;/pre&gt;                  &lt;!-- code block --&gt;
         <h2>HTML Audio</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/nGigbThVLqA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/nGigbThVLqA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -2314,7 +2347,7 @@ y = 10;&lt;/code&gt;&lt;/pre&gt;                  &lt;!-- code block --&gt;
         <h2>HTML Plug-ins</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -2338,7 +2371,7 @@ y = 10;&lt;/code&gt;&lt;/pre&gt;                  &lt;!-- code block --&gt;
         <h2>HTML YouTube</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -2361,7 +2394,7 @@ y = 10;&lt;/code&gt;&lt;/pre&gt;                  &lt;!-- code block --&gt;
         <h2>HTML Web APIs</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -2385,7 +2418,7 @@ y = 10;&lt;/code&gt;&lt;/pre&gt;                  &lt;!-- code block --&gt;
         <h2>HTML Geolocation</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -2410,7 +2443,7 @@ y = 10;&lt;/code&gt;&lt;/pre&gt;                  &lt;!-- code block --&gt;
         <h2>HTML Drag and Drop</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -2436,7 +2469,7 @@ function drop(e) {
         <h2>HTML Web Storage</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -2464,7 +2497,7 @@ sessionStorage.setItem("temp", "value");</code></pre>
         <h2>HTML Web Workers</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -2492,7 +2525,7 @@ onmessage = e =&gt; postMessage(heavyTask());</code></pre>
         <h2>HTML SSE (Server-Sent Events)</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/uKup7lkbZEk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe

@@ -11,13 +11,46 @@
 <body>
 
   <nav>
-    <a href="index.html" class="nav-logo"><img src="../images/logo.png" alt="WebStart" /></a>
+    <a href="../index.html" class="nav-logo"><img src="../images/logo.png" alt="WebStart" /></a>
     <input type="checkbox" id="nav-toggle" class="nav-checkbox" />
     <label for="nav-toggle" class="nav-toggle">&#9776;</label>
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="index.html#path">Learning Path</a></li>
-      <li><a href="#resources">Resources</a></li>
+      <li>
+        <details class="nav-home">
+          <summary>Home</summary>
+          <div class="nav-home-menu">
+            <a href="../index.html#welcome">Welcome</a>
+            <a href="../index.html#internet">The Internet</a>
+            <a href="../index.html#web">The Web</a>
+            <a href="../index.html#path">Learning Path</a>
+            <a href="../index.html#resources">Resources</a>
+          </div>
+        </details>
+      </li>
+      <li>
+        <details class="nav-path">
+          <summary>Learning Path</summary>
+          <div class="nav-path-menu">
+            <a href="learnhtml.html">HTML</a>
+            <a href="learncss.html">CSS</a>
+            <a href="learnjs.html">JavaScript</a>
+          </div>
+        </details>
+      </li>
+      <li>
+        <details class="nav-resources">
+          <summary>Resources</summary>
+          <div class="nav-resources-menu">
+            <a href="../index.html#resources">All Resources</a>
+            <a href="../index.html#w3schools">W3Schools</a>
+            <a href="../index.html#mdn">MDN Web Docs</a>
+            <a href="../index.html#freecodecamp">freeCodeCamp</a>
+            <a href="../index.html#youtube">YouTube</a>
+            <a href="../index.html#codepen">CodePen</a>
+            <a href="../index.html#stackoverflow">Stack Overflow</a>
+          </div>
+        </details>
+      </li>
       <li><a href="form.html">Subscribe</a></li>
     </ul>
   </nav>
@@ -232,7 +265,7 @@
         <h2>JS Introduction</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -258,7 +291,7 @@ console.log("Debug message");</code></pre>
         <h2>JS Where To</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -289,7 +322,7 @@ console.log("Debug message");</code></pre>
         <h2>JS Output</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -320,7 +353,7 @@ console.error("Error");</code></pre>
         <h2>JS Statements</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -354,7 +387,7 @@ let b = 2   // works, but can cause rare bugs
         <h2>JS Syntax</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -391,7 +424,7 @@ function myFunction() {}
         <h2>JS Comments</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -416,7 +449,7 @@ let x = 5; // inline comment
         <h2>JS Variables</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -442,7 +475,7 @@ let a = 1, b = 2; // multiple declarations</code></pre>
         <h2>JS Let</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -472,7 +505,7 @@ count = 1; // OK</code></pre>
         <h2>JS Const</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -500,7 +533,7 @@ arr.push(4);  // OK
         <h2>JS Data Types</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -533,7 +566,7 @@ x === null;         // check for null</code></pre>
         <h2>JS Operators</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -570,7 +603,7 @@ let msg = age &gt;= 18 ? "Adult" : "Minor";</code></pre>
         <h2>JS Type Conversion</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -606,7 +639,7 @@ Boolean(1)       // true</code></pre>
         <h2>JS Strings</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -634,7 +667,7 @@ let s3 = `Template ${s1}`;   // template literal
         <h2>JS String Methods</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -668,7 +701,7 @@ s[0]                     // "H"</code></pre>
         <h2>JS String Search</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -691,7 +724,7 @@ s.matchAll(/Hello/g)      // iterator of all matches</code></pre>
         <h2>JS Template Literals</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -722,7 +755,7 @@ console.log(`2 + 2 = ${2 + 2}`);</code></pre>
         <h2>JS Numbers</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -759,7 +792,7 @@ Math.random()     // 0.0 to 0.999...</code></pre>
         <h2>JS BigInt</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -781,7 +814,7 @@ big + 10n       // OK
         <h2>JS Number Methods</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -810,7 +843,7 @@ Number.isFinite(10) // true</code></pre>
         <h2>JS Arrays</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/S8pw2s8CfpA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/S8pw2s8CfpA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -839,7 +872,7 @@ typeof fruits          // "object" (misleading!)</code></pre>
         <h2>JS Array Methods</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -880,7 +913,7 @@ a.flat()           // flatten nested arrays</code></pre>
         <h2>JS Array Sort</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -905,7 +938,7 @@ users.sort((a, b) => a.name.localeCompare(b.name));</code></pre>
         <h2>JS Array Iteration</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -938,7 +971,7 @@ nums.some(n => n > 4)    // true</code></pre>
         <h2>JS Objects</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -974,7 +1007,7 @@ delete person.email;
         <h2>JS Object Methods</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -1005,7 +1038,7 @@ Object.freeze(obj);  // obj.a = 10 silently fails</code></pre>
         <h2>JS this Keyword</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -1039,7 +1072,7 @@ const obj = {
         <h2>JS Functions</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -1074,7 +1107,7 @@ function sum(...nums) {
         <h2>JS Arrow Functions</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/73BS2UlS0ZQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/73BS2UlS0ZQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -1108,7 +1141,7 @@ const add = (a, b) => {
         <h2>JS Closures</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -1138,7 +1171,7 @@ counter(); // 3
         <h2>JS Scope</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -1169,7 +1202,7 @@ function myFunc() {
         <h2>JS Hoisting</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -1196,7 +1229,7 @@ let y = 5;</code></pre>
         <h2>JS If / Else</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -1230,7 +1263,7 @@ const city = user?.address?.city;   // undefined instead of error</code></pre>
         <h2>JS Switch</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -1262,7 +1295,7 @@ switch (day) {
         <h2>JS Loops</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -1309,7 +1342,7 @@ for (let i = 0; i &lt; 10; i++) {
         <h2>JS Events</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/G5F4OTX7GbU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/G5F4OTX7GbU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -1338,7 +1371,7 @@ submit      load        resize      scroll</code></pre>
         <h2>JS DOM</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -1361,7 +1394,7 @@ document.getElementsByTagName("p")</code></pre>
         <h2>JS DOM — Change HTML &amp; CSS</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -1401,7 +1434,7 @@ el.insertAdjacentHTML("afterend", "&lt;p&gt;Inserted&lt;/p&gt;");</code></pre>
         <h2>JS Classes</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -1441,7 +1474,7 @@ dog.speak(); // "Rex says Woof"</code></pre>
         <h2>JS Modules</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -1471,7 +1504,7 @@ const module = await import("./math.js");
         <h2>JS Destructuring</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -1502,7 +1535,7 @@ function greet({ name, age }) {
         <h2>JS Spread &amp; Rest</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -1532,7 +1565,7 @@ function sum(first, ...others) {
         <h2>JS Promises</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/0CJa36G7_bA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/0CJa36G7_bA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -1560,7 +1593,7 @@ Promise.all([fetch(url1), fetch(url2)])
         <h2>JS Async / Await</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/MAmUv8RzDV8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/MAmUv8RzDV8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -1594,7 +1627,7 @@ async function getAll() {
         <h2>JS Error Handling</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/ITogH7lJTyE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/ITogH7lJTyE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -1630,7 +1663,7 @@ class ValidationError extends Error {
         <h2>JS JSON</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -1662,7 +1695,7 @@ const clone = JSON.parse(JSON.stringify(original));</code></pre>
         <h2>JS Regular Expressions</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -1696,7 +1729,7 @@ const pattern2 = new RegExp("hello", "i");
         <h2>JS Web Storage</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/6ZaFSasEoh0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -1725,7 +1758,7 @@ if (typeof Storage !== "undefined") {
         <h2>JS Fetch API</h2>
         <div class="media-row">
           <div class="video-wrapper">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/0CJa36G7_bA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <iframe loading="lazy" width="560" height="315" src="https://www.youtube.com/embed/0CJa36G7_bA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
           <div class="codepen-wrapper">
             <iframe
@@ -1765,3 +1798,4 @@ fetch("/api/users", {
 
 </body>
 </html>
+

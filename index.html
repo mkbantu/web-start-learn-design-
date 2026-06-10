@@ -3,24 +3,55 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../css/web.css" />
-  <link rel="stylesheet" href="../css/index.css" />
-  <link rel="icon" type="image/png" href="../images/logo.png" />
+  <link rel="stylesheet" href="css/web.css" />
+  <link rel="stylesheet" href="css/index.css" />
+  <link rel="icon" type="image/png" href="images/logo.png" />
   <title>WebStart</title>
 </head>
 <body>
 
   <nav>
-    <a href="index.html" class="nav-logo"><img src="../images/logo.png" alt="WebStart" /></a>
+    <a href="index.html" class="nav-logo"><img src="images/logo.png" alt="WebStart" /></a>
     <input type="checkbox" id="nav-toggle" class="nav-checkbox" />
     <label for="nav-toggle" class="nav-toggle">&#9776;</label>
     <ul>
-      <li><a href="#welcome">Home</a></li>
-      <li><a href="#internet">The Internet</a></li>
-      <li><a href="#web">The Web</a></li>
-      <li><a href="#path">Learning Path</a></li>
-      <li><a href="#resources">Resources</a></li>
-      <li><a href="form.html">Subscribe</a></li>
+      <li>
+        <details class="nav-home">
+          <summary>Home</summary>
+          <div class="nav-home-menu">
+            <a href="#welcome">Welcome</a>
+            <a href="#internet">The Internet</a>
+            <a href="#web">The Web</a>
+            <a href="#path">Learning Path</a>
+            <a href="#resources">Resources</a>
+          </div>
+        </details>
+      </li>
+      <li>
+        <details class="nav-path">
+          <summary>Learning Path</summary>
+          <div class="nav-path-menu">
+            <a href="html/learnhtml.html">HTML</a>
+            <a href="html/learncss.html">CSS</a>
+            <a href="html/learnjs.html">JavaScript</a>
+          </div>
+        </details>
+      </li>
+      <li>
+        <details class="nav-resources">
+          <summary>Resources</summary>
+          <div class="nav-resources-menu">
+            <a href="#resources">All Resources</a>
+            <a href="#w3schools">W3Schools</a>
+            <a href="#mdn">MDN Web Docs</a>
+            <a href="#freecodecamp">freeCodeCamp</a>
+            <a href="#youtube">YouTube</a>
+            <a href="#codepen">CodePen</a>
+            <a href="#stackoverflow">Stack Overflow</a>
+          </div>
+        </details>
+      </li>
+      <li><a href="html/form.html">Subscribe</a></li>
     </ul>
   </nav>
 
@@ -32,7 +63,7 @@
         src="https://www.youtube.com/embed/DYeFBSNe2bk?autoplay=1&mute=1&loop=1&playlist=DYeFBSNe2bk&controls=0&showinfo=0&rel=0"
         title="Website Layout Design Timelapse"
         frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         referrerpolicy="strict-origin-when-cross-origin"
         allowfullscreen>
       </iframe>
@@ -49,7 +80,7 @@
         <span class="hero-badge">JavaScript</span>
         <span class="hero-badge">Free &amp; beginner-friendly</span>
       </div>
-      <a href="form.html">Start Learning Free</a>
+      <a href="html/form.html">Start Learning Free</a>
     </div>
 
   </header>
@@ -394,21 +425,21 @@
           <h3>HTML — Page Structure</h3>
           <p>HTML (HyperText Markup Language) is the skeleton of every web page. You use tags to mark up content — headings, paragraphs, lists, images, links, tables, and forms.</p>
           <p><strong>You will learn:</strong> tags and attributes, document structure, semantic HTML5, links, images, lists, tables, and forms.</p>
-          <a href="learnhtml.html">Start HTML</a>
+          <a href="html/learnhtml.html">Start HTML</a>
         </div>
         <div class="path-step">
           <span class="step-num">2</span>
           <h3>CSS — Visual Design</h3>
           <p>CSS (Cascading Style Sheets) controls how your HTML looks — colours, fonts, spacing, layout, and how the page responds to different screen sizes.</p>
           <p><strong>You will learn:</strong> selectors, the box model, colours and typography, Flexbox, CSS Grid, responsive design, and transitions.</p>
-          <a href="learncss.html">Start CSS</a>
+          <a href="html/learncss.html">Start CSS</a>
         </div>
         <div class="path-step">
           <span class="step-num">3</span>
           <h3>JavaScript — Interactivity</h3>
           <p>JavaScript adds logic and behaviour to your pages. It makes buttons work, validates forms, fetches live data from APIs, and creates dynamic user experiences.</p>
           <p><strong>You will learn:</strong> variables, functions, the DOM, events, arrays, objects, fetch/APIs, and modern ES6+ syntax.</p>
-          <a href="learnjs.html">Start JavaScript</a>
+          <a href="html/learnjs.html">Start JavaScript</a>
         </div>
         <div class="path-step last">
           <span class="step-num">4</span>
@@ -466,27 +497,27 @@
       <p>Alongside this course, use these trusted resources to practise, look things up, and deepen your understanding:</p>
 
       <div class="card-grid">
-        <div class="card">
+        <div class="card" id="w3schools">
           <h3>W3Schools</h3>
           <p>Beginner-friendly reference and interactive examples for HTML, CSS, JavaScript, PHP, and more. Excellent for quickly checking syntax and trying short code snippets.</p>
         </div>
-        <div class="card">
+        <div class="card" id="mdn">
           <h3>MDN Web Docs</h3>
           <p>Mozilla's official reference for all web standards. The most accurate and complete documentation for HTML, CSS, and JavaScript — trusted by professional developers worldwide.</p>
         </div>
-        <div class="card">
+        <div class="card" id="freecodecamp">
           <h3>freeCodeCamp</h3>
           <p>A free, structured coding curriculum with hundreds of interactive challenges. Complete projects to earn recognised certifications in responsive web design and JavaScript.</p>
         </div>
-        <div class="card">
+        <div class="card" id="youtube">
           <h3>YouTube</h3>
           <p>Thousands of free video tutorials. Recommended channels: <strong>Traversy Media</strong>, <strong>Kevin Powell</strong> (CSS expert), and <strong>The Net Ninja</strong> for step-by-step lessons on every web topic.</p>
         </div>
-        <div class="card">
+        <div class="card" id="codepen">
           <h3>CodePen</h3>
           <p>Browse thousands of CSS effects, layouts, animations, and complete UI components built by the community. An excellent source of inspiration and real-world code to learn from.</p>
         </div>
-        <div class="card accent">
+        <div class="card accent" id="stackoverflow">
           <h3>Stack Overflow</h3>
           <p>When you get stuck on a problem, search Stack Overflow. Almost every error or coding question you will ever face has already been asked and answered here by experienced developers.</p>
         </div>
@@ -501,7 +532,7 @@
     <div class="cta-inner">
       <h2>Ready to Start?</h2>
       <p>Subscribe for free and receive personalised course materials — HTML, CSS, and JavaScript lessons delivered straight to your inbox or WhatsApp.</p>
-      <a href="form.html" class="cta-btn">Subscribe Free</a>
+      <a href="html/form.html" class="cta-btn">Subscribe Free</a>
     </div>
   </section>
 
