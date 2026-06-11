@@ -275,16 +275,21 @@
             </iframe>
           </div>
         </div>
-        <p>JavaScript is the programming language of the web. It runs in the browser and makes pages interactive.</p>
+        <p>JavaScript is the programming language of the web. It was designed to add interactivity to HTML pages. It is a lightweight scripting language that runs directly in the browser — no compilation needed.</p>
         <pre><code>document.getElementById("demo").innerHTML = "Hello World!";
 alert("Hello!");
 console.log("Debug message");</code></pre>
         <ul>
-          <li>JS can change HTML content, style, and attributes</li>
-          <li>JS can react to user events (clicks, input, scroll)</li>
+          <li>JS can put dynamic text into an HTML page using <code>document.write()</code></li>
+          <li>JS can react to events (clicks, page load, keystrokes)</li>
+          <li>JS can read and write HTML elements and their content</li>
+          <li>JS can validate form data before it is sent to a server</li>
+          <li>JS can detect the visitor's browser and load a suitable page</li>
+          <li>JS can store and retrieve information using cookies</li>
           <li>JS runs in every modern browser — no install needed</li>
           <li>JS can also run on servers (Node.js)</li>
         </ul>
+        <p><strong>Note:</strong> Java and JavaScript are two completely different languages in both concept and design. Java (developed by Sun Microsystems) is a powerful compiled language like C and C++. JavaScript is a lightweight scripting language.</p>
       </article>
 
       <article id="js-where-to">
@@ -301,20 +306,31 @@ console.log("Debug message");</code></pre>
             </iframe>
           </div>
         </div>
-        <pre><code>&lt;!-- Inline event --&gt;
-&lt;button onclick="alert('Hi')"&gt;Click&lt;/button&gt;
+        <pre><code>&lt;!-- Scripts in &lt;head&gt; — executed when CALLED (e.g. on an event) --&gt;
+&lt;head&gt;
+  &lt;script&gt;
+    function message() {
+      alert("This runs when called, not on load");
+    }
+  &lt;/script&gt;
+&lt;/head&gt;
 
-&lt;!-- Internal script (in &lt;body&gt; or &lt;head&gt;) --&gt;
-&lt;script&gt;
-  console.log("Hello");
-&lt;/script&gt;
+&lt;!-- Scripts in &lt;body&gt; — executed WHILE the page loads --&gt;
+&lt;body&gt;
+  &lt;script&gt;
+    document.write("This message is written while the page loads");
+  &lt;/script&gt;
+&lt;/body&gt;
 
-&lt;!-- External script (recommended) --&gt;
+&lt;!-- External script (recommended for reuse across pages) --&gt;
 &lt;script src="app.js" defer&gt;&lt;/script&gt;</code></pre>
         <ul>
-          <li>Place scripts before <code>&lt;/body&gt;</code> or use <code>defer</code> to avoid blocking HTML parsing</li>
+          <li>Scripts in <code>&lt;head&gt;</code> load before the page body — good for functions triggered by events</li>
+          <li>Scripts in <code>&lt;body&gt;</code> execute as the page loads — good for generating page content</li>
+          <li>External <code>.js</code> files must NOT contain the <code>&lt;script&gt;</code> tag</li>
           <li><code>defer</code> — runs after HTML is parsed, maintains order</li>
           <li><code>async</code> — runs as soon as downloaded, order not guaranteed</li>
+          <li>To hide scripts from very old browsers, wrap code in HTML comments: <code>&lt;!-- ... //--&gt;</code></li>
         </ul>
       </article>
 
@@ -464,10 +480,19 @@ let   age  = 25;       // modern — block-scoped, reassignable
 const PI   = 3.14;     // modern — block-scoped, not reassignable
 
 let x;           // declared but undefined
-let a = 1, b = 2; // multiple declarations</code></pre>
+let a = 1, b = 2; // multiple declarations
+
+// Assigning to an undeclared variable auto-declares it (avoid this)
+carname = "Volvo";  // same as: var carname = "Volvo";
+
+// Redeclaring a var variable does NOT reset its value
+var x = 5;
+var x;       // x is still 5</code></pre>
         <ul>
+          <li>Variable names are case-sensitive — <code>y</code> and <code>Y</code> are different variables</li>
+          <li>Variable names must begin with a letter or underscore (<code>_</code>)</li>
           <li>Always use <code>const</code> by default; use <code>let</code> if you need to reassign</li>
-          <li>Never use <code>var</code> in modern code</li>
+          <li>Avoid <code>var</code> in modern code — it leaks out of blocks</li>
         </ul>
       </article>
 
@@ -576,26 +601,50 @@ x === null;         // check for null</code></pre>
             </iframe>
           </div>
         </div>
-        <pre><code>// Arithmetic
-+  -  *  /  %  **  ++  --
+        <pre><code>// Arithmetic (given y = 5)
++   // addition:       x = y + 2  → x = 7
+-   // subtraction:    x = y - 2  → x = 3
+*   // multiplication: x = y * 2  → x = 10
+/   // division:       x = y / 2  → x = 2.5
+%   // modulus:        x = y % 2  → x = 1
+++  // increment:      x = ++y    → x = 6
+--  // decrement:      x = --y    → x = 4
 
-// Comparison
-==   // equal value (loose)
-===  // equal value AND type (strict — always prefer)
-!=   // not equal (loose)
-!==  // not equal strict
-&lt;  &gt;  &lt;=  &gt;=
+// Assignment (given x = 10, y = 5)
+=   // x = y    → x = 5
++=  // x += y   → x = 15
+-=  // x -= y   → x = 5
+*=  // x *= y   → x = 50
+/=  // x /= y   → x = 2
+%=  // x %= y   → x = 0
 
-// Logical
-&&   // AND
-||   // OR
-!    // NOT
+// Comparison (given x = 5)
+==   // equal value (loose):         x == 8   → false
+===  // equal value AND type:        x === 5  → true,  x === "5" → false
+!=   // not equal:                   x != 8   → true
+&gt;    // greater than:                x &gt; 8    → false
+&lt;    // less than:                   x &lt; 8    → true
+&gt;=   // greater than or equal to:    x &gt;= 8   → false
+&lt;=   // less than or equal to:       x &lt;= 8   → true
+
+// Logical (given x = 6, y = 3)
+&&   // AND:  (x &lt; 10 &amp;&amp; y &gt; 1)  → true
+||   // OR:   (x == 5 || y == 5)  → false
+!    // NOT:  !(x == y)           → true
 ??   // nullish coalescing — returns right if left is null/undefined
 
-// Ternary
-let msg = age &gt;= 18 ? "Adult" : "Minor";</code></pre>
+// Ternary (conditional)
+let msg = age &gt;= 18 ? "Adult" : "Minor";
+// greeting = (visitor == "PRES") ? "Dear President " : "Dear ";
+
+// String + number rule: result is ALWAYS a string
+5 + 5        // 10   (number + number)
+"5" + "5"    // "55" (string + string)
+5 + "5"      // "55" (number + string → string!)
+"5" + 5      // "55" (string + number → string!)</code></pre>
         <ul>
           <li>Always use <code>===</code> instead of <code>==</code> to avoid type coercion bugs</li>
+          <li>When adding a number and a string, the result is always a string</li>
         </ul>
       </article>
 
@@ -1100,7 +1149,19 @@ function greet(name = "World") {
 // Rest parameters
 function sum(...nums) {
   return nums.reduce((a, b) => a + b, 0);
-}</code></pre>
+}
+
+// Return statement — functions that return a value must use return
+function product(a, b) {
+  return a * b;
+}
+document.write(product(4, 3)); // 12</code></pre>
+        <ul>
+          <li>The keyword <code>function</code> must be in lowercase — using <code>Function</code> or <code>FUNCTION</code> causes an error</li>
+          <li>A function with no parameters must still include parentheses: <code>myFunc()</code></li>
+          <li>Functions can be called from anywhere on the page, or from other pages if in an external <code>.js</code> file</li>
+          <li>Put functions in <code>&lt;head&gt;</code> to ensure they load before any code tries to call them</li>
+        </ul>
       </article>
 
       <article id="js-arrow-functions">
@@ -1365,6 +1426,13 @@ click       dblclick    mouseover   mouseout
 keydown     keyup       keypress
 focus       blur        change      input
 submit      load        resize      scroll</code></pre>
+        <ul>
+          <li><strong>onLoad / onUnload</strong> — triggered when the user enters or leaves the page. Used to check browser type, or set/read cookies</li>
+          <li><strong>onFocus / onBlur / onChange</strong> — used with form field validation. <code>onChange</code> fires whenever a field's content changes: <code>&lt;input onchange="checkEmail()"&gt;</code></li>
+          <li><strong>onSubmit</strong> — validates all form fields before the form is sent. Return <code>false</code> from the handler to cancel submission: <code>&lt;form onsubmit="return checkForm()"&gt;</code></li>
+          <li><strong>onMouseOver / onMouseOut</strong> — used to create animated or hover effects on images and buttons</li>
+          <li>Events are normally used with functions — the function runs only when the event occurs</li>
+        </ul>
       </article>
 
       <article id="js-dom">
