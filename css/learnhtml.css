@@ -203,3 +203,79 @@ main section a.overview_header {
   border: none;
   display: block;
 }
+
+.lesson-panel-checkbox {
+  display: none;
+}
+
+.lesson-panel-toggle {
+  display: none;
+}
+
+main section {
+  width: clamp(220px, 18vw, 290px);
+  background: #ffffff;
+  border-right: 1px solid #dbe5ee;
+  z-index: 50;
+}
+
+@media (max-width: 900px) {
+  .lesson-panel-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    position: fixed;
+    top: 68px;
+    left: 12px;
+    z-index: 90;
+    min-height: 40px;
+    padding: 8px 14px;
+    border-radius: 6px;
+    background: #00628b;
+    color: #ffffff;
+    font-weight: 700;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
+    cursor: pointer;
+    user-select: none;
+  }
+
+  main {
+    display: block;
+  }
+
+  main section {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    width: min(82vw, 320px);
+    height: calc(100vh - 56px);
+    padding: 60px 16px 18px;
+    transform: translateX(-105%);
+    transition: transform 0.25s ease;
+    box-shadow: 8px 0 24px rgba(0, 0, 0, 0.18);
+  }
+
+  .lesson-panel-checkbox:checked ~ #leftPanel section {
+    transform: translateX(0);
+  }
+
+  .lesson-panel-checkbox:checked + .lesson-panel-toggle {
+    background: #e94560;
+  }
+
+  main div {
+    width: 100%;
+  }
+
+  main div article {
+    padding: 76px 18px 26px;
+  }
+
+  main div article + article {
+    padding-top: 28px;
+  }
+
+  main div article .media-row {
+    flex-direction: column !important;
+  }
+}

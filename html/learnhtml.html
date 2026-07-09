@@ -4,6 +4,7 @@
   <link rel="stylesheet" href="../css/web.css" />
   <link rel="stylesheet" href="../css/learnhtml.css">
   <link rel="icon" type="image/png" href="../images/logo.png" />
+  <script src="../script/script.js" defer></script>
   <title>WebStart — HTML</title>
 </head>
 <body>
@@ -53,10 +54,15 @@
     </ul>
   </nav>
 
-  <main>
-    <section>
+  <input type="checkbox" id="lesson-panel-toggle" class="lesson-panel-checkbox" />
+  <label for="lesson-panel-toggle" class="lesson-panel-toggle" aria-label="Toggle lesson menu">? Lessons</label>
+  <main >
+    <div class="page-controls">
+      <button onclick="expandPanel()" aria-label="Toggle lesson panel">&#9776;</button>
+      <button onclick="toggleTheme()" id="themeButton">Dark</button>
+    </div>
+    <section id="leftPanel">
          <h2 class="left"><span class="left_h2">HTML</span> Tutorial</h2>
-          <a href="#html-introduction" class="active">HTML HOME</a>
 
       <details>
         <summary>Introduction</summary>

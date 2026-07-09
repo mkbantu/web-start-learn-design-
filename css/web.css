@@ -426,6 +426,7 @@ header div.header-content a:hover {
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
+  margin-bottom: 8px;
 }
 
 #form-card form input[type="submit"]:hover {
@@ -442,6 +443,7 @@ header div.header-content a:hover {
   border-radius: 25px;
   font-size: 1rem;
   cursor: pointer;
+  margin-bottom: 8px;
 }
 
 #form-card form input[type="reset"]:hover {
@@ -709,4 +711,80 @@ details a:hover {
   color: #004f70;
   text-decoration: none !important;
   transform: translateX(2px);
+}
+
+.page-controls {
+  display: block;
+  flex: none;
+  align-self: flex-start;
+  width: auto;
+  height: auto;
+  max-width: none;
+  margin: 0;
+  padding: 10px 8px;
+  position: sticky;
+  top: 0;
+  background: none;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+.page-controls button {
+  display: block;
+  min-width: 44px;
+  min-height: 36px;
+  border: none;
+  border-radius: 6px;
+  background: #00628b;
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+
+.page-controls button:hover {
+  background: #004f70;
+}
+
+body.dark-mode {
+  background: #101820;
+  color: #f3f6f8;
+}
+
+body.dark-mode main div article,
+body.dark-mode #form-card,
+body.dark-mode #subscribe,
+body.dark-mode details {
+  background: #17232d;
+  color: #f3f6f8;
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
+body.dark-mode p,
+body.dark-mode li,
+body.dark-mode label {
+  color: #d8e1e8;
+}
+
+body.dark-mode h2,
+body.dark-mode summary,
+body.dark-mode a {
+  color: #72c7f0;
+}
+
+body.dark-mode details a {
+  background: #213342;
+  color: #72c7f0;
+}
+
+body.dark-mode details a:hover {
+  background: #29465c;
+  color: #ffffff;
+}
+
+body.dark-mode pre,
+body.dark-mode code {
+  background: #0b1117;
+  color: #f3f6f8;
 }
