@@ -1,5 +1,6 @@
 let course = [
   {
+  id: "css-introduction",
     Title: "CSS Introduction",
     videoSource: "https://www.youtube.com/embed/OXGznpKZ_sA",
     description: "CSS (Cascading Style Sheets) styles HTML elements. It controls layout, colors, fonts, and responsive design.",
@@ -15,6 +16,7 @@ let course = [
 <p style="color: red;">Red text</p>`
   },
   {
+  id: "css-syntax",
     Title: "CSS Syntax",
     videoSource: "https://www.youtube.com/embed/OXGznpKZ_sA",
     description: "CSS rules consist of a selector and declaration block. Each declaration has a property and value.",
@@ -25,6 +27,7 @@ let course = [
 }`
   },
   {
+  id: "css-selectors",
     Title: "CSS Selectors",
     videoSource: "https://www.youtube.com/embed/OXGznpKZ_sA",
     description: "Selectors target HTML elements for styling. Types include element, class, id, and attribute selectors.",
@@ -41,6 +44,7 @@ p { color: black; }
 input[type="text"] { border: 1px solid gray; }`
   },
   {
+  id: "css-comments",
     Title: "CSS Comments",
     videoSource: "https://www.youtube.com/embed/OXGznpKZ_sA",
     description: "Comments are ignored by browsers and are used to document CSS code.",
@@ -51,6 +55,7 @@ input[type="text"] { border: 1px solid gray; }`
    for explanation */`
   },
   {
+  id: "css-colors",
     Title: "CSS Colors",
     videoSource: "https://www.youtube.com/embed/y-UxeZUrs3k",
     description: "Colors can be specified by name, RGB, HEX, HSL, or HSV.",
@@ -67,6 +72,7 @@ color: #ff0000;
 color: hsl(0, 100%, 50%);`
   },
   {
+  id: "css-backgrounds",
     Title: "CSS Backgrounds",
     videoSource: "https://www.youtube.com/embed/OXGznpKZ_sA",
     description: "Background properties control the background color and image of an element.",
@@ -80,6 +86,7 @@ color: hsl(0, 100%, 50%);`
 }`
   },
   {
+  id: "css-borders",
     Title: "CSS Borders",
     videoSource: "https://www.youtube.com/embed/OXGznpKZ_sA",
     description: "Borders define the edge of an element with style, width, and color.",
@@ -96,6 +103,7 @@ border-left: 1px double purple;
 border-radius: 10px;`
   },
   {
+  id: "css-margins",
     Title: "CSS Margins",
     videoSource: "https://www.youtube.com/embed/OXGznpKZ_sA",
     description: "Margins create space outside an element, between the element and other elements.",
@@ -118,6 +126,7 @@ margin-left: 40px;
 margin: 0 auto;`
   },
   {
+  id: "css-padding",
     Title: "CSS Padding",
     videoSource: "https://www.youtube.com/embed/OXGznpKZ_sA",
     description: "Padding creates space inside an element, between content and border.",
@@ -137,6 +146,7 @@ padding-bottom: 30px;
 padding-left: 40px;`
   },
   {
+  id: "css-box-model",
     Title: "CSS Box Model",
     videoSource: "https://www.youtube.com/embed/OXGznpKZ_sA",
     description: "The box model consists of content, padding, border, and margin layers.",
@@ -153,6 +163,7 @@ div {
 div { box-sizing: border-box; }`
   },
   {
+  id: "css-width-and-height",
     Title: "CSS Width and Height",
     videoSource: "https://www.youtube.com/embed/OXGznpKZ_sA",
     description: "Width and height set element dimensions in pixels, percentages, or other units.",
@@ -169,6 +180,7 @@ div { width: 100%; max-width: 500px; }
 div { min-width: 200px; max-width: 800px; }`
   },
   {
+  id: "css-text",
     Title: "CSS Text",
     videoSource: "https://www.youtube.com/embed/OXGznpKZ_sA",
     description: "Text properties control font, size, color, alignment, and spacing.",
@@ -185,6 +197,7 @@ div { min-width: 200px; max-width: 800px; }`
 }`
   },
   {
+  id: "css-fonts",
     Title: "CSS Fonts",
     videoSource: "https://www.youtube.com/embed/OXGznpKZ_sA",
     description: "Font selection includes system fonts and web fonts imported via @font-face or Google Fonts.",
@@ -203,6 +216,7 @@ font-weight: bold;        /* 700 */
 font-weight: 300;         /* light */`
   },
   {
+  id: "css-links",
     Title: "CSS Links",
     videoSource: "https://www.youtube.com/embed/fQqdu9_IB5A",
     description: "Links have four pseudo-class states that can be styled separately.",
@@ -218,6 +232,7 @@ a { text-decoration: none; }
 a:hover { text-decoration: underline; }`
   },
   {
+  id: "css-lists",
     Title: "CSS Lists",
     videoSource: "https://www.youtube.com/embed/2CCO4fqR9qI",
     description: "List style properties customize bullet points and numbering.",
@@ -235,6 +250,7 @@ ol { list-style-type: upper-roman; } /* I, II, III... */
 ul { list-style-image: url('bullet.jpg'); }`
   },
   {
+  id: "css-display",
     Title: "CSS Display",
     videoSource: "https://www.youtube.com/embed/OXGznpKZ_sA",
     description: "Display property controls how an element is rendered (block, inline, inline-block, flex, grid, none).",
@@ -250,13 +266,13 @@ display: inline-block;
 /* Flex: flexible box layout */
 display: flex;
 
-/* Grid: grid layout */
 display: grid;
 
 /* None: hidden from page */
 display: none;`
   },
   {
+  id: "css-positioning",
     Title: "CSS Positioning",
     videoSource: "https://www.youtube.com/embed/OXGznpKZ_sA",
     description: "Position property controls element placement (static, relative, absolute, fixed, sticky).",
@@ -280,6 +296,7 @@ position: sticky;
 top: 0;`
   },
   {
+  id: "css-overflow",
     Title: "CSS Overflow",
     videoSource: "https://www.youtube.com/embed/OXGznpKZ_sA",
     description: "Overflow property controls content that exceeds the element boundaries.",
@@ -298,6 +315,7 @@ overflow-y: hidden;
 overflow: clip;`
   },
   {
+  id: "css-float",
     Title: "CSS Float",
     videoSource: "https://www.youtube.com/embed/OXGznpKZ_sA",
     description: "Float property wraps text around floated elements. Mostly replaced by flexbox/grid.",
@@ -319,6 +337,7 @@ overflow: clip;`
 }`
   },
   {
+  id: "css-flexbox",
     Title: "CSS Flexbox",
     videoSource: "https://www.youtube.com/embed/OXGznpKZ_sA",
     description: "Flexbox is a layout model that aligns and distributes space among items in a container.",
@@ -336,6 +355,7 @@ overflow: clip;`
 }`
   },
   {
+  id: "css-grid",
     Title: "CSS Grid",
     videoSource: "https://www.youtube.com/embed/OXGznpKZ_sA",
     description: "CSS Grid creates a 2D layout with rows and columns.",
@@ -352,6 +372,7 @@ overflow: clip;`
 }`
   },
   {
+  id: "css-alignment",
     Title: "CSS Alignment",
     videoSource: "https://www.youtube.com/embed/OXGznpKZ_sA",
     description: "Text and item alignment properties for precise positioning.",
@@ -371,6 +392,7 @@ justify-content: center;    /* horizontal */
 align-items: center;        /* vertical */`
   },
   {
+  id: "css-opacity",
     Title: "CSS Opacity",
     videoSource: "https://www.youtube.com/embed/OXGznpKZ_sA",
     description: "Opacity controls transparency of an element from 0 (invisible) to 1 (opaque).",
@@ -386,6 +408,7 @@ img:hover {
 }`
   },
   {
+  id: "css-transforms",
     Title: "CSS Transforms",
     videoSource: "https://www.youtube.com/embed/OXGznpKZ_sA",
     description: "Transform property rotates, scales, skews, or translates elements in 2D or 3D.",
@@ -403,6 +426,7 @@ transform: rotateX(45deg);
 transform: perspective(1000px) rotateY(20deg);`
   },
   {
+  id: "css-transitions",
     Title: "CSS Transitions",
     videoSource: "https://www.youtube.com/embed/OXGznpKZ_sA",
     description: "Transitions smoothly animate CSS property changes over time.",
@@ -422,6 +446,7 @@ transition: all 0.5s ease-in-out;
 transition: background-color 0.3s, transform 0.5s;`
   },
   {
+  id: "css-animations",
     Title: "CSS Animations",
     videoSource: "https://www.youtube.com/embed/OXGznpKZ_sA",
     description: "Animations create complex motion using keyframes, independent of user interaction.",
@@ -438,6 +463,7 @@ div {
 }`
   },
   {
+  id: "css-media-queries",
     Title: "CSS Media Queries",
     videoSource: "https://www.youtube.com/embed/-2CnrBUfAUQ",
     description: "Media queries apply styles based on device characteristics like screen size.",
@@ -457,6 +483,7 @@ body { font-size: 16px; }
 }`
   },
   {
+  id: "css-responsive-design",
     Title: "CSS Responsive Design",
     videoSource: "https://www.youtube.com/embed/-2CnrBUfAUQ",
     description: "Responsive design makes websites look good on all screen sizes and devices.",
@@ -477,6 +504,7 @@ h1 { font-size: clamp(24px, 5vw, 48px); }
 }`
   },
   {
+  id: "css-variables",
     Title: "CSS Variables",
     videoSource: "https://www.youtube.com/embed/OXGznpKZ_sA",
     description: "CSS custom properties (variables) store reusable values.",
@@ -498,6 +526,7 @@ body {
 color: var(--primary-color, blue);`
   },
   {
+  id: "css-pseudoclasses",
     Title: "CSS Pseudo-classes",
     videoSource: "https://www.youtube.com/embed/OXGznpKZ_sA",
     description: "Pseudo-classes target elements in specific states or positions.",
@@ -516,6 +545,7 @@ li:nth-child(2n) { background: #f0f0f0; }
 p:not(.highlight) { color: gray; }`
   },
   {
+  id: "css-pseudoelements",
     Title: "CSS Pseudo-elements",
     videoSource: "https://www.youtube.com/embed/OXGznpKZ_sA",
     description: "Pseudo-elements style specific parts of elements or insert content.",
@@ -533,6 +563,7 @@ p::after  { content: " <<"; }
 p::selection { background-color: yellow; }`
   },
   {
+  id: "css-gradients",
     Title: "CSS Gradients",
     videoSource: "https://www.youtube.com/embed/OXGznpKZ_sA",
     description: "Gradients create smooth color transitions as backgrounds.",
@@ -548,6 +579,7 @@ background: radial-gradient(ellipse at 50% 50%, red 0%, blue 100%);
 background: conic-gradient(red, yellow, green, blue, red);`
   },
   {
+  id: "css-filters",
     Title: "CSS Filters",
     videoSource: "https://www.youtube.com/embed/OXGznpKZ_sA",
     description: "Filters apply visual effects like blur, brightness, and saturation.",
@@ -566,6 +598,7 @@ background: conic-gradient(red, yellow, green, blue, red);`
 filter: brightness(120%) contrast(110%);`
   },
   {
+  id: "css-box-shadow",
     Title: "CSS Box Shadow",
     videoSource: "https://www.youtube.com/embed/OXGznpKZ_sA",
     description: "Box shadow adds shadows around an element.",
@@ -584,6 +617,7 @@ box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
 box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);`
   },
   {
+  id: "css-text-shadow",
     Title: "CSS Text Shadow",
     videoSource: "https://www.youtube.com/embed/OXGznpKZ_sA",
     description: "Text shadow adds shadows to text content.",
@@ -605,6 +639,7 @@ text-shadow:
   3px 3px 0px #000;`
   },
   {
+  id: "css-print-styles",
     Title: "CSS Print Styles",
     videoSource: "https://www.youtube.com/embed/OXGznpKZ_sA",
     description: "Print media queries optimize styles for printing.",
@@ -617,6 +652,7 @@ text-shadow:
 }`
   },
   {
+  id: "css-columns",
     Title: "CSS Columns",
     videoSource: "https://www.youtube.com/embed/OXGznpKZ_sA",
     description: "Column properties create multi-column layouts for text.",
@@ -636,6 +672,7 @@ column-rule: 1px solid #ccc;
 column-span: all;`
   },
   {
+  id: "css-shape-outside",
     Title: "CSS Shape Outside",
     videoSource: "https://www.youtube.com/embed/OXGznpKZ_sA",
     description: "Shape-outside wraps text around non-rectangular shapes.",
@@ -649,6 +686,7 @@ column-span: all;`
 shape-outside: polygon(0 0, 100% 0, 100% 75%, 0 100%);`
   },
   {
+  id: "css-clipping",
     Title: "CSS Clipping",
     videoSource: "https://www.youtube.com/embed/OXGznpKZ_sA",
     description: "Clip-path masks elements to specific shapes.",
@@ -665,6 +703,7 @@ clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
 clip-path: inset(10% 20% 30% 40%);`
   },
   {
+  id: "css-stacking-context",
     Title: "CSS Stacking Context",
     videoSource: "https://www.youtube.com/embed/OXGznpKZ_sA",
     description: "Z-index controls the stacking order of overlapping elements.",
