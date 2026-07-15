@@ -723,7 +723,8 @@ details a:hover {
   margin: 0;
   padding: 10px 8px;
   position: sticky;
-  top: 0;
+  top: 56px;
+  z-index: 50;
   background: none;
   box-shadow: none;
   border-radius: 0;
