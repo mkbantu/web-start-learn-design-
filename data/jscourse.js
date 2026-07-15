@@ -1,5 +1,6 @@
 let course = [
   {
+    id: "js-introduction",
     Title: "JavaScript Introduction",
     videoSource: "https://www.youtube.com/embed/W6NZfCO5tTE",
     description: "JavaScript is a programming language that makes web pages interactive. It runs in browsers and can also run on servers.",
@@ -17,6 +18,7 @@ let course = [
 <script src="app.js"></script>`
   },
   {
+    id: "js-syntax",
     Title: "JavaScript Syntax",
     videoSource: "https://www.youtube.com/embed/W6NZfCO5tTE",
     description: "JavaScript syntax defines how JavaScript code is written and executed.",
@@ -38,6 +40,7 @@ let name = 'John';
    comment */`
   },
   {
+    id: "js-statements",
     Title: "JavaScript Statements",
     videoSource: "https://www.youtube.com/embed/W6NZfCO5tTE",
     description: "Statements are executable instructions that perform actions.",
@@ -61,6 +64,7 @@ for (let i = 0; i < 5; i++) {
 }`
   },
   {
+    id: "js-comments",
     Title: "JavaScript Comments",
     videoSource: "https://www.youtube.com/embed/W6NZfCO5tTE",
     description: "Comments explain code and are ignored by JavaScript engines.",
@@ -74,6 +78,7 @@ for (let i = 0; i < 5; i++) {
 // FIXME: Fix performance issue`
   },
   {
+    id: "js-variables",
     Title: "JavaScript Variables",
     videoSource: "https://www.youtube.com/embed/W6NZfCO5tTE",
     description: "Variables store data values. Use let or const (avoid var).",
@@ -94,6 +99,7 @@ let x = 1, y = 2, z = 3;
 message = 'Hello'; // Bad practice`
   },
   {
+    id: "js-data-types",
     Title: "JavaScript Data Types",
     videoSource: "https://www.youtube.com/embed/W6NZfCO5tTE",
     description: "Data types define what kind of data a variable can hold.",
@@ -122,6 +128,7 @@ let person = { name: 'Alice', age: 30 };
 let colors = ['red', 'green', 'blue'];`
   },
   {
+    id: "js-operators",
     Title: "JavaScript Operators",
     videoSource: "https://www.youtube.com/embed/W6NZfCO5tTE",
     description: "Operators perform operations on variables and values.",
@@ -145,6 +152,7 @@ true || false;  // true
 !true;          // false`
   },
   {
+    id: "js-string-methods",
     Title: "JavaScript String Methods",
     videoSource: "https://www.youtube.com/embed/W6NZfCO5tTE",
     description: "Strings have built-in methods for manipulation.",
@@ -164,6 +172,7 @@ text.startsWith('Hello'); // true
 text.endsWith('World');   // true`
   },
   {
+    id: "js-template-literals",
     Title: "JavaScript Template Literals",
     videoSource: "https://www.youtube.com/embed/W6NZfCO5tTE",
     description: "Template literals use backticks and allow string interpolation.",
@@ -185,6 +194,7 @@ const text = \`
 const result = \`2 + 2 = \${2 + 2}\`;`
   },
   {
+    id: "js-numbers",
     Title: "JavaScript Numbers",
     videoSource: "https://www.youtube.com/embed/W6NZfCO5tTE",
     description: "Numbers can be integers, decimals, or special values like Infinity and NaN.",
@@ -209,6 +219,7 @@ Number.isInteger(42); // true
 Number.isNaN(NaN);    // true`
   },
   {
+    id: "js-math-object",
     Title: "JavaScript Math Object",
     videoSource: "https://www.youtube.com/embed/W6NZfCO5tTE",
     description: "The Math object provides mathematical functions and constants.",
@@ -230,6 +241,7 @@ Math.sin(Math.PI / 2);  // 1
 Math.cos(0);            // 1`
   },
   {
+    id: "js-arrays",
     Title: "JavaScript Arrays",
     videoSource: "https://www.youtube.com/embed/W6NZfCO5tTE",
     description: "Arrays store multiple values in a single variable.",
@@ -257,6 +269,7 @@ arr.join('-');         // '1-2-3'
 arr.reverse();         // reverses array`
   },
   {
+    id: "js-array-methods",
     Title: "JavaScript Array Methods",
     videoSource: "https://www.youtube.com/embed/W6NZfCO5tTE",
     description: "Array methods for iteration and transformation.",
@@ -287,6 +300,7 @@ numbers.every(n => n > 0); // true
 let sorted = numbers.sort((a, b) => a - b);`
   },
   {
+    id: "js-objects",
     Title: "JavaScript Objects",
     videoSource: "https://www.youtube.com/embed/W6NZfCO5tTE",
     description: "Objects store key-value pairs representing entities.",
@@ -318,6 +332,7 @@ delete person.job;
 person.hasOwnProperty('name'); // true`
   },
   {
+    id: "js-functions",
     Title: "JavaScript Functions",
     videoSource: "https://www.youtube.com/embed/W6NZfCO5tTE",
     description: "Functions are reusable blocks of code.",
@@ -350,6 +365,7 @@ add(2, 3);            // 5
 multiply(4, 5);       // 20`
   },
   {
+    id: "js-conditionals",
     Title: "JavaScript Conditionals",
     videoSource: "https://www.youtube.com/embed/W6NZfCO5tTE",
     description: "Conditionals execute code based on conditions.",
@@ -385,6 +401,7 @@ switch (day) {
 }`
   },
   {
+    id: "js-loops",
     Title: "JavaScript Loops",
     videoSource: "https://www.youtube.com/embed/W6NZfCO5tTE",
     description: "Loops repeat code blocks while conditions are true.",
@@ -424,6 +441,7 @@ for (let i = 0; i < 5; i++) {
 }`
   },
   {
+    id: "js-error-handling",
     Title: "JavaScript Error Handling",
     videoSource: "https://www.youtube.com/embed/W6NZfCO5tTE",
     description: "Error handling manages exceptions gracefully.",
@@ -459,6 +477,7 @@ class ValidationError extends Error {
 }`
   },
   {
+    id: "js-classes",
     Title: "JavaScript Classes",
     videoSource: "https://www.youtube.com/embed/W6NZfCO5tTE",
     description: "Classes are blueprints for creating objects with properties and methods.",
@@ -495,6 +514,7 @@ class Employee extends Person {
 }`
   },
   {
+    id: "js-scope",
     Title: "JavaScript Scope",
     videoSource: "https://www.youtube.com/embed/W6NZfCO5tTE",
     description: "Scope determines where variables are accessible.",
@@ -529,6 +549,7 @@ counter(); // 1
 counter(); // 2`
   },
   {
+    id: "js-hoisting",
     Title: "JavaScript Hoisting",
     videoSource: "https://www.youtube.com/embed/W6NZfCO5tTE",
     description: "Hoisting moves declarations to the top of their scope.",
@@ -555,6 +576,7 @@ const add = function(a, b) {
 };`
   },
   {
+    id: "js-callbacks",
     Title: "JavaScript Callbacks",
     videoSource: "https://www.youtube.com/embed/W6NZfCO5tTE",
     description: "Callbacks are functions passed as arguments to other functions.",
@@ -589,6 +611,7 @@ getData(function(data) {
 });`
   },
   {
+    id: "js-promises",
     Title: "JavaScript Promises",
     videoSource: "https://www.youtube.com/embed/W6NZfCO5tTE",
     description: "Promises handle asynchronous operations better than callbacks.",
@@ -621,6 +644,7 @@ Promise.all([p1, p2, p3])
   .then(results => console.log(results));`
   },
   {
+    id: "js-async-await",
     Title: "JavaScript Async/Await",
     videoSource: "https://www.youtube.com/embed/W6NZfCO5tTE",
     description: "Async/await makes asynchronous code look synchronous.",
@@ -655,6 +679,7 @@ async function getMultiple() {
 }`
   },
   {
+    id: "js-dom-manipulation",
     Title: "JavaScript DOM Manipulation",
     videoSource: "https://www.youtube.com/embed/W6NZfCO5tTE",
     description: "DOM methods interact with HTML elements.",
@@ -687,6 +712,7 @@ element.remove();
 element.removeChild(child);`
   },
   {
+    id: "js-events",
     Title: "JavaScript Events",
     videoSource: "https://www.youtube.com/embed/W6NZfCO5tTE",
     description: "Events are user interactions with the page.",
@@ -724,6 +750,7 @@ document.addEventListener('click', (e) => {
 });`
   },
   {
+    id: "js-arrow-functions",
     Title: "JavaScript Arrow Functions",
     videoSource: "https://www.youtube.com/embed/W6NZfCO5tTE",
     description: "Arrow functions are concise function syntax with lexical this.",
@@ -759,6 +786,7 @@ const person = {
 };`
   },
   {
+    id: "js-destructuring",
     Title: "JavaScript Destructuring",
     videoSource: "https://www.youtube.com/embed/W6NZfCO5tTE",
     description: "Destructuring extracts values from arrays and objects.",
@@ -790,6 +818,7 @@ const [head, ...tail] = [1, 2, 3, 4];
 // head = 1, tail = [2, 3, 4]`
   },
   {
+    id: "js-spread-operator",
     Title: "JavaScript Spread Operator",
     videoSource: "https://www.youtube.com/embed/W6NZfCO5tTE",
     description: "Spread operator expands arrays or objects.",
@@ -820,6 +849,7 @@ const objCopy = { ...obj1 };
 const merged = { ...obj1, ...obj2, c: 4 };`
   },
   {
+    id: "js-rest-parameters",
     Title: "JavaScript Rest Parameters",
     videoSource: "https://www.youtube.com/embed/W6NZfCO5tTE",
     description: "Rest parameters capture remaining arguments as an array.",
@@ -847,6 +877,7 @@ const { a, b, ...rest } = { a: 1, b: 2, c: 3, d: 4 };
 // rest = { c: 3, d: 4 }`
   },
   {
+    id: "js-filter,-map,-reduce",
     Title: "JavaScript Filter, Map, Reduce",
     videoSource: "https://www.youtube.com/embed/W6NZfCO5tTE",
     description: "Functional array methods for transformation and aggregation.",
@@ -879,6 +910,7 @@ const grouped = items.reduce((acc, item) => {
 }, {});`
   },
   {
+    id: "js-json",
     Title: "JavaScript JSON",
     videoSource: "https://www.youtube.com/embed/W6NZfCO5tTE",
     description: "JSON is a lightweight data format for data exchange.",
@@ -907,6 +939,7 @@ const arr = [1, 2, { id: 1, name: 'item' }];
 const jsonArr = JSON.stringify(arr);`
   },
   {
+    id: "js-fetch-api",
     Title: "JavaScript Fetch API",
     videoSource: "https://www.youtube.com/embed/W6NZfCO5tTE",
     description: "Fetch API makes HTTP requests and handles responses.",
@@ -942,6 +975,7 @@ fetch('/api/data')
   });`
   },
   {
+    id: "js-local-storage",
     Title: "JavaScript Local Storage",
     videoSource: "https://www.youtube.com/embed/W6NZfCO5tTE",
     description: "Local storage persists data in the browser.",
@@ -976,6 +1010,7 @@ window.addEventListener('storage', (e) => {
 });`
   },
   {
+    id: "js-regular-expressions",
     Title: "JavaScript Regular Expressions",
     videoSource: "https://www.youtube.com/embed/W6NZfCO5tTE",
     description: "Regular expressions pattern match and manipulate strings.",
