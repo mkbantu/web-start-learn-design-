@@ -18,6 +18,7 @@ This project is a university assignment. I chose to build an e-learning platform
 
 - HTML
 - CSS
+- Javascript
 - YouTube embed for the hero video on the home page
 
 ## Project status
