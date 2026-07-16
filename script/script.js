@@ -4,7 +4,7 @@ function expandPanel(){
     if (!leftpanel) {
         return;
     }
-    
+
     if(leftpanel.style.display === "none"){
         leftpanel.style.display = "";
     }else{
@@ -39,25 +39,44 @@ function toggleTheme() {
 }
 
 function initCourse() {
-    // Step 1: Find the container where we'll put all lessons
-    const container = document.getElementById("articles-container");
-    if (!container) {
-        console.warn("Container not found");
-        return;
+    const leftPanel = document.getElementById("leftPanel");
+    const articlesContent = document.getElementById("articles-container");
+
+    if (leftPanel) {
+        // Start with the title
+        let htmlContent = "<h2 class='panel-title'><span class='panel-icon'>HTML</span> Tutorial</h2>";
+        let htmlString="";
+        // Add course lessons if course data is available - using for loop as requested
+        if (typeof course !== 'undefined' && Array.isArray(course)) {
+            for (let i = 0; i < course.length; i++) {
+                const lesson = course[i];
+                htmlContent += `
+                    <details>
+                        <summary>${lesson.Title}</summary>
+                        <a href="#${lesson.id}" onclick="display(${i})" class="overview_header">${lesson.Title}</a>
+                        <a href="#${lesson.id}" onclick="display(${i})" class="sub">Overview</a>
+                        <a href="#${lesson.id}" onclick="display(${i})" class="sub">Video</a>
+                        <a href="#${lesson.id}" onclick="display(${i})" class="sub">Examples</a>
+                    </details>
+                `;
+            
+            }    
+        }
+
+        leftPanel.innerHTML = htmlContent;
+       
     }
 
-    // Step 2: Check if course data exists
-    if (typeof course === "undefined") {
-        console.warn("Course data not found");
-        return;
-    }
 
-    // Step 3: Build HTML string from course data
-    let htmlString = "";
 
-    for (let i = 0; i < course.length; i++) {
-        const lesson = course[i];
+}
 
+function display(index){
+        const lesson=course[index];
+        
+        let articlesContent=document.getElementById("articles-container");
+        let htmlString="";
+        
         // Start the article with ID from course data
         htmlString += `<article id="${lesson.id}">`;
 
@@ -111,17 +130,14 @@ function initCourse() {
 
         // Close the article
         htmlString += `</article>`;
-    }
+        articlesContent.innerHTML=htmlString;
+        console.log(htmlString);
+        
+        }
+        
 
-    // Step 4: Put all HTML into the container
-    container.innerHTML = htmlString;
 
-    // Step 5: Tell other scripts that lessons are loaded
-    const event = new CustomEvent("articles-loaded", {
-        detail: { count: course.length }
-    });
-    container.dispatchEvent(event);
-}
+
 
 document.addEventListener("DOMContentLoaded", function () {
     if (localStorage.getItem("theme") === "dark") {
@@ -131,3 +147,4 @@ document.addEventListener("DOMContentLoaded", function () {
     setThemeButtonText();
     initCourse();
 });
+
