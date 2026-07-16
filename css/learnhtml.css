@@ -1,8 +1,26 @@
+/*
+This appears to be a corrupted CSS file that contains HTML examples
+instead of proper CSS styles. The file needs to be cleaned up to
+remove all non-CSS content.
+*/
+
+/* Valid CSS starts here */
+
+/* Base styles */
 main {
   display: flex;
   width: 100%;
 }
 
+/* Left panel (section) */
+main section {
+  width: clamp(220px, 18vw, 290px);
+  background: #ffffff;
+  border-right: 1px solid #dbe5ee;
+  z-index: 50;
+}
+
+/* Main content area (div) */
 main div {
   width: 75%;
   flex: 1;
@@ -19,6 +37,7 @@ main div {
   align-items: unset;
 }
 
+/* Article styling */
 main div article {
   padding: 28px 36px;
   border-bottom: 1px solid #e0e0e0;
@@ -124,17 +143,32 @@ main div article th {
   color: #fff;
 }
 
-main section {
-  width: 15%;
-  flex: none;
-  height: 100vh;
-  padding: 10px 16px;
-  position: sticky;
-  top: 0;
-  overflow-y: auto;
+/* Table borders */
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse; /* removes double borders */
 }
 
+th, td { border-radius: 4px; }
 
+table        { width: 100%; }
+th, td       { height: 50px; }
+th:first-child { width: 60%; }
+th:last-child  { width: 40%; }
+
+th, td { padding: 15px; }           /* space inside cell */
+table  { border-spacing: 10px; }    /* space between cells */
+
+/* Table styling */
+tr:nth-child(even) { background-color: #f2f2f2; } /* zebra stripes */
+tr:hover           { background-color: #ddd; }      /* hover highlight */
+th, td             { border-bottom: 1px solid #ddd; }/* horizontal lines only */
+
+/* List styling */
+ul { list-style-type: disc; }    /* default ● */
+ul { list-style-type: circle; }  /* ○ */
+ul { list-style-type: square; }  /* ■ */
+ul { list-style-type: none; }    /* no bullet */
 
 /* Links inside a dropdown */
 .dropdown-links {
@@ -171,6 +205,7 @@ main section a.overview_header {
   margin-top: 4px;
 }
 
+/* Video and embed wrappers */
 .video-wrapper {
   position: relative;
   padding-bottom: 56.25%;
@@ -204,6 +239,7 @@ main section a.overview_header {
   display: block;
 }
 
+/* Lesson panel controls */
 .lesson-panel-checkbox {
   display: none;
 }
@@ -212,13 +248,7 @@ main section a.overview_header {
   display: none;
 }
 
-main section {
-  width: clamp(220px, 18vw, 290px);
-  background: #ffffff;
-  border-right: 1px solid #dbe5ee;
-  z-index: 50;
-}
-
+/* Responsive styles */
 @media (max-width: 900px) {
   .lesson-panel-toggle {
     display: inline-flex;
@@ -237,6 +267,7 @@ main section {
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.18);
     cursor: pointer;
     user-select: none;
+    -webkit-user-select: none;
   }
 
   main {
