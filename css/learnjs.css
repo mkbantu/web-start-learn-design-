@@ -1,6 +1,15 @@
+body {
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
 main {
   display: flex;
   width: 100%;
+  flex: 1;
+  overflow: hidden;
 }
 main #page-controls {
   display: flex;
@@ -26,6 +35,7 @@ main div {
   box-shadow: none;
   border-radius: 0;
   align-items: unset;
+  overflow-y: auto;
 }
 
 main div article {
@@ -136,10 +146,8 @@ main div article th {
 main section {
   width: 15%;
   flex: none;
-  height: 100vh;
+  height: 100%;
   padding: 10px 16px;
-  position: sticky;
-  top: 0;
   overflow-y: auto;
 }
 
@@ -208,4 +216,12 @@ main section a.overview_header {
   height: 100%;
   border: none;
   display: block;
+}
+
+footer {
+  position: static;
+  flex-shrink: 0;
+  margin-left: 0;
+  margin-top: 0;
+  width: 100%;
 }
