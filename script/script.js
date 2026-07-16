@@ -132,8 +132,7 @@ function display(index){
         htmlString += `</article>`;
         articlesContent.innerHTML=htmlString;
         console.log(htmlString);
-        
-        }
+}
         
 
 
