@@ -41,12 +41,10 @@ function toggleTheme() {
 function initCourse() {
     const leftPanel = document.getElementById("leftPanel");
     const articlesContent = document.getElementById("articles-container");
-
     if (leftPanel) {
         // Start with the title
         let htmlContent = "<h2 class='panel-title'><span class='panel-icon'>HTML</span> Tutorial</h2>";
         let htmlString="";
-        // Add course lessons if course data is available - using for loop as requested
         if (typeof course !== 'undefined' && Array.isArray(course)) {
             for (let i = 0; i < course.length; i++) {
                 const lesson = course[i];
@@ -62,7 +60,6 @@ function initCourse() {
             
             }    
         }
-
         leftPanel.innerHTML = htmlContent;
        
     }
