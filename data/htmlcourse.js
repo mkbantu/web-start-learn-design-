@@ -1,6 +1,6 @@
 let course = [
   {
-    id: "introduction",
+    id: "html-introduction",
     Title: "HTML Introduction",
     videoSource: "https://www.youtube.com/embed/uKup7lkbZEk",
     description: "HTML (HyperText Markup Language) is the standard language for creating web pages. It describes page structure using elements represented by tags.",
@@ -14,14 +14,14 @@ let course = [
 </html>`
   },
   {
-    id: "editors",
+    id: "html-editors",
     Title: "HTML Editors",
     videoSource: "https://www.youtube.com/embed/h74pEV8hEFo",
     description: "HTML can be written in any text editor. Popular choices include VS Code, Sublime Text, and Notepad++.",
     exampleCode: ""
   },
   {
-    id: "basic",
+    id: "html-basic",
     Title: "HTML Basic",
     videoSource: "https://www.youtube.com/embed/9qj9WOPDj84",
     description: "Every HTML page follows the same basic skeleton structure.",
@@ -38,7 +38,7 @@ let course = [
 </html>`
   },
   {
-    id: "elements",
+    id: "html-elements",
     Title: "HTML Elements",
     videoSource: "https://www.youtube.com/embed/uKup7lkbZEk",
     description: "An HTML element has a start tag, content, and an end tag. Some elements are self-closing (void elements).",
@@ -49,7 +49,7 @@ let course = [
 <br>   <img src="photo.jpg" alt="Photo">`
   },
   {
-    id: "attributes",
+    id: "html-attributes",
     Title: "HTML Attributes",
     videoSource: "https://www.youtube.com/embed/8KXmNKgIJzE",
     description: "Attributes provide extra information about elements. They appear in the opening tag as name/value pairs.",
@@ -59,7 +59,7 @@ let course = [
 <input type="text" placeholder="Enter name">`
   },
   {
-    id: "headings",
+    id: "html-headings",
     Title: "HTML Headings",
     videoSource: "https://www.youtube.com/embed/9cOOg1v0Elw",
     description: "HTML has six heading levels, <h1> to <h6>. <h1> is most important, <h6> least.",
@@ -71,7 +71,7 @@ let course = [
 <h6>Heading 6</h6>`
   },
   {
-    id: "paragraphs",
+    id: "html-paragraphs",
     Title: "HTML Paragraphs",
     videoSource: "https://www.youtube.com/embed/DvBhidRatWw",
     description: "The <p> element defines a paragraph. Browsers automatically add space before and after it.",
@@ -81,7 +81,7 @@ let course = [
   whitespace</pre>`
   },
   {
-    id: "horizontal-lines",
+    id: "html-horizontal-lines",
     Title: "HTML Horizontal Lines",
     videoSource: "https://www.youtube.com/embed/uKup7lkbZEk",
     description: "The <hr> tag creates a horizontal line that extends from the current position to the right margin of the page. It is used to visually separate sections of content.",
@@ -90,7 +90,7 @@ let course = [
 <p>Section two content.</p>`
   },
   {
-    id: "centering",
+    id: "html-centering",
     Title: "HTML Centering Content",
     videoSource: "https://www.youtube.com/embed/uKup7lkbZEk",
     description: "The <center> tag places its content in the center of the page or the center of the table cell it is in. It was part of early HTML and is covered in the course notes for historical context.",
@@ -100,7 +100,7 @@ let course = [
 </center>`
   },
   {
-    id: "nbsp",
+    id: "html-nbsp",
     Title: "HTML Nonbreaking Spaces",
     videoSource: "https://www.youtube.com/embed/uKup7lkbZEk",
     description: "The nonbreaking space entity &nbsp; creates a white space between words. Unlike a regular space, the browser will not break a line at a nonbreaking space — keeping the words together on the same line.",
@@ -109,7 +109,7 @@ let course = [
 <p>Section&nbsp;2.3</p>`
   },
   {
-    id: "styles",
+    id: "html-styles",
     Title: "HTML Styles",
     videoSource: "https://www.youtube.com/embed/uKup7lkbZEk",
     description: "The style attribute adds inline CSS directly to an element.",
@@ -119,7 +119,7 @@ let course = [
 <p style="font-family:courier;">Courier font</p>`
   },
   {
-    id: "formatting",
+    id: "html-formatting",
     Title: "HTML Formatting",
     videoSource: "https://www.youtube.com/embed/ND-ma8lW9UY",
     description: "Formatting elements give text special visual meaning. Prefer semantic tags over purely visual ones.",
@@ -131,7 +131,7 @@ let course = [
 <sub>Subscript</sub>    <sup>Superscript</sup>`
   },
   {
-    id: "quotations",
+    id: "html-quotations",
     Title: "HTML Quotations",
     videoSource: "https://www.youtube.com/embed/uKup7lkbZEk",
     description: "HTML provides specific elements for citing and quoting content.",
@@ -148,7 +148,7 @@ let course = [
 <p><cite>The Scream</cite> by Edvard Munch.</p>`
   },
   {
-    id: "comments",
+    id: "html-comments",
     Title: "HTML Comments",
     videoSource: "https://www.youtube.com/embed/916GWv2Qs08",
     description: "Comments are not displayed by the browser. They document code or temporarily hide content.",
@@ -156,7 +156,7 @@ let course = [
 `
   },
   {
-    id: "colors",
+    id: "html-colors",
     Title: "HTML Colors",
     videoSource: "https://www.youtube.com/embed/y-UxeZUrs3k",
     description: "Colors can be specified by name, RGB, HEX, or HSL — on text, backgrounds, and borders.",
@@ -167,7 +167,7 @@ let course = [
 <p style="background-color:lightblue;">Background</p>`
   },
   {
-    id: "colors-rgb",
+    id: "html-colors-rgb",
     Title: "Colors — RGB & RGBA",
     videoSource: "https://www.youtube.com/embed/y-UxeZUrs3k",
     description: "RGB mixes Red, Green, Blue values (0–255). RGBA adds an alpha (opacity) channel 0.0–1.0.",
@@ -178,7 +178,7 @@ color: rgb(255, 255, 255);   /* white */
 color: rgba(255, 0, 0, 0.5); /* 50% transparent red */`
   },
   {
-    id: "colors-hex",
+    id: "html-colors-hex",
     Title: "Colors — HEX",
     videoSource: "https://www.youtube.com/embed/y-UxeZUrs3k",
     description: "HEX colors use #RRGGBB — two hex digits per channel (00–ff).",
@@ -190,7 +190,7 @@ color: rgba(255, 0, 0, 0.5); /* 50% transparent red */`
 #f00     /* shorthand = #ff0000 */`
   },
   {
-    id: "colors-hsl",
+    id: "html-colors-hsl",
     Title: "Colors — HSL & HSLA",
     videoSource: "https://www.youtube.com/embed/y-UxeZUrs3k",
     description: "HSL = Hue (0–360°), Saturation (0–100%), Lightness (0–100%). HSLA adds alpha.",
@@ -200,7 +200,7 @@ color: hsl(240, 100%, 50%);    /* blue */
 color: hsla(0, 100%, 50%, 0.3);/* 30% transparent */`
   },
   {
-    id: "css",
+    id: "html-css",
     Title: "HTML CSS",
     videoSource: "https://www.youtube.com/embed/G3e-cpL7ofc",
     description: "CSS styles HTML. It can be inline, internal (in a <style> tag), or external (linked file).",
@@ -213,7 +213,7 @@ color: hsla(0, 100%, 50%, 0.3);/* 30% transparent */`
 <link rel="stylesheet" href="styles.css">`
   },
   {
-    id: "links",
+    id: "html-links",
     Title: "HTML Links",
     videoSource: "https://www.youtube.com/embed/8KXmNKgIJzE",
     description: "The <a> tag creates hyperlinks. The href attribute specifies the destination.",
@@ -224,7 +224,7 @@ color: hsla(0, 100%, 50%, 0.3);/* 30% transparent */`
 <a href="tel:+1234567890">Call me</a>`
   },
   {
-    id: "link-colors",
+    id: "html-link-colors",
     Title: "Link Colors",
     videoSource: "https://www.youtube.com/embed/fQqdu9_IB5A",
     description: "Links have four CSS states that can each be styled separately.",
@@ -234,7 +234,7 @@ a:hover   { color: red; }     /* on hover */
 a:active  { color: orange; }  /* being clicked */`
   },
   {
-    id: "link-bookmarks",
+    id: "html-link-bookmarks",
     Title: "Link Bookmarks",
     videoSource: "https://www.youtube.com/embed/8KXmNKgIJzE",
     description: "Bookmark links jump to a specific element on the page using its id.",
@@ -245,14 +245,14 @@ a:active  { color: orange; }  /* being clicked */`
 <a href="page.html#section2">Go to Section 2</a>`
   },
   {
-    id: "images",
+    id: "html-images",
     Title: "HTML Images",
     videoSource: "https://www.youtube.com/embed/HIxEsZXk7o8",
     description: "The <img> tag embeds an image. It is a void (self-closing) element.",
     exampleCode: `<img src="photo.jpg" alt="Description" width="500" height="300">`
   },
   {
-    id: "image-map",
+    id: "html-image-map",
     Title: "Image Map",
     videoSource: "https://www.youtube.com/embed/uKup7lkbZEk",
     description: "Image maps define clickable areas on an image using <map> and <area>.",
@@ -264,7 +264,7 @@ a:active  { color: orange; }  /* being clicked */`
 </map>`
   },
   {
-    id: "background-images",
+    id: "html-background-images",
     Title: "Background Images",
     videoSource: "https://www.youtube.com/embed/uKup7lkbZEk",
     description: "Background images are applied with CSS, not <img>.",
@@ -277,7 +277,7 @@ body {
 }`
   },
   {
-    id: "picture-element",
+    id: "html-picture-element",
     Title: "The Picture Element",
     videoSource: "https://www.youtube.com/embed/uKup7lkbZEk",
     description: "<picture> serves different images based on screen size or format support.",
@@ -288,7 +288,7 @@ body {
 </picture>`
   },
   {
-    id: "favicon",
+    id: "html-favicon",
     Title: "HTML Favicon",
     videoSource: "https://www.youtube.com/embed/uKup7lkbZEk",
     description: "A favicon is the small icon shown in the browser tab.",
@@ -297,7 +297,7 @@ body {
 </head>`
   },
   {
-    id: "page-title",
+    id: "html-page-title",
     Title: "HTML Page Title",
     videoSource: "https://www.youtube.com/embed/uKup7lkbZEk",
     description: "The <title> in <head> sets the tab title and is important for SEO.",
@@ -306,7 +306,7 @@ body {
 </head>`
   },
   {
-    id: "tables",
+    id: "html-tables",
     Title: "HTML Tables",
     videoSource: "https://www.youtube.com/embed/ZUmloybepoA",
     description: "Tables organize data into rows and columns.",
@@ -320,7 +320,7 @@ body {
 </table>`
   },
   {
-    id: "table-borders",
+    id: "html-table-borders",
     Title: "Table Borders",
     videoSource: "https://www.youtube.com/embed/ZUmloybepoA",
     description: "",
@@ -331,7 +331,7 @@ body {
 th, td { border-radius: 4px; }`
   },
   {
-    id: "table-sizes",
+    id: "html-table-sizes",
     Title: "Table Sizes",
     videoSource: "https://www.youtube.com/embed/ZUmloybepoA",
     description: "",
@@ -341,7 +341,7 @@ th:first-child { width: 60%; }
 th:last-child  { width: 40%; }`
   },
   {
-    id: "table-headers",
+    id: "html-table-headers",
     Title: "Table Headers",
     videoSource: "https://www.youtube.com/embed/ZUmloybepoA",
     description: "Use <caption> to add a title, and <thead>/<tbody>/<tfoot> for structure.",
@@ -359,7 +359,7 @@ th:last-child  { width: 40%; }`
 </table>`
   },
   {
-    id: "table-padding",
+    id: "html-table-padding",
     Title: "Padding & Spacing",
     videoSource: "https://www.youtube.com/embed/ZUmloybepoA",
     description: "",
@@ -367,7 +367,7 @@ th:last-child  { width: 40%; }`
 table  { border-spacing: 10px; }    /* space between cells */`
   },
   {
-    id: "table-colspan",
+    id: "html-table-colspan",
     Title: "Colspan & Rowspan",
     videoSource: "https://www.youtube.com/embed/ZUmloybepoA",
     description: "",
@@ -375,7 +375,7 @@ table  { border-spacing: 10px; }    /* space between cells */`
 <td rowspan="3">Spans 3 rows</td>`
   },
   {
-    id: "table-styling",
+    id: "html-table-styling",
     Title: "Table Styling",
     videoSource: "https://www.youtube.com/embed/ZUmloybepoA",
     description: "",
@@ -384,7 +384,7 @@ tr:hover           { background-color: #ddd; }      /* hover highlight */
 th, td             { border-bottom: 1px solid #ddd; }/* horizontal lines only */`
   },
   {
-    id: "table-colgroup",
+    id: "html-table-colgroup",
     Title: "Table Colgroup",
     videoSource: "https://www.youtube.com/embed/ZUmloybepoA",
     description: "<colgroup> applies styles to entire columns without repeating them on each cell.",
@@ -397,7 +397,7 @@ th, td             { border-bottom: 1px solid #ddd; }/* horizontal lines only */
 </table>`
   },
   {
-    id: "lists",
+    id: "html-lists",
     Title: "HTML Lists",
     videoSource: "https://www.youtube.com/embed/2CCO4fqR9qI",
     description: "HTML has three list types: unordered (<ul>), ordered (<ol>), and description (<dl>).",
@@ -405,7 +405,7 @@ th, td             { border-bottom: 1px solid #ddd; }/* horizontal lines only */
 <ol><li>First</li><li>Second</li></ol>`
   },
   {
-    id: "unordered-lists",
+    id: "html-unordered-lists",
     Title: "Unordered Lists",
     videoSource: "https://www.youtube.com/embed/2CCO4fqR9qI",
     description: "<ul> creates a bulleted list. Bullet style is controlled by CSS.",
@@ -415,14 +415,14 @@ ul { list-style-type: square; }  /* ■ */
 ul { list-style-type: none; }    /* no bullet */`
   },
   {
-    id: "ordered-lists",
+    id: "html-ordered-lists",
     Title: "Ordered Lists",
     videoSource: "https://www.youtube.com/embed/8ZTA8GMwp94",
     description: "<ol> creates a numbered list. Type and start value can be customized.",
     exampleCode: `<ol type="1"> <ol type="A"> <ol type="a"> <ol type="I"> <ol start="5">`
   },
   {
-    id: "other-lists",
+    id: "html-other-lists",
     Title: "Description Lists",
     videoSource: "https://www.youtube.com/embed/5ol3nDsEHXY",
     description: "<dl> pairs terms (<dt>) with their descriptions (<dd>).",
@@ -434,14 +434,14 @@ ul { list-style-type: none; }    /* no bullet */`
 </dl>`
   },
   {
-    id: "block-inline",
+    id: "html-block-inline",
     Title: "Block & Inline Elements",
     videoSource: "https://www.youtube.com/embed/uKup7lkbZEk",
     description: "Block elements start on a new line and take full width. Inline elements stay on the same line.",
     exampleCode: ``
   },
   {
-    id: "div",
+    id: "html-div",
     Title: "HTML Div",
     videoSource: "https://www.youtube.com/embed/uKup7lkbZEk",
     description: "<div> is a generic block-level container used to group elements for styling.",
@@ -451,7 +451,7 @@ ul { list-style-type: none; }    /* no bullet */`
 </div>`
   },
   {
-    id: "classes",
+    id: "html-classes",
     Title: "HTML Classes",
     videoSource: "https://www.youtube.com/embed/uKup7lkbZEk",
     description: "The class attribute targets multiple elements with the same CSS style.",
@@ -462,7 +462,7 @@ ul { list-style-type: none; }    /* no bullet */`
 .note      { font-style: italic; }`
   },
   {
-    id: "id",
+    id: "html-id",
     Title: "HTML Id",
     videoSource: "https://www.youtube.com/embed/uKup7lkbZEk",
     description: "The id attribute uniquely identifies a single element on the page.",
@@ -473,7 +473,7 @@ ul { list-style-type: none; }    /* no bullet */`
 document.getElementById("main-title").style.color = "red";`
   },
   {
-    id: "buttons",
+    id: "html-buttons",
     Title: "HTML Buttons",
     videoSource: "https://www.youtube.com/embed/vEPMD9SaO_4",
     description: "",
@@ -484,7 +484,7 @@ document.getElementById("main-title").style.color = "red";`
 <button disabled>Disabled</button>`
   },
   {
-    id: "iframes",
+    id: "html-iframes",
     Title: "HTML Iframes",
     videoSource: "https://www.youtube.com/embed/uKup7lkbZEk",
     description: "<iframe> embeds another HTML page inside the current one.",
@@ -492,7 +492,7 @@ document.getElementById("main-title").style.color = "red";`
 <iframe src="page.html" style="border:none;"></iframe>`
   },
   {
-    id: "frames",
+    id: "html-frames",
     Title: "HTML Frames (Legacy)",
     videoSource: "https://www.youtube.com/embed/uKup7lkbZEk",
     description: "In older HTML (before HTML5), the <frameset> element was used to divide the browser window into multiple panes, each loading a different HTML page. This is different from <iframe>, which embeds a page inside a page.",
@@ -509,7 +509,7 @@ document.getElementById("main-title").style.color = "red";`
 </html>`
   },
   {
-    id: "page-backgrounds",
+    id: "html-page-backgrounds",
     Title: "HTML Backgrounds",
     videoSource: "https://www.youtube.com/embed/uKup7lkbZEk",
     description: "HTML originally provided two attributes on the <body> tag (and on table elements) for setting backgrounds: bgcolor for a solid background colour and background for a background image.",
@@ -524,7 +524,7 @@ document.getElementById("main-title").style.color = "red";`
 </table>`
   },
   {
-    id: "javascript",
+    id: "html-javascript",
     Title: "HTML JavaScript",
     videoSource: "https://www.youtube.com/embed/uKup7lkbZEk",
     description: "The <script> tag embeds or links JavaScript.",
@@ -537,14 +537,14 @@ document.getElementById("main-title").style.color = "red";`
 <noscript>Enable JavaScript to use this site.</noscript>`
   },
   {
-    id: "file-paths",
+    id: "html-file-paths",
     Title: "HTML File Paths",
     videoSource: "https://www.youtube.com/embed/uKup7lkbZEk",
     description: "",
     exampleCode: `<img src="https://example.com/photo.jpg">  <img src="photo.jpg">                       <img src="images/photo.jpg">               <img src="../photo.jpg">                    <img src="/images/photo.jpg">              `
   },
   {
-    id: "head",
+    id: "html-head",
     Title: "HTML Head",
     videoSource: "https://www.youtube.com/embed/uKup7lkbZEk",
     description: "<head> holds metadata — not displayed on the page.",
@@ -558,7 +558,7 @@ document.getElementById("main-title").style.color = "red";`
 </head>`
   },
   {
-    id: "layout",
+    id: "html-layout",
     Title: "HTML Layout",
     videoSource: "https://www.youtube.com/embed/Bu21yHpRH6k",
     description: "HTML5 semantic elements define page regions. Use CSS Flexbox or Grid to position them.",
@@ -571,7 +571,7 @@ document.getElementById("main-title").style.color = "red";`
 <footer>  — bottom of page`
   },
   {
-    id: "responsive",
+    id: "html-responsive",
     Title: "HTML Responsive",
     videoSource: "https://www.youtube.com/embed/-2CnrBUfAUQ",
     description: "Responsive design makes pages look good on all screen sizes.",
@@ -587,7 +587,7 @@ img { max-width: 100%; height: auto; }
 }`
   },
   {
-    id: "computercode",
+    id: "html-computercode",
     Title: "HTML Computercode",
     videoSource: "https://www.youtube.com/embed/uKup7lkbZEk",
     description: "",
@@ -595,7 +595,7 @@ img { max-width: 100%; height: auto; }
 y = 10;</code></pre>                 <kbd>Ctrl + C</kbd>                    <samp>Error: file not found</samp>     <var>x</var> = <var>y</var> + 2       `
   },
   {
-    id: "semantics",
+    id: "html-semantics",
     Title: "HTML Semantics",
     videoSource: "https://www.youtube.com/embed/uKup7lkbZEk",
     description: "Semantic elements describe their meaning to the browser and developer.",
@@ -610,14 +610,14 @@ y = 10;</code></pre>                 <kbd>Ctrl + C</kbd>                    <sam
 <time datetime="2026-05-07">May 7, 2026</time>`
   },
   {
-    id: "style-guide",
+    id: "html-style-guide",
     Title: "HTML Style Guide",
     videoSource: "https://www.youtube.com/embed/uKup7lkbZEk",
     description: "",
     exampleCode: ""
   },
   {
-    id: "entities",
+    id: "html-entities",
     Title: "HTML Entities",
     videoSource: "https://www.youtube.com/embed/uKup7lkbZEk",
     description: "Entities display reserved characters that would otherwise be parsed as HTML.",
@@ -628,7 +628,7 @@ y = 10;</code></pre>                 <kbd>Ctrl + C</kbd>                    <sam
 &trade; → ™      &euro; → €`
   },
   {
-    id: "symbols",
+    id: "html-symbols",
     Title: "HTML Symbols",
     videoSource: "https://www.youtube.com/embed/uKup7lkbZEk",
     description: "",
@@ -637,7 +637,7 @@ y = 10;</code></pre>                 <kbd>Ctrl + C</kbd>                    <sam
 &#9829; → ♥   &#9827; → ♣   &#9830; → ♦`
   },
   {
-    id: "emojis",
+    id: "html-emojis",
     Title: "HTML Emojis",
     videoSource: "https://www.youtube.com/embed/uKup7lkbZEk",
     description: "Emojis are Unicode characters. Ensure charset=\"UTF-8\" is set.",
@@ -645,14 +645,14 @@ y = 10;</code></pre>                 <kbd>Ctrl + C</kbd>                    <sam
 <p>😀</p>            <p>&#128512;</p>      <p>&#x1F600;</p>    `
   },
   {
-    id: "charsets",
+    id: "html-charsets",
     Title: "HTML Charsets",
     videoSource: "https://www.youtube.com/embed/uKup7lkbZEk",
     description: "A charset defines how characters are encoded. Always use UTF-8.",
     exampleCode: `<meta charset="UTF-8">`
   },
   {
-    id: "url-encode",
+    id: "html-url-encode",
     Title: "HTML URL Encode",
     videoSource: "https://www.youtube.com/embed/uKup7lkbZEk",
     description: "URLs use ASCII only. Non-ASCII characters are percent-encoded.",
@@ -661,14 +661,14 @@ y = 10;</code></pre>                 <kbd>Ctrl + C</kbd>                    <sam
 ?     → %3F    @ → %40`
   },
   {
-    id: "vs-xhtml",
+    id: "html-vs-xhtml",
     Title: "HTML vs. XHTML",
     videoSource: "https://www.youtube.com/embed/uKup7lkbZEk",
     description: "XHTML is HTML written as stricter XML. HTML5 is now the standard.",
     exampleCode: ""
   },
   {
-    id: "forms",
+    id: "html-forms",
     Title: "HTML Forms",
     videoSource: "https://www.youtube.com/embed/vEPMD9SaO_4",
     description: "The <form> element collects user input and sends it to a server.",
@@ -679,7 +679,7 @@ y = 10;</code></pre>                 <kbd>Ctrl + C</kbd>                    <sam
 </form>`
   },
   {
-    id: "form-attributes",
+    id: "html-form-attributes",
     Title: "HTML Form Attributes",
     videoSource: "https://www.youtube.com/embed/vEPMD9SaO_4",
     description: "",
@@ -693,7 +693,7 @@ y = 10;</code></pre>                 <kbd>Ctrl + C</kbd>                    <sam
 >`
   },
   {
-    id: "form-elements",
+    id: "html-form-elements",
     Title: "HTML Form Elements",
     videoSource: "https://www.youtube.com/embed/vEPMD9SaO_4",
     description: "Forms contain several element types beyond just <input>. Each has its own purpose:",
@@ -708,7 +708,7 @@ y = 10;</code></pre>                 <kbd>Ctrl + C</kbd>                    <sam
 <output>     result of a calculation`
   },
   {
-    id: "input-types",
+    id: "html-input-types",
     Title: "HTML Input Types",
     videoSource: "https://www.youtube.com/embed/vEPMD9SaO_4",
     description: "",
@@ -730,7 +730,7 @@ y = 10;</code></pre>                 <kbd>Ctrl + C</kbd>                    <sam
 <input type="tel">        phone number`
   },
   {
-    id: "input-attributes",
+    id: "html-input-attributes",
     Title: "HTML Input Attributes",
     videoSource: "https://www.youtube.com/embed/vEPMD9SaO_4",
     description: "",
@@ -750,7 +750,7 @@ y = 10;</code></pre>                 <kbd>Ctrl + C</kbd>                    <sam
 >`
   },
   {
-    id: "canvas",
+    id: "html-canvas",
     Title: "Input Form Attributes",
     videoSource: "https://www.youtube.com/embed/vEPMD9SaO_4",
     description: "Inputs outside a <form> tag can still be linked using the form attribute.",
@@ -760,7 +760,7 @@ y = 10;</code></pre>                 <kbd>Ctrl + C</kbd>                    <sam
 <input type="text" name="extra" form="myForm">`
   },
   {
-    id: "svg",
+    id: "html-svg",
     Title: "HTML Canvas",
     videoSource: "https://www.youtube.com/embed/9qj9WOPDj84",
     description: "<canvas> draws pixel-based graphics via JavaScript.",
@@ -775,7 +775,7 @@ y = 10;</code></pre>                 <kbd>Ctrl + C</kbd>                    <sam
 </script>`
   },
   {
-    id: "media",
+    id: "html-media",
     Title: "HTML SVG",
     videoSource: "https://www.youtube.com/embed/qA_-O35O_X4",
     description: "SVG draws vector graphics in XML. Scales perfectly at any size.",
@@ -787,14 +787,14 @@ y = 10;</code></pre>                 <kbd>Ctrl + C</kbd>                    <sam
 </svg>`
   },
   {
-    id: "video",
+    id: "html-video",
     Title: "HTML Media",
     videoSource: "https://www.youtube.com/embed/uKup7lkbZEk",
     description: "HTML5 supports video and audio natively — no plugins needed.",
     exampleCode: ""
   },
   {
-    id: "audio",
+    id: "html-audio",
     Title: "HTML Video",
     videoSource: "https://www.youtube.com/embed/nGigbThVLqA",
     description: "",
@@ -805,7 +805,7 @@ y = 10;</code></pre>                 <kbd>Ctrl + C</kbd>                    <sam
 </video>`
   },
   {
-    id: "plugins",
+    id: "html-plugins",
     Title: "HTML Audio",
     videoSource: "https://www.youtube.com/embed/nGigbThVLqA",
     description: "",
@@ -816,7 +816,7 @@ y = 10;</code></pre>                 <kbd>Ctrl + C</kbd>                    <sam
 </audio>`
   },
   {
-    id: "youtube",
+    id: "html-youtube",
     Title: "HTML Plug-ins",
     videoSource: "https://www.youtube.com/embed/uKup7lkbZEk",
     description: "<object> and <embed> embed external content like PDFs.",
@@ -825,7 +825,7 @@ y = 10;</code></pre>                 <kbd>Ctrl + C</kbd>                    <sam
 </object>`
   },
   {
-    id: "web-apis",
+    id: "html-web-apis",
     Title: "HTML YouTube",
     videoSource: "https://www.youtube.com/embed/uKup7lkbZEk",
     description: "Embed YouTube videos using an <iframe> with the YouTube embed URL.",
@@ -837,14 +837,14 @@ y = 10;</code></pre>                 <kbd>Ctrl + C</kbd>                    <sam
 </iframe>`
   },
   {
-    id: "geolocation",
+    id: "html-geolocation",
     Title: "HTML Web APIs",
     videoSource: "https://www.youtube.com/embed/uKup7lkbZEk",
     description: "Web APIs are browser-built-in interfaces accessible via JavaScript.",
     exampleCode: ""
   },
   {
-    id: "drag-drop",
+    id: "html-drag-drop",
     Title: "HTML Geolocation",
     videoSource: "https://www.youtube.com/embed/uKup7lkbZEk",
     description: "",
@@ -855,7 +855,7 @@ y = 10;</code></pre>                 <kbd>Ctrl + C</kbd>                    <sam
 }`
   },
   {
-    id: "web-storage",
+    id: "html-web-storage",
     Title: "HTML Drag and Drop",
     videoSource: "https://www.youtube.com/embed/uKup7lkbZEk",
     description: "",
@@ -871,7 +871,7 @@ function drop(e) {
 }`
   },
   {
-    id: "web-workers",
+    id: "html-web-workers",
     Title: "HTML Web Storage",
     videoSource: "https://www.youtube.com/embed/uKup7lkbZEk",
     description: "Stores key/value pairs in the browser. Larger and more secure than cookies.",
@@ -884,7 +884,7 @@ localStorage.removeItem("name");
 sessionStorage.setItem("temp", "value");`
   },
   {
-    id: "sse",
+    id: "html-sse",
     Title: "HTML Web Workers",
     videoSource: "https://www.youtube.com/embed/uKup7lkbZEk",
     description: "Web Workers run JavaScript in a background thread so the UI stays responsive.",
@@ -897,7 +897,7 @@ worker.onmessage = e => console.log("Result:", e.data);
 onmessage = e => postMessage(heavyTask());`
   },
   {
-    id: "",
+    id: "html-",
     Title: "HTML SSE (Server-Sent Events)",
     videoSource: "https://www.youtube.com/embed/uKup7lkbZEk",
     description: "SSE lets a server push data to the browser over a persistent HTTP connection.",
