@@ -162,6 +162,41 @@ nav details.nav-resources > .nav-resources-menu > a:hover {
   transform: none;
 }
 
+/* ── Nav theme button (pushed to far right) ── */
+nav ul li.nav-theme-li {
+  margin-left: auto;
+}
+
+.nav-theme-btn {
+  background: transparent;
+  color: #fff;
+  border: 1.5px solid rgba(255,255,255,0.55);
+  border-radius: 20px;
+  padding: 5px 14px;
+  font-size: 0.9rem;
+  font-family: inherit;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.02em;
+  transition: background 0.2s, border-color 0.2s;
+  white-space: nowrap;
+}
+
+.nav-theme-btn:hover {
+  background: rgba(255,255,255,0.15);
+  border-color: #fff;
+}
+
+body.dark-mode .nav-theme-btn {
+  border-color: rgba(88,166,255,0.5);
+  color: #58a6ff;
+}
+
+body.dark-mode .nav-theme-btn:hover {
+  background: rgba(88,166,255,0.12);
+  border-color: #58a6ff;
+}
+
 /* ── Hamburger (hidden on desktop) ── */
 .nav-checkbox {
   display: none;
@@ -261,6 +296,14 @@ nav details.nav-resources > .nav-resources-menu > a:hover {
   nav details.nav-path > .nav-path-menu > a + a,
   nav details.nav-resources > .nav-resources-menu > a + a {
     border-top: none;
+  }
+
+  .nav-theme-btn {
+    width: calc(100% - 32px);
+    margin: 6px 16px;
+    padding: 10px 14px;
+    border-radius: 6px;
+    font-size: 1rem;
   }
 }
 
