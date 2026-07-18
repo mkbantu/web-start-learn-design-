@@ -61,11 +61,11 @@ function initCourse() {
             }    
         }
         leftPanel.innerHTML = htmlContent;
-       
     }
 
-
-
+    if (typeof course !== 'undefined' && Array.isArray(course) && course.length > 0) {
+        display(0);
+    }
 }
 
 function display(index){
