@@ -770,38 +770,66 @@ details a:hover {
 }
 
 .page-controls {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
   flex: none;
   align-self: flex-start;
-  width: auto;
-  height: auto;
-  max-width: none;
+  width: 36px;
   margin: 0;
-  padding: 10px 8px;
+  padding: 8px 4px;
   position: sticky;
   top: 56px;
   z-index: 50;
   background: none;
-  box-shadow: none;
-  border-radius: 0;
 }
 
 .page-controls button {
-  display: block;
-  min-width: 44px;
-  min-height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
   border: none;
-  border-radius: 6px;
+  border-radius: 5px;
   background: #00628b;
   color: #fff;
   font: inherit;
+  font-size: 0.75rem;
   font-weight: 700;
   cursor: pointer;
-  margin-bottom: 8px;
+  padding: 0;
 }
 
 .page-controls button:hover {
   background: #004f70;
+}
+
+.page-controls button:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.page-controls button.done {
+  background: #2d9e5f;
+}
+
+.page-controls button.done:hover {
+  background: #238a52;
+}
+
+main.focus-mode section {
+  display: none;
+}
+
+#articles-container.font-sm article p,
+#articles-container.font-sm article li {
+  font-size: 0.85rem;
+}
+
+#articles-container.font-lg article p,
+#articles-container.font-lg article li {
+  font-size: 1.1rem;
 }
 
 /* ── Dark Mode ── */
@@ -844,6 +872,16 @@ body.dark-mode .page-controls button:hover {
   background: #264153;
   color: #79c0ff;
   border-color: rgba(88, 166, 255, 0.5);
+}
+
+body.dark-mode .page-controls button:disabled {
+  opacity: 0.3;
+}
+
+body.dark-mode .page-controls button.done {
+  background: #1a6b40;
+  color: #56d364;
+  border-color: rgba(86, 211, 100, 0.4);
 }
 
 /* Left panel */

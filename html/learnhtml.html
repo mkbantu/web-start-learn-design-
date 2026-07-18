@@ -61,8 +61,15 @@
   <label for="lesson-panel-toggle" class="lesson-panel-toggle" aria-label="Toggle lesson menu">? Lessons</label>
   <main >
     <div class="page-controls">
-      <button onclick="expandPanel()" aria-label="Toggle lesson panel">&#9776;</button>
-      <button onclick="toggleTheme()" id="themeButton">Dark</button>
+      <button onclick="expandPanel()" title="Toggle Sidebar">&#9776;</button>
+      <button onclick="toggleTheme()" id="themeButton" title="Toggle Dark/Light">Dark</button>
+      <button onclick="prevLesson()" id="prevBtn" title="Previous Lesson">&#8592;</button>
+      <button onclick="nextLesson()" id="nextBtn" title="Next Lesson">&#8594;</button>
+      <button onclick="decreaseFontSize()" title="Smaller Text">A&#8722;</button>
+      <button onclick="increaseFontSize()" title="Larger Text">A+</button>
+      <button onclick="markDone()" id="markDoneBtn" title="Mark Done">&#10003;</button>
+      <button onclick="scrollToTop()" title="Scroll to Top">&#8593;</button>
+      <button onclick="toggleFocus()" id="focusBtn" title="Focus Mode">&#9108;</button>
     </div>
     <section id="leftPanel">
 
