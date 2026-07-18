@@ -4,10 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="../css/web.css" />
+  <link rel="stylesheet" href="../css/form.css" />
   <link rel="icon" type="image/png" href="../images/logo.png" />
-  <title>Student Registration</title>
+  <title>WebStart — Subscribe Free</title>
 </head>
 <body>
+
   <nav>
     <a href="../index.html" class="nav-logo"><img src="../images/logo.png" alt="WebStart" /></a>
     <input type="checkbox" id="nav-toggle" class="nav-checkbox" />
@@ -53,74 +55,133 @@
     </ul>
   </nav>
 
-  
-  <hr />
-<div id="form-card">
-  <h1>Student Registration</h1>
-  <p>
-    Fill in the form below so we can send you your personalised web design course materials.
-    Your <strong>email address</strong> is used to deliver course lessons, resources, and progress updates directly to your inbox.
-    Your <strong>WhatsApp number</strong> is used to send you quick tips, reminders, and course content via WhatsApp message.
-    We will only contact you about your course — your details will never be shared with anyone else.
-  </p>
+  <div class="subscribe-page">
 
-  <form>
+    <!-- Left: brand panel -->
+    <div class="subscribe-info">
+      <div class="subscribe-info-inner">
+        <p class="subscribe-tag">FREE &amp; BEGINNER-FRIENDLY</p>
+        <h1>Start Your Web<br />Design Journey</h1>
+        <p class="subscribe-lead">Get personalised HTML, CSS and JavaScript lessons delivered directly to your inbox or WhatsApp — at your own pace.</p>
 
-    <div class="form-group">
-      <label for="name">Full Name:</label>
-      <input type="text" id="name" name="name" placeholder="Enter your full name" required />
+        <ul class="subscribe-perks">
+          <li><span class="perk-check">&#10003;</span> Structured beginner-to-advanced lessons</li>
+          <li><span class="perk-check">&#10003;</span> Delivered via Email or WhatsApp</li>
+          <li><span class="perk-check">&#10003;</span> Learn at your own pace, no deadlines</li>
+          <li><span class="perk-check">&#10003;</span> 100% free — no credit card needed</li>
+        </ul>
+
+        <div class="subscribe-pills">
+          <span class="sub-pill html">HTML</span>
+          <span class="sub-pill css">CSS</span>
+          <span class="sub-pill js">JavaScript</span>
+        </div>
+      </div>
     </div>
 
-    <div class="form-group">
-      <label for="email">Email Address:</label>
-      <input type="email" id="email" name="email" placeholder="Enter your email" required />
+    <!-- Right: form panel -->
+    <div class="subscribe-form-wrap">
+      <div class="subscribe-form-card">
+
+        <div class="form-header">
+          <h2>Create Your Free Account</h2>
+          <p>Fill in your details below to get started</p>
+        </div>
+
+        <form class="subscribe-form">
+
+          <div class="field-row">
+            <div class="field">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" placeholder="Your full name" required />
+            </div>
+          </div>
+
+          <div class="field-row two-col">
+            <div class="field">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" required />
+            </div>
+            <div class="field">
+              <label for="whatsapp">WhatsApp Number</label>
+              <input type="tel" id="whatsapp" name="whatsapp" placeholder="+250 700 000 000" required />
+            </div>
+          </div>
+
+          <div class="field-row two-col">
+            <div class="field">
+              <label for="contact">Receive lessons via</label>
+              <select id="contact" name="contact">
+                <option value="email">Email only</option>
+                <option value="whatsapp">WhatsApp only</option>
+                <option value="both">Both Email &amp; WhatsApp</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="gender">Gender</label>
+              <select id="gender" name="gender">
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Prefer not to say</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label>Your current level</label>
+              <div class="level-grid">
+                <label class="level-card">
+                  <input type="radio" name="level" value="beginner" checked />
+                  <div class="level-inner">
+                    <span class="level-num">1</span>
+                    <span class="level-title">Beginner</span>
+                    <span class="level-desc">I know nothing yet</span>
+                  </div>
+                </label>
+                <label class="level-card">
+                  <input type="radio" name="level" value="some" />
+                  <div class="level-inner">
+                    <span class="level-num">2</span>
+                    <span class="level-title">Some knowledge</span>
+                    <span class="level-desc">A little HTML / CSS</span>
+                  </div>
+                </label>
+                <label class="level-card">
+                  <input type="radio" name="level" value="intermediate" />
+                  <div class="level-inner">
+                    <span class="level-num">3</span>
+                    <span class="level-title">Intermediate</span>
+                    <span class="level-desc">I can build basic pages</span>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="goal">What do you want to learn? <span class="optional">(optional)</span></label>
+              <textarea id="goal" name="goal" rows="3" placeholder="e.g. I want to build my own website and get a job in web design..."></textarea>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn-primary">Subscribe Free</button>
+            <button type="reset" class="btn-secondary">Clear</button>
+          </div>
+
+          <p class="privacy-note">We only contact you about your course. Your details are never shared with third parties.</p>
+
+        </form>
+      </div>
     </div>
 
-    <div class="form-group">
-      <label for="whatsapp">WhatsApp Number:</label>
-      <input type="tel" id="whatsapp" name="whatsapp" placeholder="e.g. +250 700 000 000" required />
-    </div>
-
-    <div class="form-group">
-      <label for="contact">Receive courses via:</label>
-      <select id="contact" name="contact">
-        <option value="email">Email only</option>
-        <option value="whatsapp">WhatsApp only</option>
-        <option value="both">Both Email and WhatsApp</option>
-      </select>
-    </div>
-
-    <div class="form-group">
-      <label for="level">Your Current Level:</label>
-      <select id="level" name="level">
-        <option value="beginner">Beginner — I know nothing yet</option>
-        <option value="some">I know a little HTML/CSS</option>
-        <option value="intermediate">Intermediate — I can build basic pages</option>
-      </select>
-    </div>
-
-    <div class="form-group">
-      <label for="gender">Gender:</label>
-      <select id="gender" name="gender">
-        <option value="male">Male</option>
-        <option value="female">Female</option>
-      </select>
-    </div>
-
-    <div class="form-group">
-      <label for="goal">What do you want to learn?</label>
-      <textarea id="goal" name="goal" rows="4" placeholder="e.g. I want to build my own website, or I want to get a job in web design..."></textarea>
-    </div>
-
-    <div class="form-actions">
-      <input type="submit" value="Subscribe" />
-      <input type="reset" value="Clear" />
-    </div>
-
-  </form>
   </div>
 
-  <p><a href="../index.html">Back to Home</a></p>
+  <footer>
+    <p>WebStart &copy; 2026</p>
+  </footer>
 
 </body>
 </html>

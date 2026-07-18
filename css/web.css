@@ -41,6 +41,15 @@ nav ul {
   list-style: none;
   gap: 2em;
   margin-left: 2em;
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: flex;
+  align-items: center;
 }
 
 nav ul li a {
@@ -49,6 +58,8 @@ nav ul li a {
   font-size: 1.05rem;
   padding: 6px 14px;
   border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
 }
 
 nav ul li a:visited {
@@ -749,44 +760,297 @@ details a:hover {
   background: #004f70;
 }
 
+/* ── Dark Mode ── */
 body.dark-mode {
-  background: #101820;
-  color: #f3f6f8;
+  background: #0d1117;
+  color: #e6edf3;
 }
 
-body.dark-mode main div article,
-body.dark-mode #form-card,
-body.dark-mode #subscribe,
+/* Nav */
+body.dark-mode nav {
+  background: #161b22;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+body.dark-mode nav details.nav-home > .nav-home-menu,
+body.dark-mode nav details.nav-path > .nav-path-menu,
+body.dark-mode nav details.nav-resources > .nav-resources-menu {
+  background: #161b22;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode nav ul li a:hover,
+body.dark-mode nav details.nav-home > summary:hover,
+body.dark-mode nav details.nav-path > summary:hover,
+body.dark-mode nav details.nav-resources > summary:hover,
+body.dark-mode nav details.nav-home > .nav-home-menu > a:hover,
+body.dark-mode nav details.nav-path > .nav-path-menu > a:hover,
+body.dark-mode nav details.nav-resources > .nav-resources-menu > a:hover {
+  background: #1f2d3d;
+}
+
+/* Page controls */
+body.dark-mode .page-controls button {
+  background: #1f2d3d;
+  color: #58a6ff;
+  border: 1px solid rgba(88, 166, 255, 0.25);
+}
+
+body.dark-mode .page-controls button:hover {
+  background: #264153;
+  color: #79c0ff;
+  border-color: rgba(88, 166, 255, 0.5);
+}
+
+/* Left panel */
+body.dark-mode main section {
+  background: #161b22;
+  border-right-color: rgba(255, 255, 255, 0.07);
+}
+
+body.dark-mode main section h2 {
+  color: #e6edf3;
+}
+
+body.dark-mode main section a {
+  color: #58a6ff;
+}
+
+body.dark-mode main section a.sub {
+  color: #8b949e;
+}
+
+body.dark-mode main section a:hover {
+  color: #79c0ff;
+}
+
+body.dark-mode main section a.active {
+  color: #79c0ff;
+  font-weight: bold;
+}
+
+/* Details / sidebar dropdowns */
 body.dark-mode details {
-  background: #17232d;
-  color: #f3f6f8;
-  border-color: rgba(255, 255, 255, 0.16);
+  background: #161b22;
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
-body.dark-mode p,
-body.dark-mode li,
-body.dark-mode label {
-  color: #d8e1e8;
+body.dark-mode details[open] {
+  border-color: rgba(88, 166, 255, 0.3);
 }
 
-body.dark-mode h2,
-body.dark-mode summary,
-body.dark-mode a {
-  color: #72c7f0;
+body.dark-mode summary {
+  color: #58a6ff;
 }
 
 body.dark-mode details a {
-  background: #213342;
-  color: #72c7f0;
+  background: #1a2332;
+  color: #58a6ff;
 }
 
 body.dark-mode details a:hover {
-  background: #29465c;
-  color: #ffffff;
+  background: #1f2d3d;
+  color: #79c0ff;
 }
 
+/* Articles */
+body.dark-mode main div article {
+  background: #0d1117;
+  border-bottom-color: rgba(255, 255, 255, 0.07);
+}
+
+body.dark-mode main div article h2 {
+  color: #58a6ff;
+  border-bottom-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode main div article p,
+body.dark-mode main div article li {
+  color: #c9d1d9;
+}
+
+body.dark-mode main div article th {
+  background: #1a2332;
+  color: #e6edf3;
+}
+
+body.dark-mode main div article th,
+body.dark-mode main div article td {
+  border-color: rgba(255, 255, 255, 0.09);
+}
+
+body.dark-mode main div article td {
+  color: #c9d1d9;
+}
+
+/* Code */
 body.dark-mode pre,
-body.dark-mode code {
-  background: #0b1117;
-  color: #f3f6f8;
+body.dark-mode main div article code {
+  background: #010409;
+  color: #c9d1d9;
+}
+
+body.dark-mode main div article pre code {
+  background: none;
+  color: inherit;
+}
+
+body.dark-mode main div article code {
+  background: #1a2332;
+  color: #79c0ff;
+}
+
+/* Shared text */
+body.dark-mode p,
+body.dark-mode li,
+body.dark-mode label {
+  color: #c9d1d9;
+}
+
+body.dark-mode h2 {
+  color: #58a6ff;
+}
+
+body.dark-mode h3 {
+  color: #79c0ff;
+}
+
+body.dark-mode a {
+  color: #58a6ff;
+}
+
+body.dark-mode a:hover {
+  color: #79c0ff;
+}
+
+/* Footer */
+body.dark-mode footer {
+  background: #161b22;
+  color: #6e7681;
+}
+
+/* ── Index page dark mode ── */
+body.dark-mode section.section-wrap {
+  background: #0d1117;
+}
+
+body.dark-mode section.section-wrap.bg-light {
+  background: #111820;
+}
+
+body.dark-mode hr.section-divider {
+  background: #1f2d3d;
+}
+
+body.dark-mode section div.guide-section h2 {
+  color: #58a6ff;
+}
+
+body.dark-mode section div.guide-section h3 {
+  color: #79c0ff;
+}
+
+body.dark-mode section div.guide-section ul li {
+  color: #c9d1d9;
+}
+
+body.dark-mode section div.guide-section div.card-grid div.card,
+body.dark-mode section div.guide-section div.two-col div.static-box,
+body.dark-mode section div.guide-section div.web-evo div.web-evo-card,
+body.dark-mode section div.guide-section div.tech-stack div.tech-group,
+body.dark-mode section div.guide-section div.path-steps div.path-step {
+  background: #161b22;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode section div.guide-section div.card-grid div.card h3,
+body.dark-mode section div.guide-section div.two-col div.static-box h3,
+body.dark-mode section div.guide-section div.web-evo div.web-evo-card h3,
+body.dark-mode section div.guide-section div.tech-stack div.tech-group h3,
+body.dark-mode section div.guide-section div.path-steps div.path-step h3 {
+  color: #58a6ff;
+}
+
+body.dark-mode section div.guide-section div.card-grid div.card p,
+body.dark-mode section div.guide-section div.path-steps div.path-step p {
+  color: #8b949e;
+}
+
+body.dark-mode section div.guide-section div.info-box {
+  background: #1a2332;
+  color: #c9d1d9;
+}
+
+body.dark-mode section div.guide-section div.info-box.highlight {
+  background: #2d1a1f;
+}
+
+body.dark-mode section div.guide-section div.info-box code {
+  background: rgba(255, 255, 255, 0.08);
+  color: #79c0ff;
+}
+
+body.dark-mode section div.guide-section table.protocol-table {
+  background: #161b22;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+body.dark-mode section div.guide-section table.protocol-table th {
+  background: #1a2332;
+  color: #e6edf3;
+}
+
+body.dark-mode section div.guide-section table.protocol-table td {
+  border-bottom-color: rgba(255, 255, 255, 0.07);
+  color: #c9d1d9;
+}
+
+body.dark-mode section div.guide-section table.protocol-table tbody tr:nth-child(even) td {
+  background: #111820;
+}
+
+body.dark-mode section div.guide-section table.protocol-table td:first-child {
+  color: #58a6ff;
+}
+
+body.dark-mode section div.guide-section div.tech-stack div.tech-group span.tech-tag.html   { background: #2d1a00; color: #ffa657; }
+body.dark-mode section div.guide-section div.tech-stack div.tech-group span.tech-tag.css    { background: #051d3b; color: #58a6ff; }
+body.dark-mode section div.guide-section div.tech-stack div.tech-group span.tech-tag.js     { background: #2d2600; color: #e3b341; }
+body.dark-mode section div.guide-section div.tech-stack div.tech-group span.tech-tag.php    { background: #1a1d3b; color: #818cf8; }
+body.dark-mode section div.guide-section div.tech-stack div.tech-group span.tech-tag.mysql  { background: #0f2d18; color: #3fb950; }
+body.dark-mode section div.guide-section div.tech-stack div.tech-group span.tech-tag.python { background: #2a1040; color: #d2a8ff; }
+
+/* Form */
+body.dark-mode #form-card,
+body.dark-mode #subscribe {
+  background: #161b22;
+  color: #e6edf3;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+body.dark-mode #form-card form input[type="text"],
+body.dark-mode #form-card form input[type="email"],
+body.dark-mode #form-card form input[type="tel"],
+body.dark-mode #form-card form select,
+body.dark-mode #form-card form textarea {
+  background: #0d1117;
+  border-color: rgba(255, 255, 255, 0.15);
+  color: #e6edf3;
+}
+
+body.dark-mode #form-card form input[type="text"]:focus,
+body.dark-mode #form-card form input[type="email"]:focus,
+body.dark-mode #form-card form input[type="tel"]:focus,
+body.dark-mode #form-card form select:focus,
+body.dark-mode #form-card form textarea:focus {
+  border-color: #58a6ff;
+  background: #161b22;
+}
+
+/* Mobile lesson panel toggle */
+body.dark-mode .lesson-panel-toggle {
+  background: #1a2332;
+  color: #58a6ff;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.5);
 }
