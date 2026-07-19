@@ -398,6 +398,47 @@ body.form-page footer {
   }
 }
 
+/* ── Galaxy S20 / 360px ── */
+@media (max-width: 380px) {
+  .subscribe-info {
+    padding: 20px 14px;
+  }
+
+  .subscribe-info h1 {
+    font-size: 1.2rem;
+  }
+
+  .subscribe-info .subscribe-lead {
+    font-size: 0.88rem;
+  }
+
+  .subscribe-form-wrap {
+    padding: 10px 10px;
+  }
+
+  .subscribe-form-card {
+    padding: 16px 12px;
+  }
+
+  .form-header h2 {
+    font-size: 1.1rem;
+  }
+
+  .field input,
+  .field select,
+  .field textarea {
+    font-size: 0.9rem;
+  }
+
+  .level-inner {
+    padding: 10px 8px;
+  }
+
+  .level-num {
+    font-size: 1.1rem;
+  }
+}
+
 /* ── Dark Mode ── */
 body.dark-mode .subscribe-info {
   background: linear-gradient(155deg, #002233 0%, #003347 100%);

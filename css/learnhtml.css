@@ -276,7 +276,7 @@ main section {
   }
 
   main div article {
-    padding: 76px 18px 26px;
+    padding: 50px 18px 26px;
   }
 
   main div article + article {
@@ -313,4 +313,40 @@ footer {
   margin-left: 0;
   margin-top: 0;
   width: 100%;
+}
+
+/* ── Galaxy S20 / 360px ── */
+@media (max-width: 480px) {
+  main div article {
+    padding: 48px 12px 20px;
+  }
+
+  main div article h2 {
+    font-size: 1.15rem;
+  }
+
+  main div article pre {
+    font-size: 0.78rem;
+    padding: 12px 10px;
+  }
+
+  main div article table {
+    font-size: 0.82rem;
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  main div article th,
+  main div article td {
+    padding: 7px 9px;
+  }
+
+  .lesson-panel-toggle {
+    top: 100px;
+    left: 8px;
+    padding: 6px 10px;
+    font-size: 0.82rem;
+    min-height: 34px;
+  }
 }

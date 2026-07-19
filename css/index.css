@@ -475,3 +475,113 @@ section.cta-section div.cta-inner a.cta-btn:hover {
   background: #c0304a;
   text-decoration: none;
 }
+
+/* ── Responsive (tablet) ── */
+@media (max-width: 768px) {
+  section div.guide-section {
+    padding: 32px 16px;
+  }
+
+  section div.guide-section h2 {
+    font-size: 1.35rem;
+  }
+
+  section.cta-section {
+    padding: 40px 16px;
+  }
+
+  section.cta-section div.cta-inner h2 {
+    font-size: 1.45rem;
+  }
+}
+
+/* ── Small screen (Galaxy S20 / 360px) ── */
+@media (max-width: 480px) {
+  section div.guide-section {
+    padding: 22px 12px;
+  }
+
+  section div.guide-section h2 {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+  }
+
+  section div.guide-section h3 {
+    font-size: 1rem;
+  }
+
+  /* Protocol table: scrollable instead of overflowing */
+  section div.guide-section table.protocol-table {
+    display: block;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    font-size: 0.85rem;
+  }
+
+  section div.guide-section table.protocol-table th,
+  section div.guide-section table.protocol-table td {
+    padding: 8px 10px;
+    white-space: nowrap;
+  }
+
+  /* Cards: full width on very small screens */
+  section div.guide-section div.card-grid div.card {
+    flex: 1 1 100%;
+  }
+
+  /* Web evo cards: full width */
+  section div.guide-section div.web-evo div.web-evo-card {
+    flex: 1 1 100%;
+    padding: 16px;
+  }
+
+  section div.guide-section div.web-evo div.web-evo-card span.version {
+    font-size: 1.7rem;
+  }
+
+  /* Tech stack groups: full width */
+  section div.guide-section div.tech-stack div.tech-group {
+    flex: 1 1 100%;
+    padding: 16px;
+  }
+
+  /* Two-col boxes: full width */
+  section div.guide-section div.two-col div.static-box {
+    flex: 1 1 100%;
+    padding: 16px;
+  }
+
+  /* Learning path: reduce left offset for step numbers */
+  section div.guide-section div.path-steps {
+    padding-left: 38px;
+  }
+
+  section div.guide-section div.path-steps div.path-step span.step-num {
+    left: -38px;
+    width: 28px;
+    height: 28px;
+    font-size: 0.82rem;
+  }
+
+  section div.guide-section div.path-steps div.path-step {
+    padding: 16px 14px;
+  }
+
+  /* CTA */
+  section.cta-section {
+    padding: 32px 12px;
+  }
+
+  section.cta-section div.cta-inner h2 {
+    font-size: 1.2rem;
+  }
+
+  section.cta-section div.cta-inner p {
+    font-size: 0.9rem;
+  }
+
+  section.cta-section div.cta-inner a.cta-btn {
+    padding: 11px 28px;
+    font-size: 0.93rem;
+  }
+}
