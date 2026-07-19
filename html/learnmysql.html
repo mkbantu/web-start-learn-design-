@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/web.css" />
+  <link rel="stylesheet" href="../css/learnmysql.css">
+  <link rel="icon" type="image/png" href="../images/logo.png" />
+  <script src="../data/serverside/mysqlcourse.js"></script>
+  <script src="../script/script.js"></script>
+  <title>WebStart — MySQL</title>
+</head>
+<body>
+
+  <nav>
+    <a href="../index.html" class="nav-logo"><img src="../images/logo.png" alt="WebStart" /></a>
+    <input type="checkbox" id="nav-toggle" class="nav-checkbox" />
+    <label for="nav-toggle" class="nav-toggle">&#9776;</label>
+    <ul>
+      <li>
+        <details class="nav-home">
+          <summary>Home</summary>
+          <div class="nav-home-menu">
+            <a href="../index.html#welcome">Welcome</a>
+            <a href="../index.html#internet">The Internet</a>
+            <a href="../index.html#web">The Web</a>
+            <a href="../index.html#path">Design Path</a>
+            <a href="../index.html#resources">Resources</a>
+          </div>
+        </details>
+      </li>
+      <li>
+        <details class="nav-path">
+          <summary>Design Path</summary>
+          <div class="nav-path-menu">
+            <a href="learnhtml.html">HTML</a>
+            <a href="learncss.html">CSS</a>
+            <a href="learnjs.html">JavaScript</a>
+          </div>
+        </details>
+      </li>
+      <li>
+        <details class="nav-next">
+          <summary>Server Side Path</summary>
+          <div class="nav-next-menu">
+            <a href="learnnode.html">Node.js + Express</a>
+            <a href="learnmysql.html">MySQL</a>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch" target="_blank" rel="noopener">fetch API</a>
+            <a href="https://roadmap.sh/full-stack" target="_blank" rel="noopener">Full-Stack Roadmap</a>
+          </div>
+        </details>
+      </li>
+      <li>
+        <details class="nav-hosting">
+          <summary>Hosting Path</summary>
+          <div class="nav-hosting-menu">
+            <a href="learnhosting.html">Learn Hosting</a>
+            <a href="https://vercel.com/docs" target="_blank" rel="noopener">Vercel Docs</a>
+            <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a>
+            <a href="https://railway.app/" target="_blank" rel="noopener">Railway</a>
+            <a href="https://render.com/" target="_blank" rel="noopener">Render</a>
+          </div>
+        </details>
+      </li>
+      <li>
+        <details class="nav-resources">
+          <summary>Resources</summary>
+          <div class="nav-resources-menu">
+            <a href="../index.html#resources">All Resources</a>
+            <a href="../index.html#w3schools">W3Schools</a>
+            <a href="../index.html#mdn">MDN Web Docs</a>
+            <a href="../index.html#freecodecamp">freeCodeCamp</a>
+            <a href="../index.html#youtube">YouTube</a>
+            <a href="../index.html#codepen">CodePen</a>
+            <a href="../index.html#stackoverflow">Stack Overflow</a>
+          </div>
+        </details>
+      </li>
+      <li><a href="form.html">Subscribe</a></li>
+      <li class="nav-theme-li"><button class="nav-theme-btn" id="themeButton" onclick="toggleTheme()">Dark</button></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="page-controls">
+      <button onclick="expandPanel()" title="Toggle Sidebar">&#9776;</button>
+      <button onclick="toggleTheme()" id="themeButton" title="Toggle Dark/Light">Dark</button>
+      <button onclick="prevLesson()" id="prevBtn" title="Previous Lesson">&#8592;</button>
+      <button onclick="nextLesson()" id="nextBtn" title="Next Lesson">&#8594;</button>
+      <button onclick="decreaseFontSize()" title="Smaller Text">A&#8722;</button>
+      <button onclick="increaseFontSize()" title="Larger Text">A+</button>
+      <button onclick="markDone()" id="markDoneBtn" title="Mark Done">&#10003;</button>
+      <button onclick="scrollToTop()" title="Scroll to Top">&#8593;</button>
+      <button onclick="toggleFocus()" id="focusBtn" title="Focus Mode">&#9108;</button>
+    </div>
+    <section id="leftPanel"></section>
+    <div id="articles-container"></div>
+  </main>
+
+  <footer>
+    <p>WebStart &copy; 2026</p>
+  </footer>
+
+</body>
+</html>
