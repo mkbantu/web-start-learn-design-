@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/web.css" />
-  <link rel="stylesheet" href="../css/learnhtml.css">
+  <link rel="stylesheet" href="../css/learnhosting.css">
   <link rel="icon" type="image/png" href="../images/logo.png" />
-  <script src="../data/design/htmlcourse.js"></script>
-  <script src="../script/script.js" ></script>
-  <title>WebStart — HTML</title>
+  <script src="../data/hosting/hostingcourse.js"></script>
+  <script src="../script/script.js"></script>
+  <title>WebStart — Hosting &amp; Deployment</title>
 </head>
 <body>
 
@@ -77,12 +77,11 @@
         </details>
       </li>
       <li><a href="form.html">Subscribe</a></li>
+      <li class="nav-theme-li"><button class="nav-theme-btn" id="themeButton" onclick="toggleTheme()">Dark</button></li>
     </ul>
   </nav>
 
-  <input type="checkbox" id="lesson-panel-toggle" class="lesson-panel-checkbox" />
-  <label for="lesson-panel-toggle" class="lesson-panel-toggle" aria-label="Toggle lesson menu">? Lessons</label>
-  <main >
+  <main>
     <div class="page-controls">
       <button onclick="expandPanel()" title="Toggle Sidebar">&#9776;</button>
       <button onclick="toggleTheme()" id="themeButton" title="Toggle Dark/Light">Dark</button>
@@ -94,17 +93,13 @@
       <button onclick="scrollToTop()" title="Scroll to Top">&#8593;</button>
       <button onclick="toggleFocus()" id="focusBtn" title="Focus Mode">&#9108;</button>
     </div>
-    <section id="leftPanel">
-
-    </section>
-
-    <div id="articles-container">
-    </div>
-
+    <section id="leftPanel"></section>
+    <div id="articles-container"></div>
   </main>
 
   <footer>
     <p>WebStart &copy; 2026</p>
   </footer>
+
 </body>
 </html>
