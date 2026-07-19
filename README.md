@@ -85,6 +85,3 @@ npx live-server web-start-learn-design/
 
 Phase 1 (full front-end) is complete and live. Phase 2 (Node.js + MySQL back-end) is designed and planned.
 
-## Registration No.
-
-225029152 — University of Rwanda, UR-CST, Web Design Module 2025–2026
