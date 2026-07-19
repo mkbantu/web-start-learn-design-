@@ -77,6 +77,8 @@ nav ul li a:hover {
 
 nav details.nav-home,
 nav details.nav-path,
+nav details.nav-next,
+nav details.nav-hosting,
 nav details.nav-resources {
   position: relative;
   display: block;
@@ -90,6 +92,8 @@ nav details.nav-resources {
 
 nav details.nav-home > summary,
 nav details.nav-path > summary,
+nav details.nav-next > summary,
+nav details.nav-hosting > summary,
 nav details.nav-resources > summary {
   display: block;
   color: #fff;
@@ -105,6 +109,8 @@ nav details.nav-resources > summary {
 
 nav details.nav-home > .nav-home-menu,
 nav details.nav-path > .nav-path-menu,
+nav details.nav-next > .nav-next-menu,
+nav details.nav-hosting > .nav-hosting-menu,
 nav details.nav-resources > .nav-resources-menu {
   display: none;
   position: absolute;
@@ -122,6 +128,10 @@ nav details.nav-home:hover > .nav-home-menu,
 nav details.nav-home:focus-within > .nav-home-menu,
 nav details.nav-path:hover > .nav-path-menu,
 nav details.nav-path:focus-within > .nav-path-menu,
+nav details.nav-next:hover > .nav-next-menu,
+nav details.nav-next:focus-within > .nav-next-menu,
+nav details.nav-hosting:hover > .nav-hosting-menu,
+nav details.nav-hosting:focus-within > .nav-hosting-menu,
 nav details.nav-resources:hover > .nav-resources-menu,
 nav details.nav-resources:focus-within > .nav-resources-menu {
   display: block;
@@ -129,6 +139,8 @@ nav details.nav-resources:focus-within > .nav-resources-menu {
 
 nav details.nav-home > summary:hover,
 nav details.nav-path > summary:hover,
+nav details.nav-next > summary:hover,
+nav details.nav-hosting > summary:hover,
 nav details.nav-resources > summary:hover {
   background: #004f70;
   color: #ffffff;
@@ -136,6 +148,8 @@ nav details.nav-resources > summary:hover {
 
 nav details.nav-home > .nav-home-menu > a,
 nav details.nav-path > .nav-path-menu > a,
+nav details.nav-next > .nav-next-menu > a,
+nav details.nav-hosting > .nav-hosting-menu > a,
 nav details.nav-resources > .nav-resources-menu > a {
   display: block;
   position: static;
@@ -151,12 +165,16 @@ nav details.nav-resources > .nav-resources-menu > a {
 
 nav details.nav-home > .nav-home-menu > a + a,
 nav details.nav-path > .nav-path-menu > a + a,
+nav details.nav-next > .nav-next-menu > a + a,
+nav details.nav-hosting > .nav-hosting-menu > a + a,
 nav details.nav-resources > .nav-resources-menu > a + a {
   border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 nav details.nav-home > .nav-home-menu > a:hover,
 nav details.nav-path > .nav-path-menu > a:hover,
+nav details.nav-next > .nav-next-menu > a:hover,
+nav details.nav-hosting > .nav-hosting-menu > a:hover,
 nav details.nav-resources > .nav-resources-menu > a:hover {
   background: #004f70;
   color: #ffffff;
@@ -257,6 +275,8 @@ body.dark-mode .nav-theme-btn:hover {
 
   nav details.nav-home > summary,
   nav details.nav-path > summary,
+  nav details.nav-next > summary,
+  nav details.nav-hosting > summary,
   nav details.nav-resources > summary {
     display: block;
     font-size: 1rem;
@@ -267,6 +287,8 @@ body.dark-mode .nav-theme-btn:hover {
 
   nav details.nav-home > .nav-home-menu,
   nav details.nav-path > .nav-path-menu,
+  nav details.nav-next > .nav-next-menu,
+  nav details.nav-hosting > .nav-hosting-menu,
   nav details.nav-resources > .nav-resources-menu {
     position: static;
     display: none;
@@ -281,6 +303,10 @@ body.dark-mode .nav-theme-btn:hover {
   nav details.nav-home:focus-within > .nav-home-menu,
   nav details.nav-path:hover > .nav-path-menu,
   nav details.nav-path:focus-within > .nav-path-menu,
+  nav details.nav-next:hover > .nav-next-menu,
+  nav details.nav-next:focus-within > .nav-next-menu,
+  nav details.nav-hosting:hover > .nav-hosting-menu,
+  nav details.nav-hosting:focus-within > .nav-hosting-menu,
   nav details.nav-resources:hover > .nav-resources-menu,
   nav details.nav-resources:focus-within > .nav-resources-menu {
     display: block;
@@ -288,6 +314,8 @@ body.dark-mode .nav-theme-btn:hover {
 
   nav details.nav-home > .nav-home-menu > a,
   nav details.nav-path > .nav-path-menu > a,
+  nav details.nav-next > .nav-next-menu > a,
+  nav details.nav-hosting > .nav-hosting-menu > a,
   nav details.nav-resources > .nav-resources-menu > a {
     padding: 10px 28px;
     border-bottom: 1px solid rgba(255,255,255,0.15);
@@ -295,6 +323,8 @@ body.dark-mode .nav-theme-btn:hover {
 
   nav details.nav-home > .nav-home-menu > a + a,
   nav details.nav-path > .nav-path-menu > a + a,
+  nav details.nav-next > .nav-next-menu > a + a,
+  nav details.nav-hosting > .nav-hosting-menu > a + a,
   nav details.nav-resources > .nav-resources-menu > a + a {
     border-top: none;
   }
@@ -846,6 +876,8 @@ body.dark-mode nav {
 
 body.dark-mode nav details.nav-home > .nav-home-menu,
 body.dark-mode nav details.nav-path > .nav-path-menu,
+body.dark-mode nav details.nav-next > .nav-next-menu,
+body.dark-mode nav details.nav-hosting > .nav-hosting-menu,
 body.dark-mode nav details.nav-resources > .nav-resources-menu {
   background: #161b22;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
@@ -854,9 +886,13 @@ body.dark-mode nav details.nav-resources > .nav-resources-menu {
 body.dark-mode nav ul li a:hover,
 body.dark-mode nav details.nav-home > summary:hover,
 body.dark-mode nav details.nav-path > summary:hover,
+body.dark-mode nav details.nav-next > summary:hover,
+body.dark-mode nav details.nav-hosting > summary:hover,
 body.dark-mode nav details.nav-resources > summary:hover,
 body.dark-mode nav details.nav-home > .nav-home-menu > a:hover,
 body.dark-mode nav details.nav-path > .nav-path-menu > a:hover,
+body.dark-mode nav details.nav-next > .nav-next-menu > a:hover,
+body.dark-mode nav details.nav-hosting > .nav-hosting-menu > a:hover,
 body.dark-mode nav details.nav-resources > .nav-resources-menu > a:hover {
   background: #1f2d3d;
 }

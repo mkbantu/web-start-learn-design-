@@ -368,6 +368,64 @@ section div.guide-section div.path-steps div.path-step a:hover {
   text-decoration: none;
 }
 
+/* ── Next Steps (after course) ── */
+.next-steps-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 28px 0 18px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #00628b;
+}
+.next-steps-divider::before,
+.next-steps-divider::after {
+  content: '';
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, #b3d8e8, transparent);
+}
+.next-steps-divider::before {
+  background: linear-gradient(90deg, transparent, #b3d8e8);
+}
+
+section div.guide-section div.path-steps div.path-step.next-step {
+  background: #f0f8fc;
+  border-left: 4px solid #00628b;
+  border-radius: 0 10px 10px 0;
+}
+
+section div.guide-section div.path-steps div.path-step span.step-num.next-num {
+  background: #00628b;
+}
+
+.next-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.next-links a {
+  display: inline-block;
+  background: #00628b;
+  color: #fff;
+  padding: 5px 14px;
+  border-radius: 20px;
+  font-size: 0.83rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s;
+  margin-top: 0;
+}
+
+.next-links a:hover {
+  background: #004f70;
+  text-decoration: none;
+}
+
 /* ── CTA Section ── */
 section.cta-section {
   background: linear-gradient(135deg, #1a1a2e, #d6dde0);

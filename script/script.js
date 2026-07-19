@@ -1,14 +1,13 @@
 let currentIndex = 0;
 let fontLevel = 1; // 0 = small, 1 = normal, 2 = large
 
-/* ── Sidebar toggle ── */
 function expandPanel() {
     const leftpanel = document.getElementById("leftPanel");
     if (!leftpanel) return;
     leftpanel.style.display = leftpanel.style.display === "none" ? "" : "none";
 }
 
-/* ── Theme ── */
+
 function setThemeButtonText() {
     const btn = document.getElementById("themeButton");
     if (!btn) return;
@@ -21,7 +20,7 @@ function toggleTheme() {
     setThemeButtonText();
 }
 
-/* ── Lesson navigation ── */
+
 function prevLesson() {
     if (typeof course === 'undefined' || currentIndex <= 0) return;
     display(currentIndex - 1);
@@ -40,7 +39,6 @@ function updateNavButtons() {
     nextBtn.disabled = currentIndex >= course.length - 1;
 }
 
-/* ── Mark done ── */
 function markDone() {
     if (typeof course === 'undefined') return;
     const key = "done_" + course[currentIndex].id;
@@ -58,7 +56,7 @@ function updateMarkDoneBtn() {
     btn.textContent = isDone ? "✓" : "✓";
 }
 
-/* ── Font size ── */
+
 function increaseFontSize() {
     if (fontLevel < 2) { fontLevel++; applyFontSize(); }
 }
@@ -75,7 +73,6 @@ function applyFontSize() {
     if (fontLevel === 2) c.classList.add("font-lg");
 }
 
-/* ── Focus mode ── */
 function toggleFocus() {
     const mainEl = document.querySelector("main");
     if (!mainEl) return;
@@ -84,13 +81,12 @@ function toggleFocus() {
     if (btn) btn.textContent = mainEl.classList.contains("focus-mode") ? "✕" : "⛶";
 }
 
-/* ── Scroll to top ── */
+
 function scrollToTop() {
     const c = document.getElementById("articles-container");
     if (c) c.scrollTop = 0;
 }
 
-/* ── Course init ── */
 function initCourse() {
     const leftPanel = document.getElementById("leftPanel");
     if (leftPanel) {
@@ -117,7 +113,7 @@ function initCourse() {
     }
 }
 
-/* ── Display lesson ── */
+
 function display(index) {
     const lesson = course[index];
     currentIndex = index;
@@ -163,7 +159,6 @@ function display(index) {
     scrollToTop();
 }
 
-/* ── Boot ── */
 document.addEventListener("DOMContentLoaded", function () {
     if (localStorage.getItem("theme") === "dark") {
         document.body.classList.add("dark-mode");
