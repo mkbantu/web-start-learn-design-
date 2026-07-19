@@ -90,7 +90,8 @@ function scrollToTop() {
 function initCourse() {
     const leftPanel = document.getElementById("leftPanel");
     if (leftPanel) {
-        let htmlContent = "<h2 class='panel-title'><span class='panel-icon'>HTML</span> Tutorial</h2>";
+        const label = typeof courseLabel !== 'undefined' ? courseLabel : 'Course';
+        let htmlContent = `<h2 class='panel-title'><span class='panel-icon'>${label}</span> Tutorial</h2>`;
         if (typeof course !== 'undefined' && Array.isArray(course)) {
             for (let i = 0; i < course.length; i++) {
                 const lesson = course[i];
