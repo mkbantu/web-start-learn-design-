@@ -1,0 +1,250 @@
+{
+  "courseLabel": "JavaScript",
+  "course": [
+    {
+      "id": "js-introduction",
+      "Title": "JavaScript Introduction",
+      "videoSource": "https://www.youtube.com/embed/W6NZfCO5tTE",
+      "description": "JavaScript is a programming language that makes web pages interactive. It runs in browsers and can also run on servers.",
+      "exampleCode": "<!-- Inline JavaScript -->\n<button onclick=\"alert('Hello!')\">Click me</button>\n\n<!-- Internal JavaScript -->\n<script>\n  console.log('Hello, World!');\n  var name = 'Alice';\n  alert('Welcome, ' + name);\n</script>\n\n<!-- External JavaScript -->\n<script src=\"app.js\"></script>"
+    },
+    {
+      "id": "js-syntax",
+      "Title": "JavaScript Syntax",
+      "videoSource": "https://www.youtube.com/embed/W6NZfCO5tTE",
+      "description": "JavaScript syntax defines how JavaScript code is written and executed.",
+      "exampleCode": "// Variables\nvar message = 'Hello';\nvar PI = 3.14159;\nvar x = 10;  // old style\n\n// Statements\nconsole.log('This is executed');\n\n// Operators\nvar sum = 5 + 3;\nvar name = 'John';\n\n// Comments\n// Single line comment\n/* Multi-line\n   comment */"
+    },
+    {
+      "id": "js-statements",
+      "Title": "JavaScript Statements",
+      "videoSource": "https://www.youtube.com/embed/W6NZfCO5tTE",
+      "description": "Statements are executable instructions that perform actions.",
+      "exampleCode": "// Variable declaration\nvar x = 5;\n\n// Expression statement\nx = x + 1;\n\n// Function call\nconsole.log(x);\n\n// Conditional\nif (x > 5) {\n  console.log('Greater');\n}\n\n// Loop\nfor (var i = 0; i < 5; i++) {\n  console.log(i);\n}"
+    },
+    {
+      "id": "js-comments",
+      "Title": "JavaScript Comments",
+      "videoSource": "https://www.youtube.com/embed/W6NZfCO5tTE",
+      "description": "Comments explain code and are ignored by JavaScript engines.",
+      "exampleCode": "// Single-line comment\n\n/* Multi-line comment\n   explaining code\n   in multiple lines */\n\n// TODO: Add validation\n// FIXME: Fix performance issue"
+    },
+    {
+      "id": "js-variables",
+      "Title": "JavaScript Variables",
+      "videoSource": "https://www.youtube.com/embed/W6NZfCO5tTE",
+      "description": "Variables store data values. Use var or var (avoid var).",
+      "exampleCode": "// var - block-scoped, can be reassigned\nvar age = 25;\nage = 26;\n\n// var - block-scoped, cannot be reassigned\nvar PI = 3.14159;\n\n// var - function-scoped (avoid)\nvar name = 'John';\n\n// Multiple declarations\nvar x = 1, y = 2, z = 3;\n\n// Without declaration (creates global)\nmessage = 'Hello'; // Bad practice"
+    },
+    {
+      "id": "js-data-types",
+      "Title": "JavaScript Data Types",
+      "videoSource": "https://www.youtube.com/embed/W6NZfCO5tTE",
+      "description": "Data types define what kind of data a variable can hold.",
+      "exampleCode": "// String\nvar text = 'Hello';\nvar name = \"World\";\n\n// Number (integer and decimal)\nvar age = 25;\nvar price = 19.99;\n\n// Boolean\nvar isOpen = true;\nvar isClosed = false;\n\n// Undefined\nvar x;\n\n// Null\nvar obj = null;\n\n// Object\nvar person = { name: 'Alice', age: 30 };\n\n// Array\nvar colors = ['red', 'green', 'blue'];"
+    },
+    {
+      "id": "js-operators",
+      "Title": "JavaScript Operators",
+      "videoSource": "https://www.youtube.com/embed/W6NZfCO5tTE",
+      "description": "Operators perform operations on variables and values.",
+      "exampleCode": "// Arithmetic\nvar sum = 10 + 5;   // 15\nvar diff = 10 - 5;  // 5\nvar product = 10 * 5; // 50\nvar quotient = 10 / 5; // 2\nvar remainder = 10 % 3; // 1\nvar power = 2 ** 3; // 8\n\n// Comparison\n10 > 5;      // true\n10 < 5;      // false\n10 == 10;    // true\n10 === '10'; // false (strict)\n\n// Logical\ntrue && false;  // false\ntrue || false;  // true\n!true;          // false"
+    },
+    {
+      "id": "js-string-methods",
+      "Title": "JavaScript String Methods",
+      "videoSource": "https://www.youtube.com/embed/W6NZfCO5tTE",
+      "description": "Strings have built-in methods for manipulation.",
+      "exampleCode": "var text = 'Hello World';\n\ntext.length;              // 11\ntext.toUpperCase();       // 'HELLO WORLD'\ntext.toLowerCase();       // 'hello world'\ntext.indexOf('World');    // 6\ntext.slice(0, 5);         // 'Hello'\ntext.substring(0, 5);     // 'Hello'\ntext.replace('World', 'JavaScript');\ntext.split(' ');          // ['Hello', 'World']\ntext.trim();              // removes whitespace\ntext.includes('World');   // true\ntext.startsWith('Hello'); // true\ntext.endsWith('World');   // true"
+    },
+    {
+      "id": "js-template-literals",
+      "Title": "JavaScript Template Literals",
+      "videoSource": "https://www.youtube.com/embed/W6NZfCO5tTE",
+      "description": "Template literals use backticks and allow string interpolation.",
+      "exampleCode": "// Template literal with expressions\nvar name = 'Alice';\nvar age = 30;\n\nvar message = `Hello, ${name}!`;\nvar info = `${name} is ${age} years old`;\n\n// Multi-line strings\nvar text = `\n  Line 1\n  Line 2\n  Line 3\n`;\n\n// Expressions in templates\nvar result = `2 + 2 = ${2 + 2}`;"
+    },
+    {
+      "id": "js-numbers",
+      "Title": "JavaScript Numbers",
+      "videoSource": "https://www.youtube.com/embed/W6NZfCO5tTE",
+      "description": "Numbers can be integers, decimals, or special values like Infinity and NaN.",
+      "exampleCode": "// Integer and decimal\nvar x = 42;\nvar y = 3.14;\n\n// Scientific notation\nvar big = 1e6;   // 1,000,000\nvar small = 1e-6; // 0.000001\n\n// Special values\nvar inf = Infinity;\nvar negInf = -Infinity;\nvar notNum = NaN;   // Not-a-Number\n\n// Number methods\nvar num = 3.14159;\nnum.toFixed(2);     // '3.14'\nnum.toExponential(2); // '3.14e+0'\nNumber.isInteger(42); // true\nNumber.isNaN(NaN);    // true"
+    },
+    {
+      "id": "js-math-object",
+      "Title": "JavaScript Math Object",
+      "videoSource": "https://www.youtube.com/embed/W6NZfCO5tTE",
+      "description": "The Math object provides mathematical functions and constants.",
+      "exampleCode": "// Constants\nMath.PI;        // 3.14159...\nMath.E;         // 2.71828...\n\n// Methods\nMath.abs(-5);           // 5\nMath.round(4.6);        // 5\nMath.floor(4.9);        // 4\nMath.ceil(4.1);         // 5\nMath.pow(2, 3);         // 8\nMath.sqrt(16);          // 4\nMath.max(3, 7, 2);      // 7\nMath.min(3, 7, 2);      // 2\nMath.random();          // 0 to 1\nMath.sin(Math.PI / 2);  // 1\nMath.cos(0);            // 1"
+    },
+    {
+      "id": "js-arrays",
+      "Title": "JavaScript Arrays",
+      "videoSource": "https://www.youtube.com/embed/W6NZfCO5tTE",
+      "description": "Arrays store multiple values in a single variable.",
+      "exampleCode": "// Array creation\nvar arr = [1, 2, 3, 4, 5];\nvar mixed = [1, 'hello', true, null];\n\n// Access elements\narr[0];       // 1\narr.length;   // 5\n\n// Modify elements\narr[0] = 10;\n\n// Array methods\narr.push(6);           // add to end\narr.pop();             // remove from end\narr.unshift(0);        // add to start\narr.shift();           // remove from start\narr.includes(3);       // true\narr.indexOf(2);        // 1\narr.slice(1, 3);       // [2, 3]\narr.splice(1, 1, 99);  // remove and insert\narr.join('-');         // '1-2-3'\narr.reverse();         // reverses array"
+    },
+    {
+      "id": "js-array-methods",
+      "Title": "JavaScript Array Methods",
+      "videoSource": "https://www.youtube.com/embed/W6NZfCO5tTE",
+      "description": "Array methods for iteration and transformation.",
+      "exampleCode": "var numbers = [1, 2, 3, 4, 5];\n\n// forEach - iterate\nnumbers.forEach(n => console.log(n));\n\n// map - transform\nvar doubled = numbers.map(n => n * 2); // [2,4,6,8,10]\n\n// filter - select\nvar evens = numbers.filter(n => n % 2 === 0); // [2,4]\n\n// reduce - aggregate\nvar sum = numbers.reduce((acc, n) => acc + n, 0); // 15\n\n// find - first match\nnumbers.find(n => n > 3); // 4\n\n// some - any match\nnumbers.some(n => n > 3); // true\n\n// every - all match\nnumbers.every(n => n > 0); // true\n\n// sort\nvar sorted = numbers.sort((a, b) => a - b);"
+    },
+    {
+      "id": "js-objects",
+      "Title": "JavaScript Objects",
+      "videoSource": "https://www.youtube.com/embed/W6NZfCO5tTE",
+      "description": "Objects store key-value pairs representing entities.",
+      "exampleCode": "// Object literal\nvar person = {\n  name: 'Alice',\n  age: 30,\n  email: 'alice@example.com',\n  address: {\n    city: 'New York',\n    zip: '10001'\n  }\n};\n\n// Access properties\nperson.name;           // 'Alice'\nperson['age'];         // 30\nperson.address.city;   // 'New York'\n\n// Modify properties\nperson.age = 31;\nperson.job = 'Engineer'; // add new\n\n// Delete property\ndelete person.job;\n\n// Check property\n'name' in person;      // true\nperson.hasOwnProperty('name'); // true"
+    },
+    {
+      "id": "js-functions",
+      "Title": "JavaScript Functions",
+      "videoSource": "https://www.youtube.com/embed/W6NZfCO5tTE",
+      "description": "Functions are reusable blocks of code.",
+      "exampleCode": "// Function declaration\nfunction greet(name) {\n  return 'Hello, ' + name;\n}\n\n// Function expression\nvar add = function(a, b) {\n  return a + b;\n};\n\n// Arrow function\nvar multiply = (a, b) => {\n  return a * b;\n};\n\n// Concise arrow function\nvar square = x => x * x;\n\n// Default parameters\nfunction welcome(name = 'Guest') {\n  return 'Welcome, ' + name;\n}\n\n// Function call\ngreet('Alice');        // 'Hello, Alice'\nadd(2, 3);            // 5\nmultiply(4, 5);       // 20"
+    },
+    {
+      "id": "js-conditionals",
+      "Title": "JavaScript Conditionals",
+      "videoSource": "https://www.youtube.com/embed/W6NZfCO5tTE",
+      "description": "Conditionals execute code based on conditions.",
+      "exampleCode": "// if statement\nif (age > 18) {\n  console.log('Adult');\n}\n\n// if-else\nif (score > 80) {\n  console.log('A');\n} else {\n  console.log('B');\n}\n\n// if-else if-else\nif (score > 90) {\n  console.log('A');\n} else if (score > 80) {\n  console.log('B');\n} else {\n  console.log('C');\n}\n\n// Ternary operator\nvar status = age > 18 ? 'Adult' : 'Minor';\n\n// Switch statement\nswitch (day) {\n  case 'Monday': console.log('Start of week'); break;\n  case 'Friday': console.log('Almost weekend'); break;\n  default: console.log('Midweek');\n}"
+    },
+    {
+      "id": "js-loops",
+      "Title": "JavaScript Loops",
+      "videoSource": "https://www.youtube.com/embed/W6NZfCO5tTE",
+      "description": "Loops repeat code blocks while conditions are true.",
+      "exampleCode": "// for loop\nfor (var i = 0; i < 5; i++) {\n  console.log(i);\n}\n\n// while loop\nvar x = 0;\nwhile (x < 5) {\n  console.log(x);\n  x++;\n}\n\n// do-while loop\nvar y = 0;\ndo {\n  console.log(y);\n  y++;\n} while (y < 5);\n\n// for-of loop (arrays)\nfor (var num of [1, 2, 3]) {\n  console.log(num);\n}\n\n// for-in loop (objects)\nfor (var key in person) {\n  console.log(key, person[key]);\n}\n\n// break and continue\nfor (var i = 0; i < 5; i++) {\n  if (i === 2) continue; // skip\n  if (i === 4) break;    // exit\n}"
+    },
+    {
+      "id": "js-error-handling",
+      "Title": "JavaScript Error Handling",
+      "videoSource": "https://www.youtube.com/embed/W6NZfCO5tTE",
+      "description": "Error handling manages exceptions gracefully.",
+      "exampleCode": "// try-catch\ntry {\n  riskyFunction();\n} catch (error) {\n  console.log('Error:', error.message);\n}\n\n// try-catch-finally\ntry {\n  openFile();\n} catch (e) {\n  console.log('Error:', e);\n} finally {\n  closeFile(); // always runs\n}\n\n// throw error\nfunction validate(age) {\n  if (age < 0) {\n    throw new Error('Age cannot be negative');\n  }\n}\n\n// Custom error\nclass ValidationError extends Error {\n  constructor(message) {\n    super(message);\n    this.name = 'ValidationError';\n  }\n}"
+    },
+    {
+      "id": "js-classes",
+      "Title": "JavaScript Classes",
+      "videoSource": "https://www.youtube.com/embed/W6NZfCO5tTE",
+      "description": "Classes are blueprints for creating objects with properties and methods.",
+      "exampleCode": "// Class definition\nclass Person {\n  constructor(name, age) {\n    this.name = name;\n    this.age = age;\n  }\n\n  greet() {\n    return `Hello, I'm ${this.name}`;\n  }\n\n  static info() {\n    return 'Person class';\n  }\n}\n\n// Create instance\nvar person1 = new Person('Alice', 30);\nperson1.greet(); // 'Hello, I'm Alice'\n\n// Inheritance\nclass Employee extends Person {\n  constructor(name, age, jobTitle) {\n    super(name, age);\n    this.jobTitle = jobTitle;\n  }\n\n  work() {\n    return `${this.name} is working as ${this.jobTitle}`;\n  }\n}"
+    },
+    {
+      "id": "js-scope",
+      "Title": "JavaScript Scope",
+      "videoSource": "https://www.youtube.com/embed/W6NZfCO5tTE",
+      "description": "Scope determines where variables are accessible.",
+      "exampleCode": "// Global scope\nvar global = 'global';\n\nfunction myFunction() {\n  // Function scope\n  var local = 'local';\n  var blockScoped = 'block';\n  \n  if (true) {\n    // Block scope\n    var innerBlock = 'inner';\n    console.log(blockScoped); // accessible\n  }\n  \n  console.log(innerBlock); // Error: not defined\n}\n\n// Closure\nfunction outer() {\n  var count = 0;\n  return function inner() {\n    count++;\n    return count;\n  };\n}\n\nvar counter = outer();\ncounter(); // 1\ncounter(); // 2"
+    },
+    {
+      "id": "js-hoisting",
+      "Title": "JavaScript Hoisting",
+      "videoSource": "https://www.youtube.com/embed/W6NZfCO5tTE",
+      "description": "Hoisting moves declarations to the top of their scope.",
+      "exampleCode": "// Function declarations are hoisted\ngreet(); // works\n\nfunction greet() {\n  console.log('Hello!');\n}\n\n// var declarations are hoisted (undefined)\nconsole.log(x); // undefined\nvar x = 5;\nconsole.log(x); // 5\n\n// var and var not hoisted (temporal dead zone)\nconsole.log(y); // ReferenceError\nvar y = 10;\n\n// Function expressions not hoisted\nadd(2, 3); // TypeError\nvar add = function(a, b) {\n  return a + b;\n};"
+    },
+    {
+      "id": "js-callbacks",
+      "Title": "JavaScript Callbacks",
+      "videoSource": "https://www.youtube.com/embed/W6NZfCO5tTE",
+      "description": "Callbacks are functions passed as arguments to other functions.",
+      "exampleCode": "// Simple callback\nfunction greet(name, callback) {\n  console.log('Hello, ' + name);\n  callback();\n}\n\ngreet('Alice', function() {\n  console.log('Nice to meet you!');\n});\n\n// Callback with setTimeout\nsetTimeout(function() {\n  console.log('After 2 seconds');\n}, 2000);\n\n// Array callback methods\nvar numbers = [1, 2, 3, 4, 5];\nnumbers.forEach(function(num) {\n  console.log(num * 2);\n});\n\n// Callback hell (nested callbacks)\ngetData(function(data) {\n  processData(data, function(result) {\n    displayResult(result, function() {\n      console.log('Done');\n    });\n  });\n});"
+    },
+    {
+      "id": "js-promises",
+      "Title": "JavaScript Promises",
+      "videoSource": "https://www.youtube.com/embed/W6NZfCO5tTE",
+      "description": "Promises handle asynchronous operations better than callbacks.",
+      "exampleCode": "// Create promise\nvar promise = new Promise((resolve, reject) => {\n  setTimeout(() => {\n    var success = true;\n    if (success) {\n      resolve('Success!');\n    } else {\n      reject('Failed!');\n    }\n  }, 1000);\n});\n\n// Consume promise\npromise\n  .then(result => console.log(result))\n  .catch(error => console.log(error))\n  .finally(() => console.log('Done'));\n\n// Promise chaining\nfetch('/api/data')\n  .then(response => response.json())\n  .then(data => console.log(data))\n  .catch(error => console.error(error));\n\n// Multiple promises\nPromise.all([p1, p2, p3])\n  .then(results => console.log(results));"
+    },
+    {
+      "id": "js-async-await",
+      "Title": "JavaScript Async/Await",
+      "videoSource": "https://www.youtube.com/embed/W6NZfCO5tTE",
+      "description": "Async/await makes asynchronous code look synchronous.",
+      "exampleCode": "// Async function\nasync function fetchData() {\n  try {\n    var response = await fetch('/api/data');\n    var data = await response.json();\n    return data;\n  } catch (error) {\n    console.error('Error:', error);\n  }\n}\n\n// Call async function\nfetchData().then(data => console.log(data));\n\n// Using await in loop\nasync function processItems() {\n  var items = ['a', 'b', 'c'];\n  for (var item of items) {\n    var result = await processItem(item);\n    console.log(result);\n  }\n}\n\n// Multiple awaits\nasync function getMultiple() {\n  var user = await getUser();\n  var posts = await getPosts(user.id);\n  return { user, posts };\n}"
+    },
+    {
+      "id": "js-dom-manipulation",
+      "Title": "JavaScript DOM Manipulation",
+      "videoSource": "https://www.youtube.com/embed/W6NZfCO5tTE",
+      "description": "DOM methods interact with HTML elements.",
+      "exampleCode": "// Select elements\ndocument.getElementById('myId');\ndocument.querySelector('.myClass');\ndocument.querySelectorAll('p');\n\n// Change content\nelement.textContent = 'New text';\nelement.innerHTML = '<p>New HTML</p>';\n\n// Change attributes\nelement.setAttribute('class', 'new-class');\nelement.className = 'new-class';\nelement.id = 'newId';\n\n// Change styles\nelement.style.color = 'red';\nelement.style.backgroundColor = 'blue';\n\n// Create and add elements\nvar newDiv = document.createElement('div');\nnewDiv.textContent = 'Hello';\ndocument.body.appendChild(newDiv);\nelement.insertBefore(newDiv, element.firstChild);\n\n// Remove elements\nelement.remove();\nelement.removeChild(child);"
+    },
+    {
+      "id": "js-events",
+      "Title": "JavaScript Events",
+      "videoSource": "https://www.youtube.com/embed/W6NZfCO5tTE",
+      "description": "Events are user interactions with the page.",
+      "exampleCode": "// Add event listener\nbutton.addEventListener('click', function(event) {\n  console.log('Button clicked!');\n  console.log(event.target);\n});\n\n// Remove event listener\nfunction handleClick() { console.log('Click'); }\nbutton.addEventListener('click', handleClick);\nbutton.removeEventListener('click', handleClick);\n\n// Common events\nelement.addEventListener('mouseenter', () => {});\nelement.addEventListener('mouseleave', () => {});\nelement.addEventListener('mousemove', (e) => {\n  console.log(e.clientX, e.clientY);\n});\n\ninput.addEventListener('input', (e) => {\n  console.log(e.target.value);\n});\n\ninput.addEventListener('change', (e) => {\n  console.log('Value changed to:', e.target.value);\n});\n\n// Event delegation\ndocument.addEventListener('click', (e) => {\n  if (e.target.matches('.btn')) {\n    console.log('Button clicked');\n  }\n});"
+    },
+    {
+      "id": "js-arrow-functions",
+      "Title": "JavaScript Arrow Functions",
+      "videoSource": "https://www.youtube.com/embed/W6NZfCO5tTE",
+      "description": "Arrow functions are concise function syntax with lexical this.",
+      "exampleCode": "// Arrow function basics\nvar add = (a, b) => {\n  return a + b;\n};\n\n// Concise body (implicit return)\nvar multiply = (a, b) => a * b;\n\n// Single parameter (omit parentheses)\nvar square = x => x * x;\n\n// No parameters\nvar random = () => Math.random();\n\n// Multi-line body\nvar process = (x) => {\n  var doubled = x * 2;\n  return doubled + 1;\n};\n\n// Lexical 'this'\nvar person = {\n  name: 'Alice',\n  greet: function() {\n    var arrow = () => {\n      console.log(this.name); // 'Alice'\n    };\n    arrow();\n  }\n};"
+    },
+    {
+      "id": "js-destructuring",
+      "Title": "JavaScript Destructuring",
+      "videoSource": "https://www.youtube.com/embed/W6NZfCO5tTE",
+      "description": "Destructuring extracts values from arrays and objects.",
+      "exampleCode": "// Array destructuring\nvar [a, b, c] = [1, 2, 3];\nvar [first, ...rest] = [1, 2, 3, 4];\n\n// Object destructuring\nvar { name, age } = { name: 'Alice', age: 30 };\nvar { name: fullName } = { name: 'Alice' };\n\n// Nested destructuring\nvar { address: { city } } = {\n  address: { city: 'NYC', zip: '10001' }\n};\n\n// Default values\nvar { status = 'active' } = {};\n\n// Function parameter destructuring\nfunction display({ name, age }) {\n  console.log(name, age);\n}\n\ndisplay({ name: 'Alice', age: 30 });\n\n// Rest operator\nvar [head, ...tail] = [1, 2, 3, 4];\n// head = 1, tail = [2, 3, 4]"
+    },
+    {
+      "id": "js-spread-operator",
+      "Title": "JavaScript Spread Operator",
+      "videoSource": "https://www.youtube.com/embed/W6NZfCO5tTE",
+      "description": "Spread operator expands arrays or objects.",
+      "exampleCode": "// Spread array\nvar arr1 = [1, 2, 3];\nvar arr2 = [...arr1, 4, 5];\n// arr2 = [1, 2, 3, 4, 5]\n\n// Spread object\nvar obj1 = { a: 1, b: 2 };\nvar obj2 = { ...obj1, c: 3 };\n// obj2 = { a: 1, b: 2, c: 3 }\n\n// Combine arrays\nvar combined = [...arr1, ...arr2];\n\n// Function arguments\nvar numbers = [2, 3, 1];\nMath.max(...numbers); // 3\n\n// Copy array\nvar copy = [...arr1]; // shallow copy\n\n// Copy object\nvar objCopy = { ...obj1 };\n\n// Merge objects\nvar merged = { ...obj1, ...obj2, c: 4 };"
+    },
+    {
+      "id": "js-rest-parameters",
+      "Title": "JavaScript Rest Parameters",
+      "videoSource": "https://www.youtube.com/embed/W6NZfCO5tTE",
+      "description": "Rest parameters capture remaining arguments as an array.",
+      "exampleCode": "// Rest parameters\nfunction sum(...numbers) {\n  return numbers.reduce((a, b) => a + b, 0);\n}\n\nsum(1, 2, 3, 4); // 10\n\n// Mix regular and rest params\nfunction greet(greeting, ...names) {\n  names.forEach(name => {\n    console.log(greeting + ', ' + name);\n  });\n}\n\ngreet('Hello', 'Alice', 'Bob', 'Charlie');\n\n// Rest in destructuring\nvar [head, ...tail] = [1, 2, 3, 4, 5];\n\n// Rest in object destructuring\nvar { a, b, ...rest } = { a: 1, b: 2, c: 3, d: 4 };\n// rest = { c: 3, d: 4 }"
+    },
+    {
+      "id": "js-filter,-map,-reduce",
+      "Title": "JavaScript Filter, Map, Reduce",
+      "videoSource": "https://www.youtube.com/embed/W6NZfCO5tTE",
+      "description": "Functional array methods for transformation and aggregation.",
+      "exampleCode": "var numbers = [1, 2, 3, 4, 5];\n\n// Filter - select items\nvar evens = numbers.filter(n => n % 2 === 0);\n// [2, 4]\n\n// Map - transform items\nvar doubled = numbers.map(n => n * 2);\n// [2, 4, 6, 8, 10]\n\n// Reduce - aggregate\nvar sum = numbers.reduce((acc, n) => acc + n, 0);\n// 15\n\n// Chaining\nvar result = numbers\n  .filter(n => n > 2)\n  .map(n => n * 2)\n  .reduce((a, b) => a + b);\n// (3 + 4 + 5) * 2 = 24\n\n// Complex reduce\nvar grouped = items.reduce((acc, item) => {\n  acc[item.category] = acc[item.category] || [];\n  acc[item.category].push(item);\n  return acc;\n}, {});"
+    },
+    {
+      "id": "js-json",
+      "Title": "JavaScript JSON",
+      "videoSource": "https://www.youtube.com/embed/W6NZfCO5tTE",
+      "description": "JSON is a lightweight data format for data exchange.",
+      "exampleCode": "// Object to JSON string\nvar person = { name: 'Alice', age: 30 };\nvar json = JSON.stringify(person);\n// '{\"name\":\"Alice\",\"age\":30}'\n\n// JSON string to object\nvar jsonStr = '{\"name\":\"Bob\",\"age\":25}';\nvar obj = JSON.parse(jsonStr);\n\n// Stringify options\nJSON.stringify(person, null, 2); // pretty print\nJSON.stringify(person, ['name']); // only name property\n\n// Parse with reviver\nvar dateJson = '{\"date\":\"2024-01-15\"}';\nvar withDate = JSON.parse(dateJson, (key, value) => {\n  if (key === 'date') return new Date(value);\n  return value;\n});\n\n// Arrays in JSON\nvar arr = [1, 2, { id: 1, name: 'item' }];\nvar jsonArr = JSON.stringify(arr);"
+    },
+    {
+      "id": "js-fetch-api",
+      "Title": "JavaScript Fetch API",
+      "videoSource": "https://www.youtube.com/embed/W6NZfCO5tTE",
+      "description": "Fetch API makes HTTP requests and handles responses.",
+      "exampleCode": "// GET request\nfetch('/api/users')\n  .then(response => response.json())\n  .then(data => console.log(data))\n  .catch(error => console.error(error));\n\n// POST request\nfetch('/api/users', {\n  method: 'POST',\n  headers: {\n    'Content-Type': 'application/json'\n  },\n  body: JSON.stringify({ name: 'Alice', age: 30 })\n})\n  .then(response => response.json())\n  .then(data => console.log(data));\n\n// With async/await\nasync function getUsers() {\n  var response = await fetch('/api/users');\n  var data = await response.json();\n  return data;\n}\n\n// Check response status\nfetch('/api/data')\n  .then(response => {\n    if (!response.ok) throw new Error('Network error');\n    return response.json();\n  });"
+    },
+    {
+      "id": "js-local-storage",
+      "Title": "JavaScript Local Storage",
+      "videoSource": "https://www.youtube.com/embed/W6NZfCO5tTE",
+      "description": "Local storage persists data in the browser.",
+      "exampleCode": "// Store data\nlocalStorage.setItem('username', 'Alice');\nlocalStorage.setItem('user', JSON.stringify({ id: 1, name: 'Alice' }));\n\n// Retrieve data\nvar username = localStorage.getItem('username');\nvar user = JSON.parse(localStorage.getItem('user'));\n\n// Check if key exists\nif (localStorage.getItem('token')) {\n  console.log('User is logged in');\n}\n\n// Remove item\nlocalStorage.removeItem('username');\n\n// Clear all\nlocalStorage.clear();\n\n// Get all keys\nfor (var i = 0; i < localStorage.length; i++) {\n  var key = localStorage.key(i);\n  console.log(key, localStorage.getItem(key));\n}\n\n// Listen for storage changes\nwindow.addEventListener('storage', (e) => {\n  console.log(`${e.key} changed to ${e.newValue}`);\n});"
+    },
+    {
+      "id": "js-regular-expressions",
+      "Title": "JavaScript Regular Expressions",
+      "videoSource": "https://www.youtube.com/embed/W6NZfCO5tTE",
+      "description": "Regular expressions pattern match and manipulate strings.",
+      "exampleCode": "// Create regex\nvar pattern = /hello/i;  // case-insensitive\nvar pattern2 = new RegExp('hello', 'i');\n\n// Test if matches\n/email/.test('my@email.com');     // true\n\n// Find matches\n'hello world hello'.match(/hello/g); // ['hello', 'hello']\n\n// Replace\n'hello world'.replace(/world/, 'JavaScript');\n\n// Common patterns\n/^[a-z]+$/;           // lowercase letters only\n/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,}$/i; // email\n/^\\d{3}-\\d{3}-\\d{4}$/; // phone: 123-456-7890\n\n// Character classes\n/[abc]/;      // a, b, or c\n/[a-z]/;      // a-z\n/\\d/;        // digit\n/\\w/;        // word char\n/\\s/;        // whitespace\n\n// Quantifiers\n/a+/;         // one or more\n/a*/;         // zero or more\n/a?/;         // zero or one\n/a{3}/;       // exactly 3\n/a{2,4}/;     // 2 to 4"
+    }
+  ]
+}

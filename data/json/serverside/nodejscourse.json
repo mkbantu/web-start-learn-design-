@@ -1,0 +1,96 @@
+{
+  "courseLabel": "Node.js",
+  "course": [
+    {
+      "id": "node-introduction",
+      "Title": "Node.js Introduction",
+      "videoSource": "https://www.youtube.com/embed/TlB_eWDSMt4",
+      "description": "Node.js is a JavaScript runtime built on Chrome's V8 engine. It lets you run JavaScript on the server — outside the browser. Before Node.js, JavaScript could only run in a browser. Now you can use the same language for both the front-end and the back-end of a web application.",
+      "exampleCode": "// Without Node.js: JS only ran in browsers\n// With Node.js: JS runs on a server\n\n// Check your Node.js version in the terminal:\nnode --version\n\n// Run a JavaScript file:\nnode myfile.js"
+    },
+    {
+      "id": "node-installation",
+      "Title": "Node.js Installation",
+      "videoSource": "https://www.youtube.com/embed/TlB_eWDSMt4",
+      "description": "Download Node.js from nodejs.org. Choose the LTS (Long Term Support) version — it is the most stable. Installing Node.js also installs npm (Node Package Manager) automatically. npm lets you install thousands of free packages (libraries) for your projects.",
+      "exampleCode": "// After installing, verify in your terminal:\nnode --version     // e.g. v20.11.0\nnpm --version      // e.g. 10.2.4\n\n// Create your first Node.js file — hello.js:\nconsole.log(\"Hello from Node.js!\");\n\n// Run it:\nnode hello.js\n// Output: Hello from Node.js!"
+    },
+    {
+      "id": "node-modules",
+      "Title": "Node.js Modules",
+      "videoSource": "https://www.youtube.com/embed/TlB_eWDSMt4",
+      "description": "A module is a reusable block of code saved in its own file. Node.js uses the CommonJS module system — you export code from one file using module.exports and import it in another using require(). Node.js also has many built-in modules (fs, path, http, os) that you can use without installing anything.",
+      "exampleCode": "// math.js — export a function\nfunction add(a, b) { return a + b; }\nmodule.exports = { add };\n\n// app.js — import and use it\nvar math = require('./math');\nconsole.log(math.add(3, 5)); // 8\n\n// Built-in modules — no install needed:\nvar os   = require('os');\nvar path = require('path');\nconsole.log(os.platform());       // win32 / linux / darwin\nconsole.log(path.join('folder', 'file.txt')); // folder/file.txt"
+    },
+    {
+      "id": "node-npm",
+      "Title": "NPM — Node Package Manager",
+      "videoSource": "https://www.youtube.com/embed/TlB_eWDSMt4",
+      "description": "npm is the package manager for Node.js. It lets you install libraries written by other developers. Every Node.js project has a package.json file that lists the project name, version, and all its dependencies. Running npm install reads package.json and downloads everything the project needs.",
+      "exampleCode": "// Initialise a new project (creates package.json):\nnpm init -y\n\n// Install a package:\nnpm install express\n\n// Install a dev-only package (not needed in production):\nnpm install nodemon --save-dev\n\n// package.json after installation:\n{\n  \"name\": \"my-app\",\n  \"version\": \"1.0.0\",\n  \"dependencies\": {\n    \"express\": \"^4.18.2\"\n  },\n  \"devDependencies\": {\n    \"nodemon\": \"^3.0.1\"\n  }\n}"
+    },
+    {
+      "id": "node-filesystem",
+      "Title": "Node.js File System (fs)",
+      "videoSource": "https://www.youtube.com/embed/TlB_eWDSMt4",
+      "description": "The built-in fs (File System) module lets your Node.js program read files, write files, create folders, and delete files on the computer. There are synchronous (blocking) and asynchronous (non-blocking) versions of each method. Always prefer asynchronous in servers so other requests are not blocked.",
+      "exampleCode": "var fs = require('fs');\n\n// Write a file (async):\nfs.writeFile('note.txt', 'Hello world!', (err) => {\n  if (err) throw err;\n  console.log('File saved!');\n});\n\n// Read a file (async):\nfs.readFile('note.txt', 'utf8', (err, data) => {\n  if (err) throw err;\n  console.log(data); // Hello world!\n});\n\n// Delete a file:\nfs.unlink('note.txt', (err) => {\n  if (err) throw err;\n  console.log('File deleted');\n});"
+    },
+    {
+      "id": "node-http",
+      "Title": "Node.js HTTP Server",
+      "videoSource": "https://www.youtube.com/embed/TlB_eWDSMt4",
+      "description": "The built-in http module lets you create a web server using only Node.js — no extra packages needed. The server listens on a port and responds to every incoming request. This is the foundation of how web servers work. In practice, most developers use Express (built on top of http) because it is much easier to use.",
+      "exampleCode": "var http = require('http');\n\nvar server = http.createServer((req, res) => {\n  res.writeHead(200, { 'Content-Type': 'text/html' });\n  res.write('<h1>Hello from Node.js Server!</h1>');\n  res.end();\n});\n\nserver.listen(3000, () => {\n  console.log('Server running at http://localhost:3000');\n});\n\n// Visit http://localhost:3000 in your browser\n// You will see: Hello from Node.js Server!"
+    },
+    {
+      "id": "express-introduction",
+      "Title": "Express.js Introduction",
+      "videoSource": "https://www.youtube.com/embed/L72fhGm1tfE",
+      "description": "Express is a minimal and flexible Node.js web application framework. It makes it much easier to create web servers and APIs compared to using the raw http module. Express handles routing (what happens at each URL), middleware (functions that process requests), and responses. It is the most popular back-end framework for Node.js.",
+      "exampleCode": "// Install Express first:\n// npm install express\n\nvar express = require('express');\nvar app = express();\n\napp.get('/', (req, res) => {\n  res.send('<h1>Welcome to Express!</h1>');\n});\n\napp.listen(3000, () => {\n  console.log('Server running on port 3000');\n});"
+    },
+    {
+      "id": "express-routing",
+      "Title": "Express Routing",
+      "videoSource": "https://www.youtube.com/embed/L72fhGm1tfE",
+      "description": "Routing means defining what your server does when a client visits a specific URL with a specific HTTP method (GET, POST, PUT, DELETE). In Express, each route is a function that takes a request object (req) and a response object (res). You can also use route parameters (:id) to capture values from the URL.",
+      "exampleCode": "var express = require('express');\nvar app = express();\n\n// GET routes\napp.get('/', (req, res) => res.send('Home Page'));\napp.get('/about', (req, res) => res.send('About Page'));\n\n// Route parameter — e.g. /user/123\napp.get('/user/:id', (req, res) => {\n  res.send('User ID: ' + req.params.id);\n});\n\n// Query string — e.g. /search?q=html\napp.get('/search', (req, res) => {\n  res.send('You searched: ' + req.query.q);\n});\n\napp.listen(3000);"
+    },
+    {
+      "id": "express-middleware",
+      "Title": "Express Middleware",
+      "videoSource": "https://www.youtube.com/embed/L72fhGm1tfE",
+      "description": "Middleware are functions that run between receiving a request and sending a response. They can read the request, modify it, log information, check authentication, or end the request early. Every middleware function receives req, res, and next. Calling next() passes the request to the next middleware in the chain.",
+      "exampleCode": "var express = require('express');\nvar app = express();\n\n// Parse JSON body (built-in middleware):\napp.use(express.json());\n\n// Parse form data (built-in middleware):\napp.use(express.urlencoded({ extended: true }));\n\n// Custom logging middleware:\napp.use((req, res, next) => {\n  console.log(req.method + ' ' + req.url);\n  next(); // must call next() to continue\n});\n\napp.get('/', (req, res) => res.send('Hello!'));\n\napp.listen(3000);"
+    },
+    {
+      "id": "express-post",
+      "Title": "Express — Handling POST Requests",
+      "videoSource": "https://www.youtube.com/embed/L72fhGm1tfE",
+      "description": "When a form submits or a front-end sends data, it uses a POST request. The data arrives in req.body. You must add express.json() or express.urlencoded() middleware first so Express can parse the body. This is how your subscription form will eventually send student data to the server.",
+      "exampleCode": "var express = require('express');\nvar app = express();\napp.use(express.urlencoded({ extended: true }));\napp.use(express.json());\n\n// Handle form submission\napp.post('/subscribe', (req, res) => {\n  var { name, email, whatsapp } = req.body;\n  console.log('New subscriber:', name, email, whatsapp);\n  res.json({ message: 'Subscribed!', student: name });\n});\n\napp.listen(3000);\n\n// Front-end sends:\n// fetch('/subscribe', {\n//   method: 'POST',\n//   body: JSON.stringify({ name, email, whatsapp }),\n//   headers: { 'Content-Type': 'application/json' }\n// });"
+    },
+    {
+      "id": "express-rest-api",
+      "Title": "Express REST API",
+      "videoSource": "https://www.youtube.com/embed/L72fhGm1tfE",
+      "description": "A REST API is a set of URL endpoints that a front-end can call to get or send data. Each endpoint corresponds to a resource (users, courses, progress). The HTTP method tells the server what to do: GET = read, POST = create, PUT/PATCH = update, DELETE = remove. The server responds with JSON.",
+      "exampleCode": "var express = require('express');\nvar app = express();\napp.use(express.json());\n\nvar lessons = [\n  { id: 1, title: 'HTML Introduction', done: false },\n  { id: 2, title: 'CSS Basics', done: false }\n];\n\n// GET all lessons\napp.get('/api/lessons', (req, res) => {\n  res.json(lessons);\n});\n\n// POST — mark a lesson done\napp.post('/api/progress', (req, res) => {\n  var { lessonId, userId } = req.body;\n  // In real app: INSERT into course_view table\n  res.json({ message: 'Progress saved', lessonId, userId });\n});\n\n// DELETE a lesson\napp.delete('/api/lessons/:id', (req, res) => {\n  lessons = lessons.filter(l => l.id !== +req.params.id);\n  res.json({ message: 'Deleted' });\n});\n\napp.listen(3000);"
+    },
+    {
+      "id": "express-static",
+      "Title": "Express Static Files",
+      "videoSource": "https://www.youtube.com/embed/L72fhGm1tfE",
+      "description": "express.static() lets your Express server serve HTML, CSS, JavaScript, and image files directly. You point it at a folder, and any file inside becomes accessible by URL. This means your existing WebStart front-end (HTML/CSS/JS files) can be served by your new Node.js + Express backend in Phase 2.",
+      "exampleCode": "var express = require('express');\nvar app = express();\n\n// Serve everything in the 'public' folder:\napp.use(express.static('public'));\n\n// If public/index.html exists, visiting / serves it\n// If public/css/web.css exists, /css/web.css serves it\n\n// You can also serve from a different path:\napp.use('/static', express.static('public'));\n// Now accessible at: /static/index.html\n\napp.listen(3000, () => {\n  console.log('Serving files on http://localhost:3000');\n});"
+    },
+    {
+      "id": "express-mysql",
+      "Title": "Express + MySQL (mysql2)",
+      "videoSource": "https://www.youtube.com/embed/L72fhGm1tfE",
+      "description": "The mysql2 package connects your Express server to a MySQL database. You create a connection pool (handles multiple requests at the same time), then run SQL queries using pool.query(). This is how your Phase 2 server will read courses from the database and save student progress to the course_view table.",
+      "exampleCode": "// npm install mysql2\n\nvar mysql = require('mysql2');\n\nvar pool = mysql.createPool({\n  host:     'localhost',\n  user:     'root',\n  password: 'yourpassword',\n  database: 'webstart'\n}).promise(); // .promise() lets us use async/await\n\n// Get all courses from the database:\napp.get('/api/courses', async (req, res) => {\n  var [rows] = await pool.query('SELECT * FROM course');\n  res.json(rows);\n});\n\n// Save student progress:\napp.post('/api/progress', async (req, res) => {\n  var { userId, courseId } = req.body;\n  await pool.query(\n    'INSERT INTO course_view (UserID, CourseID) VALUES (?, ?)',\n    [userId, courseId]\n  );\n  res.json({ message: 'Progress saved!' });\n});"
+    }
+  ]
+}

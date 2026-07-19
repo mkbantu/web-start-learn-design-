@@ -1,0 +1,82 @@
+{
+  "courseLabel": "MySQL",
+  "course": [
+    {
+      "id": "mysql-introduction",
+      "Title": "MySQL Introduction",
+      "videoSource": "https://www.youtube.com/embed/HXV3zeQKqGY",
+      "description": "MySQL is a free, open-source relational database management system (RDBMS). It stores data in tables — rows and columns — just like a spreadsheet. Tables are linked together using foreign keys. MySQL is one of the most widely used databases in the world and powers applications from small student projects to large platforms like Facebook and Twitter.",
+      "exampleCode": "-- SQL is the language used to talk to MySQL\n-- Statements end with a semicolon (;)\n\n-- Show all databases on the server:\nSHOW DATABASES;\n\n-- Create a new database:\nCREATE DATABASE webstart;\n\n-- Select (use) a database:\nUSE webstart;\n\n-- Show all tables in the current database:\nSHOW TABLES;"
+    },
+    {
+      "id": "mysql-installation",
+      "Title": "MySQL Installation",
+      "videoSource": "https://www.youtube.com/embed/HXV3zeQKqGY",
+      "description": "Download MySQL Community Server free from mysql.com. During installation, set a root password — remember it, you will need it to connect. MySQL Workbench is the official free visual tool for managing your database with a GUI. Alternatively, XAMPP installs MySQL, Apache, and PHP together in one package — very common for beginners on Windows.",
+      "exampleCode": "-- After installation, connect via terminal:\nmysql -u root -p\n-- Enter your password when prompted\n\n-- Or use MySQL Workbench (GUI):\n-- File → New Connection → hostname: localhost\n-- Port: 3306, Username: root\n\n-- Check your MySQL version:\nSELECT VERSION();\n\n-- A successful connection looks like:\n-- Welcome to the MySQL monitor.\n-- mysql>"
+    },
+    {
+      "id": "mysql-create-database",
+      "Title": "Create Database & Tables",
+      "videoSource": "https://www.youtube.com/embed/HXV3zeQKqGY",
+      "description": "A database holds all the tables for one application. A table holds one type of record — for example, one table for users, one for courses. Every column in a table has a data type (INT, VARCHAR, TEXT, DATE, DATETIME) that controls what kind of data it can store. Every table should have a PRIMARY KEY — a unique ID for each row.",
+      "exampleCode": "-- Create the webstart database:\nCREATE DATABASE webstart;\nUSE webstart;\n\n-- Create the admin table:\nCREATE TABLE admin (\n  AdminID   INT AUTO_INCREMENT PRIMARY KEY,\n  Username  VARCHAR(80)  NOT NULL UNIQUE,\n  Password  VARCHAR(255) NOT NULL,\n  Email     VARCHAR(150) NOT NULL UNIQUE\n);\n\n-- Create the course table:\nCREATE TABLE course (\n  CourseID    INT AUTO_INCREMENT PRIMARY KEY,\n  Title       VARCHAR(200) NOT NULL,\n  Description TEXT,\n  Category    VARCHAR(80),\n  VideoFile   VARCHAR(500),\n  PublishDate DATE NOT NULL,\n  AdminID     INT,\n  FOREIGN KEY (AdminID) REFERENCES admin(AdminID)\n);"
+    },
+    {
+      "id": "mysql-data-types",
+      "Title": "MySQL Data Types",
+      "videoSource": "https://www.youtube.com/embed/HXV3zeQKqGY",
+      "description": "Choosing the right data type is important — it controls how data is stored, how much space it uses, and what values are allowed. The most common types are INT (whole numbers), VARCHAR (short text with a max length), TEXT (long text), DATE (year-month-day), DATETIME (date plus time), and BOOLEAN (true/false, stored as 1/0 in MySQL).",
+      "exampleCode": "-- Common MySQL data types:\n\nINT          -- Whole number:        42\nTINYINT      -- Small number (0-255): used for boolean (0 or 1)\nFLOAT/DOUBLE -- Decimal:             3.14\nVARCHAR(100) -- Short text, max 100 chars: 'Hello'\nTEXT         -- Long text, no limit:  'A long paragraph...'\nDATE         -- Date only:           '2026-07-19'\nDATETIME     -- Date + time:         '2026-07-19 14:30:00'\nBOOLEAN      -- True/False (1/0)\n\n-- Example table using various types:\nCREATE TABLE user (\n  UserID    INT AUTO_INCREMENT PRIMARY KEY,\n  Name      VARCHAR(100),\n  Email     VARCHAR(150),\n  JoinDate  DATETIME DEFAULT NOW(),\n  Active    TINYINT(1) DEFAULT 1\n);"
+    },
+    {
+      "id": "mysql-insert",
+      "Title": "INSERT — Add Data",
+      "videoSource": "https://www.youtube.com/embed/HXV3zeQKqGY",
+      "description": "INSERT INTO adds new rows to a table. You list the column names, then the values in the same order. You can insert one row or multiple rows at once. AUTO_INCREMENT columns (like UserID) fill themselves automatically — you do not include them in the INSERT statement.",
+      "exampleCode": "-- Insert one user:\nINSERT INTO user (Name, Email)\nVALUES ('Mukundabantu', 'mkbantu56@gmail.com');\n\n-- Insert multiple users at once:\nINSERT INTO user (Name, Email) VALUES\n  ('Alice', 'alice@email.com'),\n  ('Bob',   'bob@email.com'),\n  ('Carol', 'carol@email.com');\n\n-- Insert a course (admin must exist first):\nINSERT INTO admin (Username, Password, Email)\nVALUES ('admin1', 'hashedpassword', 'admin@webstart.rw');\n\nINSERT INTO course (Title, Description, Category, PublishDate, AdminID)\nVALUES ('HTML Introduction', 'Learn HTML basics', 'HTML', '2026-07-01', 1);"
+    },
+    {
+      "id": "mysql-select",
+      "Title": "SELECT — Read Data",
+      "videoSource": "https://www.youtube.com/embed/HXV3zeQKqGY",
+      "description": "SELECT is the most used SQL statement. It reads data from a table. You can select all columns (*) or specific columns by name. SELECT does not change or delete any data — it only reads. Every time your website loads a page, it runs a SELECT to fetch the content from the database.",
+      "exampleCode": "-- Select all columns from user table:\nSELECT * FROM user;\n\n-- Select specific columns:\nSELECT Name, Email FROM user;\n\n-- Select with a condition (WHERE):\nSELECT * FROM user WHERE Name = 'Alice';\n\n-- Select a specific course by ID:\nSELECT * FROM course WHERE CourseID = 1;\n\n-- Count how many users exist:\nSELECT COUNT(*) AS total_users FROM user;\n\n-- Get the most recent 5 courses:\nSELECT * FROM course ORDER BY PublishDate DESC LIMIT 5;"
+    },
+    {
+      "id": "mysql-where",
+      "Title": "WHERE — Filter Results",
+      "videoSource": "https://www.youtube.com/embed/HXV3zeQKqGY",
+      "description": "The WHERE clause filters rows — it only returns rows that match a condition. You can combine conditions with AND and OR. Use = for exact match, LIKE for pattern matching, IN for a list of values, and BETWEEN for a range. WHERE works with SELECT, UPDATE, and DELETE.",
+      "exampleCode": "-- Exact match:\nSELECT * FROM user WHERE Email = 'alice@email.com';\n\n-- Multiple conditions:\nSELECT * FROM course WHERE Category = 'HTML' AND AdminID = 1;\n\n-- LIKE — partial match (% = any characters):\nSELECT * FROM user WHERE Name LIKE 'M%'; -- starts with M\nSELECT * FROM course WHERE Title LIKE '%Introduction%';\n\n-- IN — match any value in a list:\nSELECT * FROM course WHERE Category IN ('HTML', 'CSS', 'JavaScript');\n\n-- BETWEEN — range:\nSELECT * FROM course WHERE PublishDate BETWEEN '2026-01-01' AND '2026-12-31';"
+    },
+    {
+      "id": "mysql-update",
+      "Title": "UPDATE — Edit Data",
+      "videoSource": "https://www.youtube.com/embed/HXV3zeQKqGY",
+      "description": "UPDATE changes existing rows in a table. Always include a WHERE clause — without it, every row in the table gets updated. Before running an UPDATE, run a SELECT with the same WHERE to check which rows will be affected.",
+      "exampleCode": "-- Update one user's email:\nUPDATE user SET Email = 'new@email.com' WHERE UserID = 1;\n\n-- Update multiple columns at once:\nUPDATE course\nSET Title = 'HTML Introduction (Updated)', Category = 'HTML'\nWHERE CourseID = 1;\n\n-- ALWAYS check before updating:\n-- First run this:\nSELECT * FROM user WHERE UserID = 1;\n-- Then run:\nUPDATE user SET Name = 'Mohammed' WHERE UserID = 1;\n\n-- Without WHERE — updates EVERY row (dangerous!):\n-- UPDATE user SET Active = 0;  ← do NOT do this accidentally"
+    },
+    {
+      "id": "mysql-delete",
+      "Title": "DELETE — Remove Data",
+      "videoSource": "https://www.youtube.com/embed/HXV3zeQKqGY",
+      "description": "DELETE removes rows from a table permanently. Like UPDATE, always use WHERE — without it, all rows are deleted. If the table has foreign key constraints, you may need to delete child records (e.g. course_view rows) before deleting the parent (e.g. the course). Use TRUNCATE to empty a whole table quickly.",
+      "exampleCode": "-- Delete one user:\nDELETE FROM user WHERE UserID = 3;\n\n-- Delete all progress records for a specific course:\nDELETE FROM course_view WHERE CourseID = 2;\n\n-- Delete a course (its views must be deleted first if FK exists):\nDELETE FROM course_view WHERE CourseID = 1;\nDELETE FROM course WHERE CourseID = 1;\n\n-- Check before deleting:\nSELECT * FROM user WHERE UserID = 3;\n-- Then delete:\nDELETE FROM user WHERE UserID = 3;\n\n-- Empty an entire table (no undo!):\nTRUNCATE TABLE course_view;"
+    },
+    {
+      "id": "mysql-join",
+      "Title": "JOIN — Combine Tables",
+      "videoSource": "https://www.youtube.com/embed/HXV3zeQKqGY",
+      "description": "JOIN combines rows from two or more tables based on a matching column (usually a foreign key). INNER JOIN returns only rows that have a match in both tables. LEFT JOIN returns all rows from the left table plus matched rows from the right (unmatched right rows appear as NULL). JOINs are how you answer questions that span multiple tables.",
+      "exampleCode": "-- Which student viewed which course?\nSELECT u.Name, c.Title, cv.ViewDate\nFROM course_view cv\nINNER JOIN user   u ON cv.UserID   = u.UserID\nINNER JOIN course c ON cv.CourseID = c.CourseID;\n\n-- All users, even those with no course views (LEFT JOIN):\nSELECT u.Name, cv.CourseID\nFROM user u\nLEFT JOIN course_view cv ON u.UserID = cv.UserID;\n\n-- How many times was each course viewed?\nSELECT c.Title, COUNT(cv.ViewID) AS views\nFROM course c\nLEFT JOIN course_view cv ON c.CourseID = cv.CourseID\nGROUP BY c.CourseID, c.Title\nORDER BY views DESC;"
+    },
+    {
+      "id": "mysql-nodejs",
+      "Title": "MySQL with Node.js (mysql2)",
+      "videoSource": "https://www.youtube.com/embed/HXV3zeQKqGY",
+      "description": "The mysql2 package connects Node.js to MySQL. You create a connection pool to handle multiple database requests at the same time, then run SQL queries with pool.query(). Using .promise() with async/await makes the code clean and readable. This is how WebStart Phase 2 will read lesson content from the database and save student progress.",
+      "exampleCode": "// npm install mysql2\n\nvar mysql = require('mysql2/promise');\n\nvar pool = mysql.createPool({\n  host:     'localhost',\n  user:     'root',\n  password: 'yourpassword',\n  database: 'webstart'\n});\n\n// Fetch all courses (async/await):\nasync function getCourses() {\n  var [rows] = await pool.query('SELECT * FROM course');\n  return rows;\n}\n\n// Save student progress:\nasync function markDone(userId, courseId) {\n  await pool.query(\n    'INSERT INTO course_view (UserID, CourseID) VALUES (?, ?)',\n    [userId, courseId]\n  );\n}\n\n// Get a student's completed lessons:\nasync function getProgress(userId) {\n  var [rows] = await pool.query(\n    'SELECT CourseID FROM course_view WHERE UserID = ?',\n    [userId]\n  );\n  return rows.map(r => r.CourseID);\n}"
+    }
+  ]
+}

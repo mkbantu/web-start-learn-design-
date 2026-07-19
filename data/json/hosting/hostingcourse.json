@@ -1,0 +1,75 @@
+{
+  "courseLabel": "Hosting",
+  "course": [
+    {
+      "id": "hosting-introduction",
+      "Title": "What is Web Hosting?",
+      "videoSource": "https://www.youtube.com/embed/d3PtE8gQUAw",
+      "description": "Web hosting means storing your website files on a computer (server) that is connected to the internet 24/7 so that anyone in the world can visit it. Without hosting, your website only works on your own laptop. The hosting server has an IP address, and DNS (Domain Name System) maps your domain name (like webstart.rw) to that IP so visitors can find it by name.",
+      "exampleCode": "How a hosted website works:\n\n1. You build your website files (HTML, CSS, JS)\n2. You upload them to a hosting server\n3. The server gets a public IP address (e.g. 76.223.54.15)\n4. A domain name (webstart.rw) points to that IP via DNS\n5. Visitor types webstart.rw in browser\n6. DNS looks up the IP address\n7. Browser sends request to that IP\n8. Server responds with your HTML file\n9. Browser renders the page"
+    },
+    {
+      "id": "hosting-static-vs-dynamic",
+      "Title": "Static vs Dynamic Hosting",
+      "videoSource": "https://www.youtube.com/embed/d3PtE8gQUAw",
+      "description": "Static hosting serves only HTML, CSS, and JavaScript files — no server-side code runs. It is fast, cheap (often free), and simple. Dynamic hosting runs a server (Node.js, PHP, Python) that can execute code, connect to a database, and generate pages on demand. Static hosting is perfect for WebStart Phase 1. Dynamic hosting is needed for Phase 2 (admin panel + student tracking).",
+      "exampleCode": "Static hosting (Phase 1 — current):\n  Files: HTML + CSS + JS only\n  Server: None (files served directly)\n  Database: None (localStorage only)\n  Platforms: Vercel, Netlify, GitHub Pages\n  Cost: Free\n\nDynamic hosting (Phase 2 — planned):\n  Files: HTML + CSS + JS + Node.js server\n  Server: Node.js + Express runs on the host\n  Database: MySQL (also on the host or separate)\n  Platforms: Railway, Render, VPS (DigitalOcean)\n  Cost: Free tier available on Railway/Render"
+    },
+    {
+      "id": "hosting-github",
+      "Title": "GitHub — Version Control",
+      "videoSource": "https://www.youtube.com/embed/RGOj5yH7evk",
+      "description": "GitHub is where you store your code online. It uses Git — a version control system that tracks every change you make. Before deploying to any hosting platform, you push your project to a GitHub repository. Most hosting platforms (Vercel, Netlify, Railway) connect directly to GitHub — when you push new code, they automatically redeploy your site.",
+      "exampleCode": "-- Initial setup (once):\ngit config --global user.name \"Mukundabantu\"\ngit config --global user.email \"mkbantu56@gmail.com\"\n\n-- Start tracking a project:\ncd my-project\ngit init\ngit add .\ngit commit -m \"Initial commit\"\n\n-- Push to GitHub (after creating repo online):\ngit remote add origin https://github.com/mkbantu/webstart.git\ngit push -u origin main\n\n-- Update after making changes:\ngit add .\ngit commit -m \"Add Node.js backend\"\ngit push"
+    },
+    {
+      "id": "hosting-github-pages",
+      "Title": "GitHub Pages — Free Static Hosting",
+      "videoSource": "https://www.youtube.com/embed/RGOj5yH7evk",
+      "description": "GitHub Pages hosts static websites directly from a GitHub repository — completely free. Your site gets a URL like username.github.io/repo-name. Any file in your repository is served publicly. It is ideal for portfolios, project demos, and small static sites. No server configuration needed.",
+      "exampleCode": "-- Steps to deploy on GitHub Pages:\n\n1. Push your project to a GitHub repository\n\n2. Go to: github.com/username/repo-name\n   → Settings → Pages\n\n3. Source: Deploy from a branch\n   Branch: main   Folder: / (root)\n   Click Save\n\n4. Your site is live at:\n   https://username.github.io/repo-name/\n\n-- Limitations:\n-- Static files only (no Node.js, no database)\n-- All files in the repo are public\n-- Custom domain supported (free)\n-- HTTPS provided automatically"
+    },
+    {
+      "id": "hosting-vercel",
+      "Title": "Vercel — Static + Serverless",
+      "videoSource": "https://www.youtube.com/embed/NU8xDQzPJTw",
+      "description": "Vercel is the platform currently hosting WebStart at web-start-learn-design.vercel.app. It is free, connects to GitHub, and automatically redeploys when you push new code. Vercel also supports serverless functions — small pieces of Node.js code that run on demand. This means Phase 2 API endpoints (like POST /api/progress) can also run on Vercel without a full server.",
+      "exampleCode": "-- Deploy a static site on Vercel:\n\n1. Push code to GitHub\n\n2. Go to vercel.com → Log in with GitHub\n\n3. Click \"Add New Project\"\n   → Import your GitHub repository\n   → Framework Preset: Other (for plain HTML/CSS/JS)\n   → Click Deploy\n\n4. Live in 30 seconds at:\n   https://your-project.vercel.app\n\n-- Auto-deploy on push:\n-- Every git push to main triggers a new deployment\n-- Preview deployments for every branch\n\n-- For Phase 2 (serverless API):\n-- Create /api/progress.js file\n-- Vercel runs it as a serverless function"
+    },
+    {
+      "id": "hosting-netlify",
+      "Title": "Netlify — Free Static Hosting",
+      "videoSource": "https://www.youtube.com/embed/NU8xDQzPJTw",
+      "description": "Netlify is a popular alternative to Vercel for static hosting. It is free, connects to GitHub, and deploys automatically on every push. Netlify also supports forms (you can submit a form without a back-end), redirects, and serverless functions. It is a good choice if you want free form handling without writing a server.",
+      "exampleCode": "-- Deploy on Netlify:\n\n1. Push code to GitHub\n\n2. Go to app.netlify.com → Log in with GitHub\n\n3. \"Add new site\" → Import from GitHub\n   → Select repository → Deploy site\n\n4. Live at: random-name.netlify.app\n\n-- Netlify Forms (no back-end needed):\n-- Add netlify attribute to your <form>:\n<form name=\"subscribe\" method=\"POST\" netlify>\n  <input name=\"email\" type=\"email\">\n  <button type=\"submit\">Subscribe</button>\n</form>\n-- Netlify captures submissions automatically\n-- View them in the Netlify dashboard\n\n-- Custom domain: Settings → Domain management → Add domain"
+    },
+    {
+      "id": "hosting-railway",
+      "Title": "Railway — Full-Stack Hosting",
+      "videoSource": "https://www.youtube.com/embed/NU8xDQzPJTw",
+      "description": "Railway hosts Node.js servers and MySQL databases together — exactly what WebStart Phase 2 needs. The free tier gives you $5 of usage per month which covers a small project. You connect Railway to GitHub, and it automatically detects that your project uses Node.js (by reading package.json). Railway also provides a free MySQL database you can attach to your project.",
+      "exampleCode": "-- Deploy Node.js + MySQL on Railway:\n\n1. Push your Node.js project to GitHub\n   (must have package.json with a start script)\n\n2. Go to railway.app → New Project\n   → Deploy from GitHub repo\n   → Railway detects Node.js automatically\n\n3. Add a MySQL database:\n   → New → Database → MySQL\n   → Railway provides DATABASE_URL automatically\n\n4. Add start script to package.json:\n{\n  \"scripts\": {\n    \"start\": \"node server.js\"\n  }\n}\n\n5. Set environment variables in Railway dashboard:\n   DB_HOST, DB_USER, DB_PASSWORD, DB_NAME\n\n6. Your app is live at:\n   https://your-app.up.railway.app"
+    },
+    {
+      "id": "hosting-render",
+      "Title": "Render — Free Full-Stack Hosting",
+      "videoSource": "https://www.youtube.com/embed/NU8xDQzPJTw",
+      "description": "Render is another free platform for hosting Node.js apps and databases. The free tier for web services spins down after 15 minutes of inactivity (the first request after idle takes ~30 seconds to wake up). Paid plans ($7/month) stay always-on. Render also offers a free PostgreSQL database — PostgreSQL is similar to MySQL but uses slightly different SQL syntax.",
+      "exampleCode": "-- Deploy on Render:\n\n1. Push project to GitHub\n\n2. Go to render.com → New → Web Service\n   → Connect GitHub → Select repo\n   → Runtime: Node\n   → Build Command: npm install\n   → Start Command: node server.js\n   → Click Create Web Service\n\n3. Add a free database:\n   → New → PostgreSQL (free tier)\n   → Copy the connection string\n\n4. Add environment variable in Render:\n   DATABASE_URL = (paste connection string)\n\n5. Live at: https://your-app.onrender.com\n\n-- Note: Free tier sleeps after inactivity\n-- First request after sleep takes ~30 seconds"
+    },
+    {
+      "id": "hosting-domain",
+      "Title": "Domain Names & DNS",
+      "videoSource": "https://www.youtube.com/embed/d3PtE8gQUAw",
+      "description": "A domain name (like webstart.rw) is your website's address. You buy it from a domain registrar (Namecheap, GoDaddy, or the Rwanda registrar RICTA for .rw domains). After buying, you point the domain to your hosting platform by updating DNS records. A CNAME record points your domain to a Vercel/Netlify/Railway URL. An A record points to an IP address.",
+      "exampleCode": "-- Adding a custom domain to Vercel:\n\n1. Buy domain from Namecheap / RICTA (.rw)\n\n2. In Vercel: Settings → Domains → Add domain\n   Enter: webstart.rw → Add\n\n3. Vercel gives you DNS records to add:\n   Type: CNAME\n   Name: www\n   Value: cname.vercel-dns.com\n\n   Type: A\n   Name: @\n   Value: 76.76.21.21\n\n4. Go to your domain registrar → DNS settings\n   → Add those records\n\n5. Wait 5-60 minutes for DNS propagation\n\n6. Your site is now live at:\n   https://webstart.rw (with HTTPS automatically)"
+    },
+    {
+      "id": "hosting-environment-variables",
+      "Title": "Environment Variables",
+      "videoSource": "https://www.youtube.com/embed/NU8xDQzPJTw",
+      "description": "Environment variables store sensitive information (database passwords, API keys) outside your code. You never put passwords directly in your JavaScript files because they would be visible on GitHub. On your local machine, you use a .env file (add it to .gitignore). On hosting platforms, you set them in the dashboard. The dotenv package reads .env files in Node.js.",
+      "exampleCode": "// npm install dotenv\n\n// .env file (LOCAL only — never push to GitHub):\nDB_HOST=localhost\nDB_USER=root\nDB_PASSWORD=mySecretPassword\nDB_NAME=webstart\nPORT=3000\n\n// .gitignore — exclude .env from git:\n.env\nnode_modules/\n\n// server.js — load .env:\nrequire('dotenv').config();\n\nvar pool = mysql.createPool({\n  host:     process.env.DB_HOST,\n  user:     process.env.DB_USER,\n  password: process.env.DB_PASSWORD,\n  database: process.env.DB_NAME\n});\n\n// On hosting platforms (Vercel, Railway, Render):\n// Add DB_HOST, DB_USER, DB_PASSWORD, DB_NAME\n// in the dashboard Environment Variables section"
+    }
+  ]
+}

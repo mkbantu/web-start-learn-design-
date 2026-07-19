@@ -1,0 +1,89 @@
+{
+  "courseLabel": "Full Stack",
+  "course": [
+    {
+      "id": "fs-introduction",
+      "Title": "What is Full-Stack Development?",
+      "videoSource": "https://www.youtube.com/embed/ysEN5RaKOlA",
+      "description": "A full-stack developer builds both the front-end (what the user sees) and the back-end (the server and database behind it). The front-end is HTML, CSS, and JavaScript running in the browser. The back-end is a server (Node.js + Express) that handles data, and a database (MySQL) that stores it permanently. Full-stack means you can build a complete working web application from scratch, alone.",
+      "exampleCode": "Full-Stack Web Application Structure:\n\n┌─────────────────────────────────────┐\n│           BROWSER (Front-End)        │\n│   HTML + CSS + JavaScript            │\n│   Sends requests → Receives data     │\n└──────────────┬──────────────────────┘\n               │  HTTP Request (fetch)\n               ▼\n┌─────────────────────────────────────┐\n│           SERVER (Back-End)          │\n│   Node.js + Express                  │\n│   Handles routes, logic, auth        │\n└──────────────┬──────────────────────┘\n               │  SQL Query\n               ▼\n┌─────────────────────────────────────┐\n│           DATABASE                   │\n│   MySQL                              │\n│   Stores users, courses, progress    │\n└─────────────────────────────────────┘"
+    },
+    {
+      "id": "fs-how-web-works",
+      "Title": "How the Web Works (Full-Stack View)",
+      "videoSource": "https://www.youtube.com/embed/ysEN5RaKOlA",
+      "description": "Every time a user visits a page or clicks a button, the browser sends an HTTP request to the server. The server processes it — reads from or writes to the database — then sends back a response (HTML, JSON, or a status code). Understanding this request-response cycle is the foundation of full-stack development. Every feature you build follows this same pattern.",
+      "exampleCode": "Request-Response Cycle:\n\n1. User clicks \"Mark Done\" on a lesson\n   → Browser sends:\n     POST /api/progress\n     Body: { userId: 5, courseId: 12 }\n\n2. Express server receives the request:\n   app.post('/api/progress', async (req, res) => {\n     var { userId, courseId } = req.body;\n     ...\n   })\n\n3. Server queries the database:\n   INSERT INTO course_view (UserID, CourseID)\n   VALUES (5, 12)\n\n4. Server sends back a response:\n   res.json({ message: 'Progress saved!' })\n\n5. Browser receives the response:\n   → Button turns green ✓"
+    },
+    {
+      "id": "fs-project-setup",
+      "Title": "Setting Up a Full-Stack Project",
+      "videoSource": "https://www.youtube.com/embed/ysEN5RaKOlA",
+      "description": "A full-stack project has two parts in one folder: the front-end (your HTML/CSS/JS files) and the back-end (your Node.js server). You initialise npm, install Express and mysql2, create a server.js entry point, and serve your front-end files from Express using express.static(). This is exactly how WebStart Phase 2 will be structured.",
+      "exampleCode": "Project folder structure:\n\nwebstart/\n├── public/              ← Front-end (served by Express)\n│   ├── index.html\n│   ├── css/\n│   ├── html/\n│   ├── data/\n│   └── script/\n├── server.js            ← Express server (entry point)\n├── routes/\n│   ├── courses.js       ← /api/courses routes\n│   └── progress.js      ← /api/progress routes\n├── db.js                ← MySQL connection pool\n├── .env                 ← Secrets (never push to GitHub)\n├── .gitignore\n└── package.json\n\n// Terminal setup:\nnpm init -y\nnpm install express mysql2 dotenv\nnpm install nodemon --save-dev"
+    },
+    {
+      "id": "fs-express-server",
+      "Title": "Building the Express Server",
+      "videoSource": "https://www.youtube.com/embed/L72fhGm1tfE",
+      "description": "server.js is the entry point of your back-end. It creates the Express app, registers middleware (body parsers), mounts route files, serves the public folder, and starts listening on a port. Keeping the server file clean by splitting routes into separate files makes the codebase easy to maintain as it grows.",
+      "exampleCode": "// server.js\nrequire('dotenv').config();\nvar express  = require('express');\nvar path     = require('path');\n\nvar app = express();\n\n// Middleware\napp.use(express.json());\napp.use(express.urlencoded({ extended: true }));\n\n// Serve front-end files\napp.use(express.static(path.join(__dirname, 'public')));\n\n// API routes\napp.use('/api/courses',  require('./routes/courses'));\napp.use('/api/progress', require('./routes/progress'));\napp.use('/api/users',    require('./routes/users'));\n\n// All other requests → serve front-end\napp.get('*', (req, res) => {\n  res.sendFile(path.join(__dirname, 'public', 'index.html'));\n});\n\nvar PORT = process.env.PORT || 3000;\napp.listen(PORT, () => console.log('Server running on port ' + PORT));"
+    },
+    {
+      "id": "fs-database-connection",
+      "Title": "Connecting to MySQL",
+      "videoSource": "https://www.youtube.com/embed/HXV3zeQKqGY",
+      "description": "Create a db.js file that sets up a mysql2 connection pool. A pool reuses database connections instead of opening a new one for every request — much faster and more efficient. Export the pool so every route file can import and use it. Store all credentials in .env so they never appear in your code.",
+      "exampleCode": "// db.js\nrequire('dotenv').config();\nvar mysql = require('mysql2/promise');\n\nvar pool = mysql.createPool({\n  host:               process.env.DB_HOST,\n  user:               process.env.DB_USER,\n  password:           process.env.DB_PASSWORD,\n  database:           process.env.DB_NAME,\n  waitForConnections: true,\n  connectionLimit:    10\n});\n\nmodule.exports = pool;\n\n// .env\nDB_HOST=localhost\nDB_USER=root\nDB_PASSWORD=yourpassword\nDB_NAME=webstart\nPORT=3000\n\n// Using the pool in a route:\nvar pool = require('../db');\nvar [rows] = await pool.query('SELECT * FROM course');"
+    },
+    {
+      "id": "fs-rest-api-courses",
+      "Title": "REST API — Courses",
+      "videoSource": "https://www.youtube.com/embed/L72fhGm1tfE",
+      "description": "The courses route handles everything related to lesson content. GET /api/courses returns all courses from the database so the front-end can render the sidebar and lesson articles — replacing the static JS data files. POST /api/courses (admin only) inserts a new lesson. This is the core of the admin content-management feature planned for WebStart Phase 2.",
+      "exampleCode": "// routes/courses.js\nvar express = require('express');\nvar router  = express.Router();\nvar pool    = require('../db');\n\n// GET all courses\nrouter.get('/', async (req, res) => {\n  var [courses] = await pool.query(\n    'SELECT * FROM course ORDER BY PublishDate DESC'\n  );\n  res.json(courses);\n});\n\n// GET one course by ID\nrouter.get('/:id', async (req, res) => {\n  var [rows] = await pool.query(\n    'SELECT * FROM course WHERE CourseID = ?',\n    [req.params.id]\n  );\n  if (!rows.length) return res.status(404).json({ error: 'Not found' });\n  res.json(rows[0]);\n});\n\n// POST — admin adds a new course\nrouter.post('/', async (req, res) => {\n  var { title, description, category, videoFile, adminId } = req.body;\n  var [result] = await pool.query(\n    'INSERT INTO course (Title,Description,Category,VideoFile,PublishDate,AdminID) VALUES (?,?,?,?,NOW(),?)',\n    [title, description, category, videoFile, adminId]\n  );\n  res.status(201).json({ id: result.insertId });\n});\n\nmodule.exports = router;"
+    },
+    {
+      "id": "fs-rest-api-progress",
+      "Title": "REST API — Student Progress",
+      "videoSource": "https://www.youtube.com/embed/L72fhGm1tfE",
+      "description": "The progress route saves and retrieves which lessons a student has completed. POST /api/progress is called when a student clicks Mark Done — it inserts a row into course_view. GET /api/progress/:userId returns the list of completed course IDs so the front-end can highlight them. This replaces localStorage with real server-side tracking.",
+      "exampleCode": "// routes/progress.js\nvar express = require('express');\nvar router  = express.Router();\nvar pool    = require('../db');\n\n// GET — which lessons has this student completed?\nrouter.get('/:userId', async (req, res) => {\n  var [rows] = await pool.query(\n    'SELECT CourseID FROM course_view WHERE UserID = ?',\n    [req.params.userId]\n  );\n  res.json(rows.map(r => r.CourseID));\n});\n\n// POST — mark a lesson as done\nrouter.post('/', async (req, res) => {\n  var { userId, courseId } = req.body;\n  // Avoid duplicate entries:\n  var [existing] = await pool.query(\n    'SELECT ViewID FROM course_view WHERE UserID=? AND CourseID=?',\n    [userId, courseId]\n  );\n  if (existing.length) return res.json({ message: 'Already done' });\n  await pool.query(\n    'INSERT INTO course_view (UserID, CourseID, ViewDate) VALUES (?,?,NOW())',\n    [userId, courseId]\n  );\n  res.status(201).json({ message: 'Progress saved!' });\n});\n\nmodule.exports = router;"
+    },
+    {
+      "id": "fs-frontend-fetch",
+      "Title": "Connecting Front-End to the API",
+      "videoSource": "https://www.youtube.com/embed/ysEN5RaKOlA",
+      "description": "The front-end uses the fetch API to communicate with the Express server. Instead of reading from a static JS array, script.js sends a GET request to /api/courses to load lesson content. When a student clicks Mark Done, it sends a POST to /api/progress. The UI updates based on the server's response. This is the bridge that makes the whole full-stack app work.",
+      "exampleCode": "// In script.js — load courses from the API instead of a static file:\nasync function initCourse() {\n  var res     = await fetch('/api/courses');\n  var courses = await res.json();\n  buildSidebar(courses);\n  display(courses[0]);\n}\n\n// Load student progress on startup:\nasync function loadProgress(userId) {\n  var res  = await fetch('/api/progress/' + userId);\n  var done = await res.json(); // [3, 7, 12, ...]\n  done.forEach(id => markSidebarDone(id));\n}\n\n// Mark a lesson done — save to server:\nasync function markDone(userId, courseId) {\n  var res  = await fetch('/api/progress', {\n    method:  'POST',\n    headers: { 'Content-Type': 'application/json' },\n    body:    JSON.stringify({ userId, courseId })\n  });\n  var data = await res.json();\n  console.log(data.message); // 'Progress saved!'\n}"
+    },
+    {
+      "id": "fs-authentication",
+      "Title": "User Authentication",
+      "videoSource": "https://www.youtube.com/embed/mbsmsi7l3r4",
+      "description": "Authentication proves who a user is. The most common approaches are sessions (server stores login state) and JWT (JSON Web Tokens — server sends a signed token the client stores and sends with every request). For the WebStart admin panel, the admin logs in with username + password. The password is hashed using bcrypt before storing — never store plain-text passwords. Every admin-only route checks the token before executing.",
+      "exampleCode": "// npm install bcrypt jsonwebtoken\n\nvar bcrypt = require('bcrypt');\nvar jwt    = require('jsonwebtoken');\n\n// Register admin (one-time setup):\nvar hash = await bcrypt.hash('mypassword', 10);\n// INSERT INTO admin (Username, Password) VALUES ('admin1', hash)\n\n// Login route:\napp.post('/api/login', async (req, res) => {\n  var { username, password } = req.body;\n  var [rows] = await pool.query(\n    'SELECT * FROM admin WHERE Username = ?', [username]\n  );\n  if (!rows.length) return res.status(401).json({ error: 'Not found' });\n  var match = await bcrypt.compare(password, rows[0].Password);\n  if (!match)  return res.status(401).json({ error: 'Wrong password' });\n  var token = jwt.sign({ id: rows[0].AdminID }, process.env.JWT_SECRET);\n  res.json({ token });\n});\n\n// Middleware to protect admin routes:\nfunction auth(req, res, next) {\n  var token = req.headers.authorization?.split(' ')[1];\n  try { req.admin = jwt.verify(token, process.env.JWT_SECRET); next(); }\n  catch { res.status(401).json({ error: 'Unauthorised' }); }\n}"
+    },
+    {
+      "id": "fs-admin-panel",
+      "Title": "Admin Panel — Content Management",
+      "videoSource": "https://www.youtube.com/embed/ysEN5RaKOlA",
+      "description": "The admin panel is a private web page where the administrator logs in and manages course content. It shows all existing courses in a table, provides a form to add new lessons, and allows editing or deleting existing ones. The front-end sends requests to the protected API routes (with the JWT token in the Authorization header). No code editing or redeployment is needed to update lesson content.",
+      "exampleCode": "// admin.html front-end — add a new course:\nasync function addCourse(event) {\n  event.preventDefault();\n  var token = localStorage.getItem('adminToken');\n\n  var body = {\n    title:       document.getElementById('title').value,\n    description: document.getElementById('desc').value,\n    category:    document.getElementById('category').value,\n    videoFile:   document.getElementById('video').value,\n    adminId:     1\n  };\n\n  var res = await fetch('/api/courses', {\n    method:  'POST',\n    headers: {\n      'Content-Type':  'application/json',\n      'Authorization': 'Bearer ' + token\n    },\n    body: JSON.stringify(body)\n  });\n\n  var data = await res.json();\n  if (data.id) alert('Course added! ID: ' + data.id);\n}\n\n// Protected route in Express:\nrouter.post('/', auth, async (req, res) => {\n  // auth middleware runs first — only admins reach here\n  ...\n});"
+    },
+    {
+      "id": "fs-deploy",
+      "Title": "Deploying Full-Stack to Railway",
+      "videoSource": "https://www.youtube.com/embed/NU8xDQzPJTw",
+      "description": "Railway hosts both your Node.js server and your MySQL database together for free. Push your project to GitHub, connect Railway to the repo, add a MySQL database service, and set your environment variables in the Railway dashboard. Railway reads the start script from package.json, installs dependencies, and your full-stack app is live with a public URL.",
+      "exampleCode": "// 1. Add start script to package.json:\n{\n  \"scripts\": {\n    \"start\": \"node server.js\",\n    \"dev\":   \"nodemon server.js\"\n  }\n}\n\n// 2. Create .gitignore:\nnode_modules/\n.env\n\n// 3. Push to GitHub:\ngit init\ngit add .\ngit commit -m \"Full-stack app ready to deploy\"\ngit remote add origin https://github.com/you/webstart.git\ngit push -u origin main\n\n// 4. Railway dashboard:\n//    New Project → Deploy from GitHub → Select repo\n//    New → Database → MySQL\n//    Variables → Add: DB_HOST, DB_USER, DB_PASSWORD, DB_NAME, JWT_SECRET\n\n// 5. Run your SQL schema on the Railway MySQL:\n//    Railway dashboard → MySQL → Connect → run CREATE TABLE statements\n\n// App goes live at: https://webstart.up.railway.app"
+    },
+    {
+      "id": "fs-full-project",
+      "Title": "Complete Project — WebStart Phase 2",
+      "videoSource": "https://www.youtube.com/embed/ysEN5RaKOlA",
+      "description": "Putting it all together: the complete WebStart Phase 2 application. The front-end (HTML/CSS/JS) is served by Express from the public/ folder. The admin logs in, adds courses via the dashboard — they appear instantly for all students. Students visit the site, their UserID is created automatically, and every Mark Done click saves to the database. Their progress is visible from any device.",
+      "exampleCode": "Complete data flow summary:\n\nADMIN SIDE:\n  Admin → POST /api/login → receives JWT token\n  Admin → POST /api/courses (with token) → lesson saved to DB\n  Front-end fetches GET /api/courses → renders sidebar + articles\n\nSTUDENT SIDE:\n  Student visits site → GET /api/users/me → UserID assigned\n  Student loads lesson → GET /api/progress/:userId → done lessons highlighted\n  Student clicks ✓ → POST /api/progress → saved to course_view table\n  Student opens site on phone → same progress shown (from DB, not localStorage)\n\nADMIN SEES:\n  Dashboard shows:\n  - Total students subscribed\n  - Most completed lessons\n  - Last active dates\n  All from: SELECT COUNT(*), CourseID FROM course_view GROUP BY CourseID"
+    }
+  ]
+}
