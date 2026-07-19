@@ -1,0 +1,5 @@
+/* Full-Stack page — dark blue accent */
+@import url('learnhtml.css');
+
+.panel-icon { background: #1a3a5c !important; }
+main div article h2 { color: #0f2540; }
